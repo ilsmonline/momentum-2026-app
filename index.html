@@ -196,11 +196,11 @@ function showPartners(){
    logo.append(fallback,img);
    img.src='assets/partners/'+encodeURIComponent(p.logo);
    var details=el('div','partner-details');
-   details.append(el('h3','',p.name),el('p','','Meet them at Momentum.'));
+   details.append(el('h3','',p.name),el('p','','Meet them at Momentum in the arena lobby during free times.'));
    header.append(logo,details);article.append(header);
    if(p.ad&&!/\.heic$/i.test(p.ad)){
     var assetUrl='assets/partners/'+encodeURIComponent(p.ad);
-    var button=el('button','partner-ad-open','VIEW AD · FULL SCREEN');
+    var button=el('button','partner-ad-open','Click Here');
     button.type='button';button.hidden=true;
     button.addEventListener('click',function(){openPartnerAd(p,assetUrl)});
     article.append(button);
