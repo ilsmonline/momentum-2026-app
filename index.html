@@ -28,7 +28,7 @@
 @media(max-width:370px){.partner-logo{width:102px;height:77px;padding:8px}.partner-header{gap:11px}.partner-details h3{font-size:15px}}
 .route-card{border:1px solid #765453;background:#302728;border-radius:12px;padding:16px 17px;margin:18px 0 23px}.route-card h3{color:#f1bcb2;font-size:13px;font-weight:900;letter-spacing:1.3px;margin:0 0 10px}.route-card p{font-size:13px;color:#e0cfc4;margin:0 0 10px;line-height:1.6}.route-card p:last-child{margin-bottom:0}.map-tabs{display:flex;gap:7px;overflow-x:auto;white-space:nowrap;margin:15px 0 12px;padding-bottom:3px}
 .map-tabs .tab{white-space:nowrap;flex:none}
-.map-panel{background:#312929;border:1px solid #65514b;border-radius:11px;overflow:hidden;margin-bottom:8px}
+.map-panel[data-active-map="lower"] .map-stage{height:min(78vh,680px);background:#211b1e}.map-hint{font-size:13px;line-height:1.5;color:#d7bcb1;margin:4px 0 14px}.venue-extra-details{margin:20px 0 12px;border:1px solid #654f4c;border-radius:11px;background:#30272a;padding:12px 14px}.venue-extra-details summary{font-size:14px;font-weight:800;color:#f0c8b8;cursor:pointer;padding:5px 2px}.venue-extra-details #venue-list{padding-top:16px}.route-card[hidden]{display:none}.map-panel{background:#312929;border:1px solid #65514b;border-radius:11px;overflow:hidden;margin-bottom:8px}
 .map-stage{position:relative;background:#e9dfd1;overflow:auto;width:100%;height:clamp(260px,58vw,440px);overscroll-behavior:contain;touch-action:pan-x pan-y;scrollbar-color:#88645d #d5c9bf}
 .map-stage img{width:100%;max-width:none;height:auto;display:none;user-select:none;pointer-events:none}.arena-svg-wrap{width:100%;min-width:100%;background:#211b1e}.arena-svg-wrap svg{display:block;width:100%;height:auto;max-width:none}.arena-svg-wrap[hidden]{display:none}.map-selection-summary:not(:empty){background:#332829;border:1px solid #80595c;border-radius:10px;padding:13px 15px;font-size:13px;color:#f5dcd1;margin-bottom:16px}.map-selection-summary strong{color:#fff0e1;font-size:15px}
 .map-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:23px;background:linear-gradient(150deg,#3d2e2d,#211b1c);color:#e5c7b9;font-size:14px}
@@ -52,7 +52,7 @@
 </section>
 <section class="screen" data-page="schedule"><div class="section"><span class="kicker">PLAN YOUR WEEKEND</span><h1 class="page-title">EVENT <span style="color:#d89f94">SCHEDULE.</span></h1><p class="lead">Attendee schedule. Tap any event for details.</p><div class="tabs"><button class="tab" data-day="friday" aria-selected="true">Friday, Nov 20</button><button class="tab" data-day="saturday" aria-selected="false">Saturday, Nov 21</button></div><div id="schedule-list" class="timeline"></div></div></section>
 <section class="screen" data-page="breakouts"><div class="section"><span class="kicker">SATURDAY · 1:00–1:45 PM</span><h1 class="page-title">EXPLORE <span style="color:#d89f94">BREAKOUTS.</span></h1><input class="search" id="breakout-search" type="search" placeholder="Search workshop, speaker, or room" aria-label="Search workshops, speakers and rooms"><div class="filterrow"><button class="filter" data-filter="all" aria-pressed="true">All Sessions</button><button class="filter" data-filter="saved" aria-pressed="false">★ My Sessions</button></div><p class="counter" id="breakout-count"></p><div id="breakout-list"></div></div></section>
-<section class="screen" data-page="venue"><div class="section"><span class="kicker">FIND YOUR WAY</span><h1 class="page-title">VENUE <span style="color:#d89f94">GUIDE.</span></h1><p class="lead">Locate arena seating, find your breakout rooms, and follow the directions below to move between levels.</p><div class="route-card" id="breakout-route" hidden><h3>GETTING TO YOUR BREAKOUT</h3><p><strong>Lower-level rooms:</strong> Use the stairs in the main lobby to reach breakout rooms B1–B11.</p><p><strong>North Mezzanine:</strong> From the arena entrance, turn left and follow the ramp up.</p><p><strong>South Mezzanine:</strong> Follow the posted directional signs and conference staff guidance.</p><p class="muted">Students needing accessibility accommodations must be accompanied by an adult leader. Ask event staff for access assistance.</p></div><p class="lead">Choose a map below. Pinch or use the zoom controls to see details.</p>
+<section class="screen" data-page="venue"><div class="section"><span class="kicker">FIND YOUR WAY</span><h1 class="page-title">VENUE <span style="color:#d89f94">GUIDE.</span></h1><p class="lead">Find your reserved seating or breakout room on the maps below.</p><p class="map-hint">Choose a map. Use the + button to zoom in on room details.</p>
  <div class="map-tabs" role="tablist" aria-label="Venue maps">
  <button class="tab" data-map="arena" role="tab" aria-selected="true">Arena Seating</button>
  <button class="tab" data-map="lower" role="tab" aria-selected="false">Breakout Rooms</button>
@@ -62,9 +62,8 @@
  <div class="map-tools">
  <button type="button" data-map-zoom="out" aria-label="Zoom out">−</button><output id="map-zoom-label" aria-live="polite">100%</output><button type="button" data-map-zoom="in" aria-label="Zoom in">+</button><button type="button" data-map-zoom="reset">Reset</button></div>
  </div>
- <p class="muted" id="map-caption"></p><div id="map-selection-summary" class="map-selection-summary" role="status" aria-live="polite"></div>
- <h2 class="section-head">ROOM <em>DIRECTORY.</em></h2><div id="venue-list"></div>
- <p class="muted">Room assignments are based on Momentum 2026 information. Students should use the lobby stairs for lower-level breakouts. Students needing accessibility accommodations should speak with event staff and be accompanied by an adult leader.</p></div></section>
+ <p class="muted" id="map-caption"></p><div id="map-selection-summary" class="map-selection-summary" role="status" aria-live="polite"></div><div class="route-card" id="breakout-route" hidden><h3>GETTING TO YOUR BREAKOUT</h3><p><strong>Lower-level rooms:</strong> Take the main lobby stairs and follow signs to B1, B2, B4, B6, B7, B10 and B11 A–D.</p><p><strong>North Mezzanine:</strong> From the arena entrance, turn left and follow the ramp.</p><p><strong>South Mezzanine:</strong> Follow posted directional signs.</p><p class="muted">Students needing accessibility accommodations should ask event staff for assistance and be accompanied by an adult leader.</p></div>
+ <details class="venue-extra-details"><summary>Other venue locations</summary><div id="venue-list"></div></details></div></section>
 <section class="screen" data-page="seating"><div class="section"><span class="kicker">CHURCH RESERVED SEATING</span><h1 class="page-title">FIND MY <span style="color:#d89f94">CHURCH.</span></h1><p class="lead">Search your church's name to locate assigned reserved seating.</p><input class="search" id="church-search" type="search" placeholder="Enter church name" aria-label="Search church name"><p class="seat-last-updated muted" id="seat-updated" aria-live="polite"></p><div id="seating-results" class="empty" aria-live="polite">Loading 2026 reserved seating directory…</div><button id="open-seating-toggle" class="open-seat-toggle" type="button" aria-expanded="false" aria-controls="open-seating-panel">View Open Seating Areas <span aria-hidden="true">⌄</span></button><div id="open-seating-panel" hidden></div><p class="muted"><em>Not all groups are assigned seats</em>. If your church isn't listed, check with your church leader or the ISM Information Booth. Follow on-site reserved seating signs. Arena floor seating remains first-come, first-served.</p></div></section>
 <section class="screen" data-page="reception"><div class="section"><span class="kicker">FRIDAY · SPECIAL EVENT</span><h1 class="page-title">YOUTH PASTOR <span style="color:#d89f94">RECEPTION.</span></h1><div class="card"><h3>Youth Pastors & Spouses, This One's for You!</h3><p>We’re hosting a special reception to honor your work in ministry. Full-time and volunteer youth leaders, along with their spouses, are invited.</p><p><strong>When:</strong> Friday, following the first worship song during Session 1, on Pastor Chris’s release.</p><p><strong>Where:</strong> North Mezzanine</p><p><strong>Please remain in service with your group until Pastor Chris releases you.</strong></p></div></div></section>
 <section class="screen" data-page="welcome"><div class="section"><span class="kicker">FROM OUR DIRECTORS</span><h1 class="page-title">A WORD OF <span style="color:#d89f94">WELCOME.</span></h1><article id="welcome-letter" class="welcome-letter" aria-label="Welcome letter from Pastors Chris and Christina Stanley"></article></div></section>
@@ -87,7 +86,7 @@
 'use strict';
 var S={
  friday:[
- ['12:00 PM','Registration','BOS Center','Church group check-in; registration closes at 2:00 PM.'],
+ ['12:00 PM','Group Check-In','BOS Center','Church leaders check in their registered groups. Group Check-In closes at 2:00 PM.'],
  ['2:00 PM','Arena Doors Open','Main Arena','General Session 1'],
  ['3:00 PM','General Session 1','Main Arena','Worship and a message from Kendall Alfaro.','Kendall Alfaro'],
  ['During Session 1','Youth Pastor Reception','North Mezzanine','Following the first worship song. Stay with your group until Pastor Chris releases you.'],
@@ -208,7 +207,7 @@ rules.forEach(function(x){var c=el('div','card');c.append(el('h3','',x[0]),el('p
 })();
 var mapDefinitions={
  arena:{src:'assets/maps/Bos Seating - Momentum Map.png',alt:'Momentum 2026 arena seating map',caption:'Custom Momentum arena seating diagram, not to scale. Colored row bands represent reserved or open areas. Follow posted signs for exact seat locations.'},
- lower:{src:'assets/maps/Lower Level Breakout Guide.svg',alt:'Momentum 2026 lower level breakout room directory with room numbers and speaker names',caption:'Branded room directory, not a physical floor plan. Students should use the stairs in the lobby and follow on-site room signs.'}
+ lower:{src:'assets/maps/Momentum Lower Level Map.svg',alt:'Momentum 2026 lower-level breakout room map with speakers, stairs and restrooms',caption:'Map based on the BOS Center lower-level diagram. Use lobby stairs and follow posted signs.'}
 };
 var activeMap='arena',mapZoom=100,mapFocus={type:'overview'},mapDataLoading=false;
 function mapSelectionText(){
@@ -247,7 +246,7 @@ function setMap(id,focus){
  document.querySelectorAll('[data-map]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.map===id))});
  img.onload=null;img.onerror=null;img.style.display='none';mount.hidden=true;
  document.getElementById('map-caption').textContent=def.caption;document.getElementById('map-selection-summary').textContent='';
- var stage=document.getElementById('map-stage');stage.scrollLeft=0;stage.scrollTop=0;
+ document.getElementById('map-panel').dataset.activeMap=id;var stage=document.getElementById('map-stage');stage.scrollLeft=0;stage.scrollTop=0;
  if(id==='arena'){fallback.style.display='flex';fallback.textContent='Preparing the interactive arena map…';renderArena();return}
  fallback.style.display='flex';fallback.textContent='The breakout guide is being added to the app.';
  img.onload=function(){if(activeMap!==id)return;fallback.style.display='none';img.style.display='block';adjustMapZoom()};
