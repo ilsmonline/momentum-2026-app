@@ -85,16 +85,12 @@
       txt(g,x+w/2,top?y-16:y+h+25,section,22,'#fff2e5','900',{'text-anchor':'middle'});
       add(g,'title',{},'Section '+section+(reserved?' · Your church: '+selected.church:'')+(open[section]?' · Includes designated open rows':''));
    });
-   // Entire floor seating is first-come; six clusters schematically reflect the source plan.
+   // A single compact green floor zone leaves all numbered section bands unobstructed.
+   // Upper section rows end before y=380; lower section rows begin after y=518.
    var floor=add(svg,'g',{'aria-label':'All floor seating is open'});
-   var fy=[336,402,468];
-   fy.forEach(function(y,ri){[0,1].forEach(function(ci){
-      var x=260+ci*256;
-      add(floor,'rect',{x:x,y:y,width:238,height:58,rx:8,fill:mode==='church'?'#456b60':'#4b8d77',stroke:'#9bc1aa','stroke-width':1.4});
-      for(var q=0;q<5;q++){for(var k=0;k<18;k++){add(floor,'circle',{cx:x+12+k*12.6,cy:y+12+q*8.5,r:1.65,fill:'#c0e1c8',opacity:0.8})}}
-   })});
-   add(floor,'rect',{x:395,y:418,width:236,height:24,rx:6,fill:'#18251f',opacity:.95});
-   txt(floor,513,436,'ALL FLOOR SEATING · OPEN',14,'#e7f5e7','900',{'text-anchor':'middle'});
+   add(floor,'rect',{x:247,y:387,width:557,height:125,rx:16,fill:mode==='church'?'#446d5f':'#498e76',stroke:'#a8c8b0','stroke-width':2});
+   txt(floor,525,444,'ALL FLOOR SEATING',23,'#eef8ec','900',{'text-anchor':'middle','letter-spacing':1});
+   txt(floor,525,480,'OPEN · FIRST-COME',17,'#d4e9d7','800',{'text-anchor':'middle','letter-spacing':1});
    // Public venue reference identifies back-center modules. Their seating is open.
    [0,1,2].forEach(function(i){
       var x=864,y=319+i*83;
