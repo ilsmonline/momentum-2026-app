@@ -1,11 +1,19 @@
-# Momentum 2026 venue map assets
+# Momentum 2026 · venue maps
 
-The app's **Lower Level** tab now uses `Lower Level Breakout Guide.svg`, a branded, mobile-readable room directory with **room number + speaker name only**.
+## Arena seating
 
-**Important:** The SVG is a schematic directory, not a floor plan. It intentionally does not imply room positions or routes that have not been verified against the source plan. It omits elevator callouts. Attendees should use lobby stairs to reach lower-level breakouts; accessibility accommodations are coordinated with event staff and an accompanying adult leader.
+The arena seating tab now renders a custom **interactive vector map** from `assets/arena-map.js`; the original PNG `Bos Seating - Momentum Map.png` is retained for reference. It follows the BOS Center's public Main Hall layout (stage on the left, riser sections 102–106 above the floor and 119–115 below it, floor in the middle, open seating toward the rear middle). The diagram is **schematic and not to scale**, not an architectural plan or exact row spacing.
 
-The **Arena Seating** tab uses the existing approved `Bos Seating - Momentum Map.png`. Future design refinement should preserve the source seating geometry and section numbering.
+Highlighted row bands are driven directly from `data/seating.json`, with a crimson tint for a selected church and green for open seating. A special striped highlight indicates partial-row assignments, with specific seat numbers shown below the map. All floor seating and the rear-middle seating are designated open, first-come seating. Check venue signage.
 
-The **Lobby** tab expects `Lobby - Exhibitors.png` when an attendee-safe, accurate source map has been reviewed and styled. Never publish detailed electrical plans or other internal facility diagrams.
+To change a church assignment or open rows, update the public JSON after updating and validating the source Reserved Seating workbook. Map markup generally does **not** need changing for data edits. The current public JSON does not auto-sync to Google Sheets.
 
-For an accurate stylized wayfinding floor plan, compare placements against the current source `Lower Level with Speakers.pdf` in Dropbox `2026 Momentum/To Print` before converting this directory into a true map.
+## Lower level
+
+The **Lower Level** tab currently uses `Lower Level Breakout Guide.svg`, a branded room-number + speaker-name **directory**, not an accurate wayfinding floor plan. Don't infer room positions from it. Students should use lobby stairs; accessible routes are coordinated with staff and adult leaders. No student elevator callouts.
+
+For a truly spatial floor plan, consult the current `Lower Level with Speakers.pdf` in Dropbox `2026 Momentum/To Print` before positioning rooms.
+
+## Lobby
+
+The **Lobby** tab expects an attendee-approved image `Lobby - Exhibitors.png`, when the current public booth map has been verified and styled. Never publish electrical diagrams or sensitive internal staff/security layouts.
