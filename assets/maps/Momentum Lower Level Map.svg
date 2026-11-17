@@ -65,21 +65,14 @@
 <path d="M707 385H827V441H757" fill="none" stroke="#6d5b54" stroke-width="3"/>
 <rect x="755" y="377" width="72" height="57" rx="6" fill="#393336" stroke="#655551"/>
 <text x="791" y="399" font-size="11" font-weight="700" fill="#b29a90" text-anchor="middle">CATERING</text><text x="791" y="413" font-size="11" font-weight="700" fill="#b29a90" text-anchor="middle">AREA</text>
-<!-- Lobby access note without unverified route arrows -->
-<g><rect x="61" y="677" width="92" height="190" rx="12" fill="#423239" stroke="#b48679" stroke-width="1.8"/>
-<text x="107" y="724" font-size="17" font-weight="900" fill="#f4d6c7" text-anchor="middle">LOBBY</text>
-<text x="107" y="750" font-size="15" font-weight="800" fill="#f4d6c7" text-anchor="middle">STAIRS</text>
-<text x="107" y="789" font-size="11" font-weight="700" fill="#d8b9ae" text-anchor="middle">FOLLOW</text>
-<text x="107" y="805" font-size="11" font-weight="700" fill="#d8b9ae" text-anchor="middle">VENUE</text>
-<text x="107" y="821" font-size="11" font-weight="700" fill="#d8b9ae" text-anchor="middle">SIGNS</text>
-</g>
-<path d="M154 770H169" stroke="#d5ad95" stroke-width="3" stroke-dasharray="4 4"/>
+<!-- Lobby-access route is not marked here: venue's source diagram does not identify that route.
+     Both actual stair locations are shown; use main lobby stairs and posted event signage. -->
 <!-- Compact legend and mobile wayfinding note -->
 <rect x="50" y="1280" width="860" height="106" rx="13" fill="#302729" stroke="#765456" stroke-width="1.5"/>
 <rect x="75" y="1304" width="24" height="24" rx="5" fill="#59343d" stroke="#c08e84" stroke-width="1.5"/>
 <text x="112" y="1322" class="caption">BREAKOUT ROOM</text>
 <rect x="433" y="1304" width="24" height="24" rx="5" fill="#31544e" stroke="#8ab3a2" stroke-width="1.5"/>
 <text x="469" y="1322" class="caption">AMENITIES</text>
-<text x="75" y="1361" font-size="16" font-weight="700" fill="#bda69b">Room positions based on BOS Center plan. Follow posted signs.</text>
+<text x="75" y="1361" font-size="16" font-weight="700" fill="#bda69b">Use lobby stairs to reach this level. Follow posted signs.</text>
 <text x="51" y="1411" font-size="13" letter-spacing="1" font-weight="700" fill="#927c75">ILLINOIS STUDENT MINISTRIES  /  MOMENTUM 2026</text>
 </svg>
