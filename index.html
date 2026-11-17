@@ -26,6 +26,31 @@
 .partner-ad-image{margin-top:13px;background:#f8f3eb;border-radius:8px;overflow:hidden;line-height:0}
 .partner-ad-image img{display:block;width:100%;height:auto;object-fit:contain;max-height:100vh}
 @media(max-width:370px){.partner-logo{width:102px;height:77px;padding:8px}.partner-header{gap:11px}.partner-details h3{font-size:15px}}
+
+/* Clearer partner presentation and full-screen viewer */
+.partner-logo{position:relative}
+.partner-logo img{position:absolute;inset:0;width:100%;height:100%;max-height:none;padding:11px;background:#f7f1e9;object-fit:contain;visibility:hidden}
+.partner-logo img.is-loaded{visibility:visible}
+.partner-logo-fallback[hidden]{display:none}
+.partner-ad-open{display:flex;align-items:center;justify-content:center;width:100%;margin-top:15px;padding:12px;border:1px solid #a76e69;border-radius:9px;background:#61363f;color:#ffe8dc;font-weight:850;font-size:14px}
+.partner-ad-open:hover,.partner-ad-open:focus-visible{background:#79434c}
+.partner-ad-dialog{position:fixed;inset:0;width:100vw;max-width:none;height:100vh;height:100dvh;max-height:none;margin:0;padding:0;border:0;border-radius:0;overflow:hidden;background:#1d171a}
+.partner-ad-dialog::backdrop{background:#080506ed}
+.partner-ad-shell{height:100%;display:flex;flex-direction:column}
+.partner-ad-toolbar{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#2d2428;border-bottom:1px solid #67474a}
+.partner-ad-title{font-size:16px;line-height:1.25;font-weight:900;color:#f7e4d8}
+.partner-ad-hint{font-size:11px;color:#d1b8ad;margin:4px 0 0}
+.partner-ad-close{flex:none;display:grid;place-items:center;background:#56393f;border:1px solid #9c7771;color:#ffe7de;border-radius:50%;width:44px;height:44px;padding:0;font-size:29px;line-height:1}
+.partner-ad-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;padding:12px;background:#181316}
+.partner-ad-stage img{display:block;max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain;border-radius:4px}
+.partner-ad-stage img[hidden],.partner-ad-error[hidden]{display:none}
+.partner-ad-error{max-width:350px;color:#f3d5c8;text-align:center;font-size:14px;line-height:1.6}
+.speaker .portrait,.breakout .portrait{position:relative;overflow:hidden}
+.speaker .portrait img,.breakout .portrait img{position:absolute;inset:0;opacity:0;transition:opacity .15s ease}
+.speaker .portrait img.is-loaded,.breakout .portrait img.is-loaded{opacity:1}
+.portrait-initials[hidden]{display:none}
+.more-external-note{font-size:12px;line-height:1.55;color:#b7a29b;margin:17px 0 0}
+
 .route-card{border:1px solid #765453;background:#302728;border-radius:12px;padding:16px 17px;margin:18px 0 23px}.route-card h3{color:#f1bcb2;font-size:13px;font-weight:900;letter-spacing:1.3px;margin:0 0 10px}.route-card p{font-size:13px;color:#e0cfc4;margin:0 0 10px;line-height:1.6}.route-card p:last-child{margin-bottom:0}.map-tabs{display:flex;gap:7px;overflow-x:auto;white-space:nowrap;margin:15px 0 12px;padding-bottom:3px}
 .map-tabs .tab{white-space:nowrap;flex:none}
 .map-panel[data-active-map="lower"] .map-stage{height:min(78vh,680px);background:#211b1e}.map-hint{font-size:13px;line-height:1.5;color:#d7bcb1;margin:4px 0 14px}.venue-extra-details{margin:20px 0 12px;border:1px solid #654f4c;border-radius:11px;background:#30272a;padding:12px 14px}.venue-extra-details summary{font-size:14px;font-weight:800;color:#f0c8b8;cursor:pointer;padding:5px 2px}.venue-extra-details #venue-list{padding-top:16px}.route-card[hidden]{display:none}.map-panel{background:#312929;border:1px solid #65514b;border-radius:11px;overflow:hidden;margin-bottom:8px}
@@ -70,16 +95,15 @@
 <section class="screen" data-page="maestra"><div class="section"><span class="kicker">TRADUCCIÓN EN VIVO</span><h1 class="page-title">MAESTRA <span style="color:#d89f94">TRANSLATION.</span></h1><div class="card"><h3>Spanish Translation Available</h3><p>Live Spanish interpretation is available during general sessions and the breakout in the Main Auditorium.</p><p>Bring a mobile phone and headphones. Scan the Maestra QR displayed at the conference to listen to translated audio on your device.</p><p class="muted">The direct event link and QR graphic are being added to this page.</p></div></div></section>
 <section class="screen" data-page="rules"><div class="section"><span class="kicker">A GREAT WEEKEND FOR EVERYONE</span><h1 class="page-title">RULES & <span style="color:#d89f94">EXPECTATIONS.</span></h1><div id="rules-list"></div><p class="muted">This is a quick reference. Your church leaders have the full conference information packet.</p></div></section>
 <section class="screen" data-page="grave"><div class="section"><span class="kicker">CELEBRATING GENEROSITY</span><h1 class="page-title">GRAVE ROBBERS <span style="color:#d89f94">CLUB.</span></h1><div class="empty">The approved introduction and member recognition are being added.</div></div></section>
-<section class="screen" data-page="colleges"><div class="section"><span class="kicker">DISCOVER WHAT'S NEXT</span><h1 class="page-title">COLLEGES <span style="color:#d89f94">& PARTNERS.</span></h1><p class="lead">Explore the colleges, discipleship training programs, and ministry partners joining us at Momentum. Tap an available ad to see it in full.</p><div id="partner-directory" class="partner-directory"></div></div></section>
-<section class="screen" data-page="events"><div class="section"><span class="kicker">KEEP THE MOMENTUM GOING</span><h1 class="page-title">2027 <span style="color:#d89f94">EVENTS.</span></h1><p class="lead">Mark your calendar for these upcoming Illinois Student Ministries and Illinois District events.</p><div class="year-date-note"><strong>JANUARY 22</strong><span>Illinois AG churches may begin requesting a camp Group Hold online.</span></div><h2 class="year-group-heading">WINTER &amp; EARLY SPRING</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Jan 16–18</div><div class="year-content"><h3>PK Retreat</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Feb 1–2</div><div class="year-content"><h3>Connected Conference</h3><p>Victory City Church · Joliet</p></div></article><article class="year-event"><div class="year-date">Feb 12–13</div><div class="year-content"><h3>NextGen Missions Tour · South Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Feb 19–20</div><div class="year-content"><h3>NextGen Missions Tour · Central Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Feb 26–27</div><div class="year-content"><h3>NextGen Missions Tour · North Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Mar 5–6</div><div class="year-content"><h3>NextGen Missions Tour · Chicago Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Mar 20</div><div class="year-content"><h3>Young Adults Equipping One-Day</h3><p>Location TBD · Date tentative</p></div></article></div><h2 class="year-group-heading">SPRING</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Apr 17</div><div class="year-content"><h3>Illinois District Fine Arts Festival</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">May 16–19</div><div class="year-content"><h3>District Council</h3><p>City First Church · Rockford</p></div></article></div><h2 class="year-group-heading">SUMMER CAMPS</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Jun 14–17</div><div class="year-content"><h3>Kids Camp · Week 1</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jun 18–21</div><div class="year-content"><h3>Teen Discipleship Camp</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jun 22–25</div><div class="year-content"><h3>Kids Camp · Week 2</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jul 12–16</div><div class="year-content"><h3>Teen Camp · Week 1</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jul 19–23</div><div class="year-content"><h3>Teen Camp · Week 2</h3><p>Lake Williamson Christian Center</p></div></article></div><h2 class="year-group-heading">FALL</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Fall · TBD</div><div class="year-content"><h3>Alive Conference</h3><p>First Assembly of God · Normal</p></div></article><article class="year-event"><div class="year-date">Fall · TBD</div><div class="year-content"><h3>KidMin Equipping One-Day</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Oct 18–19</div><div class="year-content"><h3>NextGen Summit</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Nov 19–20</div><div class="year-content"><h3>Momentum Youth Conference</h3><p>BOS Center · Springfield</p></div></article></div><p class="muted year-disclaimer">Dates and locations are subject to change. Events marked TBD have not yet been assigned a final date or location.</p></div></section>
-<section class="screen" data-page="giving"><div class="section"><span class="kicker">MAKE AN ETERNAL DIFFERENCE</span><h1 class="page-title">GIVE WITH <span style="color:#d89f94">PURPOSE.</span></h1><div class="empty">The approved secure giving link will appear here.</div></div></section>
-<section class="screen" data-page="restaurants"><div class="section"><span class="kicker">EXPLORE SPRINGFIELD</span><h1 class="page-title">GRAB A <span style="color:#d89f94">BITE.</span></h1><div class="empty">A local Springfield dining guide will be linked here.</div></div></section>
-<section class="screen" data-page="more"><div class="section"><span class="kicker">ALL THE EXTRAS</span><h1 class="page-title">MORE TO <span style="color:#d89f94">EXPLORE.</span></h1><div id="more-list"></div></div></section>
+<section class="screen" data-page="colleges"><div class="section"><span class="kicker">DISCOVER WHAT'S NEXT</span><h1 class="page-title">COLLEGES <span style="color:#d89f94">& PARTNERS.</span></h1><p class="lead">Explore the colleges, discipleship training programs, and ministry partners joining us at Momentum. Tap View Ad to see a full-screen advertisement.</p><div id="partner-directory" class="partner-directory"></div></div></section>
+<section class="screen" data-page="events"><div class="section"><span class="kicker">KEEP THE MOMENTUM GOING</span><h1 class="page-title">2027 <span style="color:#d89f94">EVENTS.</span></h1><p class="lead">Mark your calendar for these upcoming Illinois Student Ministries and Illinois District events.</p><div class="year-date-note"><strong>JANUARY 22</strong><span>Illinois AG churches may begin requesting a camp Group Hold online.</span></div><h2 class="year-group-heading">WINTER &amp; EARLY SPRING</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Jan 16–18</div><div class="year-content"><h3>PK Retreat</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Feb 1–2</div><div class="year-content"><h3>Connected Conference</h3><p>Victory City Church · Joliet</p></div></article><article class="year-event"><div class="year-date">Feb 12–13</div><div class="year-content"><h3>NextGen Missions Tour · South Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Feb 19–20</div><div class="year-content"><h3>NextGen Missions Tour · Central Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Feb 26–27</div><div class="year-content"><h3>NextGen Missions Tour · North Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Mar 5–6</div><div class="year-content"><h3>NextGen Missions Tour · Chicago Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Mar 20</div><div class="year-content"><h3>Young Adults Equipping One-Day</h3><p>Location TBD · Date tentative</p></div></article></div><h2 class="year-group-heading">SPRING</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Apr 17</div><div class="year-content"><h3>Illinois District Fine Arts Festival</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">May 16–19</div><div class="year-content"><h3>District Council</h3><p>City First Church · Rockford</p></div></article></div><h2 class="year-group-heading">SUMMER CAMPS</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Jun 14–17</div><div class="year-content"><h3>Kids Camp · Week 1</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jun 18–21</div><div class="year-content"><h3>Teen Discipleship Camp</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jun 22–25</div><div class="year-content"><h3>Kids Camp · Week 2</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jul 12–16</div><div class="year-content"><h3>Teen Camp · Week 1</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jul 19–23</div><div class="year-content"><h3>Teen Camp · Week 2</h3><p>Lake Williamson Christian Center</p></div></article></div><h2 class="year-group-heading">FALL</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Sep 11</div><div class="year-content"><h3>Alive Conference</h3><p>First Assembly of God · Normal</p></div></article><article class="year-event"><div class="year-date">Fall · TBD</div><div class="year-content"><h3>KidMin Equipping One-Day</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Oct 18–19</div><div class="year-content"><h3>NextGen Summit</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Nov 19–20</div><div class="year-content"><h3>Momentum Youth Conference</h3><p>BOS Center · Springfield</p></div></article></div><p class="muted year-disclaimer">Dates and locations are subject to change. Events marked TBD have not yet been assigned a final date or location.</p></div></section>
+<section class="screen" data-page="more"><div class="section"><span class="kicker">ALL THE EXTRAS</span><h1 class="page-title">MORE TO <span style="color:#d89f94">EXPLORE.</span></h1><div id="more-list"></div><p class="more-external-note">The dining guide is provided by the Springfield Convention &amp; Visitors Bureau. It is a third-party resource, not an ISM endorsement. Leaders should review dining options for their groups.</p></div></section>
 </main>
 <div class="note">Momentum 2026 preview build · Content subject to final verification · Illinois Student Ministries</div>
 <nav class="bottom" aria-label="Primary navigation"><button class="nav" data-go="home" aria-current="page"><span class="symbol">⌂</span>Home</button><button class="nav" data-go="schedule"><span class="symbol">▦</span>Schedule</button><button class="nav" data-go="breakouts"><span class="symbol">✳</span>Breakouts</button><button class="nav" data-go="venue"><span class="symbol">⌖</span>Venue</button><button class="nav" data-go="more"><span class="symbol">☷</span>More</button></nav>
 </div>
 <dialog id="event-dialog"><div id="dialog-content"></div><div class="actions"><button id="close-dialog">Close</button></div></dialog>
+<dialog class="partner-ad-dialog" id="partner-ad-dialog" aria-label="Partner advertisement"><div class="partner-ad-shell"><header class="partner-ad-toolbar"><div><div id="partner-ad-title" class="partner-ad-title"></div><p class="partner-ad-hint">Tap outside the ad or press × to close</p></div><button id="partner-ad-close" class="partner-ad-close" aria-label="Close advertisement" type="button">×</button></header><div class="partner-ad-stage" id="partner-ad-stage"><img id="partner-ad-image" alt="" hidden><p id="partner-ad-error" class="partner-ad-error" hidden></p></div></div></dialog>
 <script src="assets/arena-map.js"></script>
 <script>
 (function(){
@@ -109,7 +133,7 @@ var breakoutPairs=[["Derek Burgin","B1","How to Build a Consistent Prayer and De
 var breakoutPhotoMap={"Derek Burgin":"Derek Burgin.PNG","Called College · Grayson Wade":"Grayson Wade.png","Izzy Marti":"Izzy Marti.png","Jaimee Jennings":"Jaimee Jennings.jpeg","Todd & Shawndra Lucas":"Todd Lucas.jpeg","Jacob Dilger":"Jacob Dilger.png","Luke Keen":"Luke Keen.jpeg","Caleb Pellizzer":"Caleb Pellizzer.jpeg","Cohl Callies":"Cohl Callies.jpg","Joshua Hinzman":"Joshua Hinzman.jpeg","Rick McGough":"Rick McGough.jpg","David Anderson":"David Anderson.jpg","Mike Alvarez":"Mike Alvarez.jpeg"};
 var places=[['Main Arena','General sessions and worship','arena'],['Main Hall','Rick McGough breakout'],['North Mezzanine','Youth Pastor Reception; Mike Alvarez breakout. From the arena entrance, turn left and continue to the ramp.'],['South Mezzanine','David Anderson breakout'],['Lower Level Rooms','Use the stairs in the lobby for lower-level breakout access. Rooms B1, B2, B4, B6, B7, B10, and B11 A–D.','lower'],['ISM Information Booth','Conference help and lost-and-found assistance']];
 var partnerData=[{"name":"Evangel University","category":"college","logo":"evangel-university.png","ad":"ValorBooklet.png"},{"name":"North Central University","category":"college","logo":"North Central.webp","ad":"WI_YOUTH_CONVENTION-3.png"},{"name":"Called College","category":"college","logo":"CalledCollege_Logo_Full_Color.jpg","ad":"Digital_Booklet_Ad_Fall 2026.png"},{"name":"City First Leadership College","category":"college","logo":"CFLC-export-06.png","ad":"9dd57825-7492-4651-94a2-f714429752bb.png"},{"name":"Gospel Encounter","category":"college","logo":"Gospel Encounter Logo Black Text Under.png","ad":"Digital Booklet - Gospel Encounter.png"},{"name":"Illinois Chi Alpha","category":"ministry","logo":"XA@300x.png","ad":"ilsmonline_232416851317050_6696418958219086042_ILLINOIS XA Promo Card (4 x 6 in)_7337.png"},{"name":"Youth Alive","category":"ministry","logo":"Youth Alive Brandmark Black.png","ad":"Youth Alive Ad.png"}];
-var extras=[['welcome','Welcome Letter','From Chris and Christina Stanley'],['reception','Youth Pastor Reception','Friday during Session 1'],['maestra','Spanish Translation','Maestra mobile interpretation'],['seating','Find My Church','Reserved seating search'],['grave','Grave Robbers Club','Recognizing ministry generosity'],['colleges','Colleges & Partners','Schools and ministry exhibitors'],['rules','Rules & Expectations','Important event information'],['events','2027 Events','Stay connected'],['giving','Giving','Support student ministry'],['restaurants','Local Dining','Restaurants in Springfield']];
+var extras=[['welcome','Welcome Letter','From Chris and Christina Stanley'],['reception','Youth Pastor Reception','Friday during Session 1'],['maestra','Spanish Translation','Maestra mobile interpretation'],['seating','Find My Church','Reserved seating search'],['grave','Grave Robbers Club','Recognizing ministry generosity'],['colleges','Colleges & Partners','Schools and ministry exhibitors'],['rules','Rules & Expectations','Important event information'],['events','2027 Events','Stay connected'],['giving','Give to Speed the Light','Open secure giving page'],['restaurants','Local Dining Guide','Springfield restaurant listings']];
 var rules=[['Wear Your Wristband','Keep your conference wristband on at all times.'],['Stay With Your Group','Church leaders are responsible for student supervision throughout the event and in hotels.'],['Honor Curfew','Be in your hotel room by midnight with lights out by 12:15 AM.'],['Respect Others and the Venue','Follow staff direction. Respect BOS Center staff, property, students, and leaders.'],['Prohibited Items','No fireworks, smoking, alcohol, illegal drugs, weapons (including knives), or profanity.'],['Appropriate Conduct','Attend scheduled activities. Do not enter unsupervised mixed-gender hotel rooms, and avoid public displays of affection.']];
 var welcome=[
  "Welcome to Momentum’26!",
@@ -133,50 +157,57 @@ function updateBreakoutDirections(){
  directions.hidden=local<'2026-11-21T10';
 }
 function go(page){updateBreakoutDirections();if(!document.querySelector('[data-page="'+page+'"]'))page='home';document.querySelectorAll('.screen').forEach(function(x){x.classList.toggle('active',x.dataset.page===page)});document.querySelectorAll('.nav').forEach(function(x){var yes=x.dataset.go===(['home','schedule','breakouts','venue'].includes(page)?page:'more');if(yes)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});if(location.hash!=='#'+page)history.pushState(null,'','#'+page);window.scrollTo(0,0);if(page==='schedule')showSchedule();if(page==='breakouts')showBreakouts();if(page==='seating')showSeating();}
+function openPartnerAd(partner,url){
+ var dialog=document.getElementById('partner-ad-dialog');
+ var title=document.getElementById('partner-ad-title'),img=document.getElementById('partner-ad-image'),error=document.getElementById('partner-ad-error');
+ title.textContent=partner.name;error.hidden=true;error.textContent='';
+ img.hidden=true;img.alt=partner.name+' advertisement';
+ img.onload=function(){img.hidden=false;error.hidden=true};
+ img.onerror=function(){img.hidden=true;error.textContent='This advertisement could not be loaded. Please try again shortly.';error.hidden=false};
+ dialog.showModal();
+ img.src=url;
+}
 function showPartners(){
  var root=document.getElementById('partner-directory');root.textContent='';
  [['college','COLLEGES & MINISTRY TRAINING'],['ministry','MINISTRY PARTNERS']].forEach(function(group){
-   var matches=partnerData.filter(function(p){return p.category===group[0]});
-   if(!matches.length)return;
-   root.append(el('h2','partner-group-title',group[1]));
-   var list=el('div','partner-list');
-   matches.forEach(function(p){
-     var article=el('article','partner-card');
-     var header=el('div','partner-header');
-     var logo=el('div','partner-logo');
-     logo.append(el('span','partner-logo-fallback',p.name));
-     var img=el('img');img.src='assets/partners/'+encodeURIComponent(p.logo);img.alt=p.name+' logo';img.loading='lazy';
-     img.addEventListener('load',function(){logo.textContent='';logo.append(img)});
-     header.append(logo);
-     var details=el('div','partner-details');
-     details.append(el('h3','',p.name),el('p','','Visit their exhibitor booth at Momentum.'));
-     header.append(details);
-     article.append(header);
-     if(p.ad){
-       var assetUrl='assets/partners/'+encodeURIComponent(p.ad);
-       if(/\.heic$/i.test(p.ad)){
-         var fileLink=el('a','partner-ad-file','View Partner Ad (HEIC File)');
-         fileLink.href=assetUrl;fileLink.target='_blank';fileLink.rel='noopener';
-         fileLink.title='HEIC image format may need a supported device or image viewer';
-         article.append(fileLink);
-       }else{
-         var ad=el('details','partner-ad'),summary=el('summary','','View Partner Ad');
-         var wrap=el('div','partner-ad-image'),picture=el('img');
-         picture.alt=p.name+' promotional advertisement';picture.loading='lazy';
-         picture.src=assetUrl;
-         wrap.append(picture);ad.append(summary,wrap);ad.hidden=true;article.append(ad);
-         fetch(assetUrl,{method:'HEAD'})
-          .then(function(res){if(res.ok)ad.hidden=false})
-          .catch(function(){});
-       }
-     }
-     list.append(article);
-   });
-   root.append(list);
+  var matches=partnerData.filter(function(p){return p.category===group[0]});
+  if(!matches.length)return;
+  root.append(el('h2','partner-group-title',group[1]));
+  var list=el('div','partner-list');
+  matches.forEach(function(p){
+   var article=el('article','partner-card'),header=el('div','partner-header');
+   var logo=el('div','partner-logo'),fallback=el('span','partner-logo-fallback',p.name),img=el('img');
+   img.alt=p.name+' logo';img.loading='eager';
+   img.onload=function(){img.classList.add('is-loaded');fallback.hidden=true};
+   img.onerror=function(){img.remove();fallback.hidden=false};
+   logo.append(fallback,img);
+   img.src='assets/partners/'+encodeURIComponent(p.logo);
+   var details=el('div','partner-details');
+   details.append(el('h3','',p.name),el('p','','Meet them at Momentum.'));
+   header.append(logo,details);article.append(header);
+   if(p.ad&&!/\.heic$/i.test(p.ad)){
+    var assetUrl='assets/partners/'+encodeURIComponent(p.ad);
+    var button=el('button','partner-ad-open','VIEW AD · FULL SCREEN');
+    button.type='button';button.hidden=true;
+    button.addEventListener('click',function(){openPartnerAd(p,assetUrl)});
+    article.append(button);
+    fetch(assetUrl,{method:'HEAD'}).then(function(response){if(response.ok)button.hidden=false}).catch(function(){});
+   }
+   list.append(article)
+  });
+  root.append(list)
  });
 }
-function cardLink(page,title,desc){var b=el('button','listbtn');b.dataset.go=page;var t=el('span');t.append(el('strong','',title),el('small','',desc));b.append(t,el('b','', '↗'));return b}
-speakerNames.forEach(function(s){var c=el('div','speaker'),p=el('div','portrait'),im=el('img'),bottom=el('div');p.textContent=initials(s[0]);im.src=s[2];im.alt='Portrait of '+s[0];im.loading='lazy';im.addEventListener('load',function(){p.textContent='';p.append(im)});bottom.append(el('strong','',s[0]),el('br'),el('small','',s[1]));c.append(p,bottom);document.getElementById('speakers').append(c)});
+document.getElementById('partner-ad-close').addEventListener('click',function(){document.getElementById('partner-ad-dialog').close()});
+document.getElementById('partner-ad-dialog').addEventListener('click',function(event){if(event.target===this||event.target.id==='partner-ad-stage')this.close()});
+document.getElementById('partner-ad-dialog').addEventListener('close',function(){var img=document.getElementById('partner-ad-image');img.onload=null;img.onerror=null;img.removeAttribute('src');img.hidden=true});
+function cardLink(page,title,desc){
+ var external=page==='giving'?'https://www.ilsmonline.com/give':page==='restaurants'?'https://www.visitspringfieldillinois.com/LocationSearches/EatAndDrink':null;
+ var b=el(external?'a':'button','listbtn');
+ if(external){b.href=external;b.target='_blank';b.rel='noopener noreferrer';b.setAttribute('aria-label',title+' (opens a new tab)')}else b.dataset.go=page;
+ var t=el('span');t.append(el('strong','',title),el('small','',desc));b.append(t,el('b','', '↗'));return b
+}
+speakerNames.forEach(function(s){var c=el('div','speaker'),p=el('div','portrait'),im=el('img'),initial=el('span','portrait-initials',initials(s[0])),bottom=el('div');im.alt='Portrait of '+s[0];im.loading='eager';im.onload=function(){im.classList.add('is-loaded');initial.hidden=true};im.onerror=function(){im.remove();initial.hidden=false};p.append(initial,im);im.src=s[2];bottom.append(el('strong','',s[0]),el('br'),el('small','',s[1]));c.append(p,bottom);document.getElementById('speakers').append(c)});
 extras.forEach(function(x,i){document.getElementById('more-list').append(cardLink(x[0],x[1],x[2]));if(i<4)document.getElementById('home-links').append(cardLink(x[0],x[1],x[2]))});
 places.forEach(function(x){var c=el(x[2]?'button':'div',x[2]?'listbtn':'card'),txt=el('div');txt.append(el('strong','',x[0]),el('small','',x[1]));c.append(txt);if(x[2]){c.append(el('b','', 'View map ↗'));c.addEventListener('click',function(){setMap(x[2]);document.getElementById('map-panel').scrollIntoView({block:'center',behavior:'smooth'})})}document.getElementById('venue-list').append(c)});
 rules.forEach(function(x){var c=el('div','card');c.append(el('h3','',x[0]),el('p','',x[1]));document.getElementById('rules-list').append(c)});
@@ -270,7 +301,7 @@ function showBreakouts(){
  if(!visible.length){list.append(el('div','empty',filter==='saved'?'No saved sessions yet. Tap a star to add one.':'No matching sessions.'));return}
  visible.forEach(function(x){
   var id=breakoutPairs.indexOf(x),card=el('article','breakout'),photo=el('div','portrait',initials(x[0])),main=el('div','breakoutmain'),save=el('button','save',saved.has(id)?'★':'☆');
-  var file=breakoutPhotoMap[x[0]];if(file){var img=el('img');var preferred='assets/breakouts/'+encodeURIComponent(file.replace(/\.[^.]+$/,'.jpg'));var originalFile='assets/breakouts/'+encodeURIComponent(file);img.src=preferred;img.alt=x[0]+' speaker photo';img.loading='lazy';if(preferred!==originalFile){img.onerror=function(){img.onerror=null;img.src=originalFile}};img.addEventListener('load',function(){photo.textContent='';photo.append(img)})}
+  var file=breakoutPhotoMap[x[0]];if(file){var img=el('img'),initial=el('span','portrait-initials',initials(x[0]));var preferred='assets/breakouts/'+encodeURIComponent(file.replace(/\.[^.]+$/,'.jpg'));var originalFile='assets/breakouts/'+encodeURIComponent(file);photo.textContent='';photo.append(initial,img);img.alt=x[0]+' speaker photo';img.loading='lazy';img.onload=function(){img.classList.add('is-loaded');initial.hidden=true};img.onerror=function(){if(img.src.indexOf(encodeURIComponent(file.replace(/\.[^.]+$/,'.jpg')))!==-1&&preferred!==originalFile){img.onerror=function(){img.remove();initial.hidden=false};img.src=originalFile}else{img.remove();initial.hidden=false}};img.src=preferred}
   var roomBtn=el('button','roomlink','⌖ '+x[1]);roomBtn.type='button';roomBtn.title='View venue information';roomBtn.addEventListener('click',function(){go('venue');if(/^B\d/i.test(x[1]))setMap('lower')});main.append(roomBtn,el('h3','',x[2]),el('div','presenter','WITH '+x[0]));
   var d=el('details','description');d.append(el('summary','', 'Read session description'),el('p','',x[3]));main.append(d);
   if(x[4]==='pending')main.append(el('small','status-note','Speaker confirmation pending'));
