@@ -10,7 +10,7 @@ Upload all **13 photos** with their names **exactly as below**:
 - `Jaimee Jennings.jpeg`
 - `Rick McGough.jpg`
 - `Joshua Hinzman.jpeg`
-- `Grayson Wade.jpg` (Called College)
+- `Grayson Wade.png` (Called College)
 - `Mike Alvarez.jpeg`
 - `Izzy Marti.png`
 - `Cohl Callies.jpg`
