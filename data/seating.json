@@ -312,6 +312,18 @@
         "rows": "P–W"
       }
     ],
-    "firstComeFirstServed": true
+    "firstComeFirstServed": true,
+    "areas": [
+      {
+        "id": "floor",
+        "title": "All Floor Seating",
+        "description": "Every floor seating area is open seating."
+      },
+      {
+        "id": "rear-middle",
+        "title": "Back Seating · Middle Section",
+        "description": "The rear seating area in the middle section is open seating."
+      }
+    ]
   }
 }
