@@ -133,7 +133,7 @@ function showBreakouts(){
  if(!visible.length){list.append(el('div','empty',filter==='saved'?'No saved sessions yet. Tap a star to add one.':'No matching sessions.'));return}
  visible.forEach(function(x){
   var id=breakoutPairs.indexOf(x),card=el('article','breakout'),photo=el('div','portrait',initials(x[0])),main=el('div','breakoutmain'),save=el('button','save',saved.has(id)?'★':'☆');
-  var file=breakoutPhotoMap[x[0]];if(file){var img=el('img');img.src='assets/breakouts/'+encodeURIComponent(file);img.alt=x[0]+' speaker photo';img.loading='lazy';img.addEventListener('load',function(){photo.textContent='';photo.append(img)})}
+  var file=breakoutPhotoMap[x[0]];if(file){var img=el('img');var preferred='assets/breakouts/'+encodeURIComponent(file.replace(/\.[^.]+$/,'.jpg'));var originalFile='assets/breakouts/'+encodeURIComponent(file);img.src=preferred;img.alt=x[0]+' speaker photo';img.loading='lazy';if(preferred!==originalFile){img.onerror=function(){img.onerror=null;img.src=originalFile}};img.addEventListener('load',function(){photo.textContent='';photo.append(img)})}
   var roomBtn=el('button','roomlink','⌖ '+x[1]);roomBtn.type='button';roomBtn.title='View venue information';roomBtn.addEventListener('click',function(){go('venue');if(/^B\d/i.test(x[1]))setMap('lower')});main.append(roomBtn,el('h3','',x[2]),el('div','presenter','WITH '+x[0]));
   var d=el('details','description');d.append(el('summary','', 'Read session description'),el('p','',x[3]));main.append(d);
   if(x[4]==='pending')main.append(el('small','status-note','Speaker confirmation pending'));
