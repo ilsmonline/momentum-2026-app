@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1450" role="img" aria-labelledby="title desc">
+<title id="title">Momentum 2026 lower level breakout room map</title>
+<desc id="desc">Branded location map based on the Bank of Springfield Center lower-level diagram. B1 Derek Burgin, B2 Luke Keen at the top; B3 nursing and mother's room beneath B1; B4 Caleb Pellizzer, B6 Cohl Callies, B7 Joshua Hinzman on the left; B11A Izzy Marti, B11B Jaimee Jennings, B11C Todd and Shawndra Lucas, B11D Jacob Dilger on the right; B10 Called College with Grayson Wade at the bottom. Stairs near B3 and B8, restrooms at upper right and lower right.</desc>
+<defs>
+ <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#38282c"/><stop offset=".5" stop-color="#241e21"/><stop offset="1" stop-color="#1c1a1b"/></linearGradient>
+ <pattern id="stars" patternUnits="userSpaceOnUse" width="21" height="21"><circle cx="2" cy="2" r="1" fill="#a97773" opacity=".23"/></pattern>
+ <style>
+ text{font-family:Arial,Helvetica,sans-serif;user-select:none}
+ .kicker{fill:#ddb0a1;font-size:17px;font-weight:900;letter-spacing:3.1px}
+ .title{fill:#f6e8d9;font-size:54px;font-weight:950;letter-spacing:1px}
+ .subtitle{fill:#ddc3b6;font-size:18px;letter-spacing:.8px;font-weight:700}
+ .workshop{fill:#59343d;stroke:#c08e84;stroke-width:2}
+ .room-no{fill:#fff0dc;font-weight:900;text-anchor:middle}
+ .speaker{fill:#f4d7ce;font-size:19px;font-weight:700;text-anchor:middle}
+ .small-speak{font-size:18px}
+ .wing{fill:#b99d92;font-size:11px;font-weight:800;text-anchor:middle;letter-spacing:1px}
+ .other rect{fill:#353136;stroke:#77645e;stroke-width:1.7}
+ .other-label{fill:#a99690;font-size:19px;font-weight:800;text-anchor:middle;letter-spacing:1px}
+ .stair-label{fill:#ffe7bd;font-size:16px;font-weight:900;text-anchor:middle;letter-spacing:1px}
+ .amenity{fill:#d8e7dd;font-size:17px;font-weight:800;text-anchor:middle}
+ .amenity-small{fill:#b1c8b9;font-size:14px;font-weight:700;text-anchor:middle}
+ .caption{fill:#c6b1a5;font-size:17px;font-weight:700}
+ </style>
+</defs>
+<rect width="960" height="1450" fill="url(#bg)"/><rect width="960" height="1450" fill="url(#stars)" opacity=".55"/>
+<rect x="25" y="22" width="910" height="1404" rx="25" fill="none" stroke="#6d4b4c" stroke-width="2"/>
+<rect x="48" y="49" width="66" height="5" rx="3" fill="#dba79b"/>
+<text x="51" y="94" class="kicker">MOMENTUM ’26  /  BOS CENTER</text>
+<text x="48" y="155" class="title">BREAKOUT ROOMS</text>
+<text x="50" y="187" class="subtitle">LOWER LEVEL  ·  SATURDAY, 1:00–1:45 PM</text>
+<!-- Architectural footprint: simplified from the supplied source. -->
+<path d="M159 211H756V388H832V1251H158Z" fill="#222125" stroke="#896d66" stroke-width="3" stroke-linejoin="round"/>
+<!-- Corridors remain open and dark; position aligned to source diagram -->
+<path d="M171 352H517V453H519V1004L475 1066H169" fill="none" stroke="#4b4444" stroke-width="42" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M171 352V1242" fill="none" stroke="#52494a" stroke-width="18" opacity=".6"/>
+<path d="M476 417V1036" fill="none" stroke="#968577" stroke-width="3" stroke-dasharray="14 23" opacity=".8"/>
+<text x="500" y="706" fill="#cbb4a5" font-size="14" font-weight="800" text-anchor="middle" transform="rotate(-90 500 706)" letter-spacing="2">MAIN HALLWAY</text>
+<!-- Workshop room tiles -->
+<g class="room" aria-label="B1 Derek Burgin"><title>B1: Derek Burgin</title><rect x="178" y="223" width="133" height="125" rx="11" class="workshop"/><rect x="185" y="230" width="4" height="111" rx="2" fill="#d88b8b" opacity=".8"/><text x="244.5" y="275" class="room-no" font-size="44">B1</text><text x="244.5" y="307" class="speaker">Derek Burgin</text></g>
+<g class="room" aria-label="B2 Luke Keen"><title>B2: Luke Keen</title><rect x="320" y="223" width="151" height="125" rx="11" class="workshop"/><rect x="327" y="230" width="4" height="111" rx="2" fill="#d88b8b" opacity=".8"/><text x="395.5" y="275" class="room-no" font-size="44">B2</text><text x="395.5" y="307" class="speaker">Luke Keen</text></g>
+<g class="room" aria-label="B4 Caleb Pellizzer"><title>B4: Caleb Pellizzer</title><rect x="179" y="492" width="240" height="139" rx="11" class="workshop"/><rect x="186" y="499" width="4" height="125" rx="2" fill="#d88b8b" opacity=".8"/><text x="299" y="549" class="room-no" font-size="44">B4</text><text x="299" y="581" class="speaker">Caleb Pellizzer</text><path d="M299 604v19" stroke="#a17675" stroke-dasharray="4 4" stroke-width="2"/><text class="wing" x="228" y="621">WEST</text><text class="wing" x="364" y="621">EAST</text></g>
+<g class="room" aria-label="B6 Cohl Callies"><title>B6: Cohl Callies</title><rect x="179" y="705" width="240" height="127" rx="11" class="workshop"/><rect x="186" y="712" width="4" height="113" rx="2" fill="#d88b8b" opacity=".8"/><text x="299" y="757" class="room-no" font-size="44">B6</text><text x="299" y="789" class="speaker">Cohl Callies</text><path d="M299 805v19" stroke="#a17675" stroke-dasharray="4 4" stroke-width="2"/><text class="wing" x="228" y="822">WEST</text><text class="wing" x="364" y="822">EAST</text></g>
+<g class="room" aria-label="B7 Joshua Hinzman"><title>B7: Joshua Hinzman</title><rect x="179" y="847" width="240" height="118" rx="11" class="workshop"/><rect x="186" y="854" width="4" height="104" rx="2" fill="#d88b8b" opacity=".8"/><text x="299" y="899" class="room-no" font-size="44">B7</text><text x="299" y="931" class="speaker">Joshua Hinzman</text><path d="M299 938v19" stroke="#a17675" stroke-dasharray="4 4" stroke-width="2"/><text class="wing" x="228" y="955">WEST</text><text class="wing" x="364" y="955">EAST</text></g>
+<g class="room" aria-label="B10 Called College Grayson Wade"><title>B10: Called College Grayson Wade</title><rect x="320" y="1111" width="152" height="132" rx="11" class="workshop"/><rect x="327" y="1118" width="4" height="118" rx="2" fill="#d88b8b" opacity=".8"/><text x="396" y="1156" class="room-no" font-size="44">B10</text><text x="396" y="1186" class="speaker">Called College</text><text x="396" y="1208" class="speaker ">Grayson Wade</text></g>
+<g class="room" aria-label="B11A Izzy Marti"><title>B11A: Izzy Marti</title><rect x="532" y="440" width="220" height="136" rx="11" class="workshop"/><rect x="539" y="447" width="4" height="122" rx="2" fill="#d88b8b" opacity=".8"/><text x="642" y="497" class="room-no" font-size="39">B11A</text><text x="642" y="529" class="speaker">Izzy Marti</text></g>
+<g class="room" aria-label="B11B Jaimee Jennings"><title>B11B: Jaimee Jennings</title><rect x="532" y="582" width="220" height="124" rx="11" class="workshop"/><rect x="539" y="589" width="4" height="110" rx="2" fill="#d88b8b" opacity=".8"/><text x="642" y="634" class="room-no" font-size="39">B11B</text><text x="642" y="666" class="speaker">Jaimee Jennings</text></g>
+<g class="room" aria-label="B11C Todd &amp; Shawndra Lucas"><title>B11C: Todd &amp; Shawndra Lucas</title><rect x="532" y="711" width="220" height="126" rx="11" class="workshop"/><rect x="539" y="718" width="4" height="112" rx="2" fill="#d88b8b" opacity=".8"/><text x="642" y="763" class="room-no" font-size="39">B11C</text><text x="642" y="793" class="speaker">Todd &amp; Shawndra</text><text x="642" y="815" class="speaker small-speak">Lucas</text></g>
+<g class="room" aria-label="B11D Jacob Dilger"><title>B11D: Jacob Dilger</title><rect x="532" y="842" width="220" height="133" rx="11" class="workshop"/><rect x="539" y="849" width="4" height="119" rx="2" fill="#d88b8b" opacity=".8"/><text x="642" y="899" class="room-no" font-size="39">B11D</text><text x="642" y="931" class="speaker">Jacob Dilger</text></g>
+<!-- Nursing, service and unassigned rooms kept visually distinct -->
+<g aria-label="B3 Nursing and Mother's Room">
+ <rect x="178" y="381" width="133" height="102" rx="10" fill="#31544e" stroke="#8ab3a2" stroke-width="2"/>
+ <text x="244.5" y="416" class="room-no" font-size="34">B3</text>
+ <text x="244.5" y="443" class="amenity">NURSING</text>
+ <text x="244.5" y="465" class="amenity-small">MOTHER’S ROOM</text>
+</g>
+<g class="other"><rect x="178" y="635" width="133" height="62" rx="9"/><text class="other-label" x="244.5" y="670">OTHER</text></g>
+<g class="other"><rect x="178" y="976" width="133" height="100" rx="9"/><text class="other-label" x="244.5" y="1030">B8</text></g>
+<g class="other"><rect x="178" y="1111" width="133" height="132" rx="9"/><text class="other-label" x="244.5" y="1181">B9</text></g>
+<g><rect x="321" y="381" width="122" height="94" rx="9" fill="#51433e" stroke="#b79a7c" stroke-width="2"/><path d="M337 391 v74 m13 -74 v74 m13 -74 v74 m13 -74 v74 m13 -74 v74" stroke="#e1c7a1" stroke-width="2" opacity=".45"/><rect x="331" y="414" width="102" height="27" rx="4" fill="#4d3936"/><text class="stair-label" x="382" y="433">STAIRS</text></g>
+<g><rect x="319" y="977" width="122" height="100" rx="9" fill="#51433e" stroke="#b79a7c" stroke-width="2"/><path d="M335 987 v80 m13 -80 v80 m13 -80 v80 m13 -80 v80 m13 -80 v80" stroke="#e1c7a1" stroke-width="2" opacity=".45"/><rect x="329" y="1013" width="102" height="27" rx="4" fill="#4d3936"/><text class="stair-label" x="380" y="1032">STAIRS</text></g>
+<!-- Restrooms are upper-right and lower-right in source layout -->
+<g><rect x="563" y="247" width="143" height="125" rx="22" fill="#33463f" stroke="#83a491" stroke-width="2"/><text x="634" y="281" class="amenity">RESTROOMS</text><path d="M634 295V360" stroke="#719481" stroke-width="2"/><text x="602" y="329" class="amenity-small">MEN</text><text x="671" y="329" class="amenity-small">WOMEN</text></g>
+<g><rect x="549" y="1056" width="159" height="117" rx="21" fill="#33463f" stroke="#83a491" stroke-width="2"/><text x="628" y="1092" class="amenity">RESTROOMS</text><path d="M628 1106V1160" stroke="#719481" stroke-width="2"/><text x="589" y="1141" class="amenity-small">MEN</text><text x="669" y="1141" class="amenity-small">WOMEN</text></g>
+<g class="other"><rect x="714" y="1056" width="110" height="117" rx="9"/><text class="other-label" x="769" y="1118.5">VIP</text></g>
+<path d="M707 385H827V441H757" fill="none" stroke="#6d5b54" stroke-width="3"/>
+<rect x="755" y="377" width="72" height="57" rx="6" fill="#393336" stroke="#655551"/>
+<text x="791" y="399" font-size="11" font-weight="700" fill="#b29a90" text-anchor="middle">CATERING</text><text x="791" y="413" font-size="11" font-weight="700" fill="#b29a90" text-anchor="middle">AREA</text>
+<!-- Lobby access note without unverified route arrows -->
+<g><rect x="61" y="677" width="92" height="190" rx="12" fill="#423239" stroke="#b48679" stroke-width="1.8"/>
+<text x="107" y="724" font-size="17" font-weight="900" fill="#f4d6c7" text-anchor="middle">LOBBY</text>
+<text x="107" y="750" font-size="15" font-weight="800" fill="#f4d6c7" text-anchor="middle">STAIRS</text>
+<text x="107" y="789" font-size="11" font-weight="700" fill="#d8b9ae" text-anchor="middle">FOLLOW</text>
+<text x="107" y="805" font-size="11" font-weight="700" fill="#d8b9ae" text-anchor="middle">VENUE</text>
+<text x="107" y="821" font-size="11" font-weight="700" fill="#d8b9ae" text-anchor="middle">SIGNS</text>
+</g>
+<path d="M154 770H169" stroke="#d5ad95" stroke-width="3" stroke-dasharray="4 4"/>
+<!-- Compact legend and mobile wayfinding note -->
+<rect x="50" y="1280" width="860" height="106" rx="13" fill="#302729" stroke="#765456" stroke-width="1.5"/>
+<rect x="75" y="1304" width="24" height="24" rx="5" fill="#59343d" stroke="#c08e84" stroke-width="1.5"/>
+<text x="112" y="1322" class="caption">BREAKOUT ROOM</text>
+<rect x="433" y="1304" width="24" height="24" rx="5" fill="#31544e" stroke="#8ab3a2" stroke-width="1.5"/>
+<text x="469" y="1322" class="caption">AMENITIES</text>
+<text x="75" y="1361" font-size="16" font-weight="700" fill="#bda69b">Room positions based on BOS Center plan. Follow posted signs.</text>
+<text x="51" y="1411" font-size="13" letter-spacing="1" font-weight="700" fill="#927c75">ILLINOIS STUDENT MINISTRIES  /  MOMENTUM 2026</text>
+</svg>
