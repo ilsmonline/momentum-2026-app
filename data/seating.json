@@ -268,5 +268,50 @@
         }
       ]
     }
-  ]
+  ],
+  "openSeating": {
+    "sections": [
+      {
+        "section": "102",
+        "rows": "S–W"
+      },
+      {
+        "section": "103",
+        "rows": "T–W"
+      },
+      {
+        "section": "104",
+        "rows": "M–W"
+      },
+      {
+        "section": "105",
+        "rows": "L–W"
+      },
+      {
+        "section": "106",
+        "rows": "A–W"
+      },
+      {
+        "section": "115",
+        "rows": "A–W"
+      },
+      {
+        "section": "116",
+        "rows": "K–W"
+      },
+      {
+        "section": "117",
+        "rows": "P–W"
+      },
+      {
+        "section": "118",
+        "rows": "L–W"
+      },
+      {
+        "section": "119",
+        "rows": "P–W"
+      }
+    ],
+    "firstComeFirstServed": true
+  }
 }
