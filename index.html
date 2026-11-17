@@ -239,7 +239,17 @@ function showSeating(){
  var query=normalizeSeatSearch(input.value),matches=query?seatingData.churches.filter(function(c){return normalizeSeatSearch(c.church+' '+c.city).includes(query)||normalizeSeatSearch(c.city+' '+c.church).includes(query)}):[];
  target.textContent='';
  if(!query){target.className='empty';target.textContent='Start typing your church name or city to find your reserved section and rows.';return}
- if(!matches.length){target.className='empty';target.textContent='No matching reserved-seating assignment found. Check your church name or city, or ask your church leader or the ISM Information Booth.';return}
+ if(!matches.length){
+   target.className='empty';target.textContent='';
+   target.append(el('strong','','This church does not appear in the reserved seating list.'));
+   target.append(el('p','','Not all groups qualified for reserved seating. Your group may use the designated open seating areas instead. Please check with your church leader and review the Open Seating Areas guide below.'));
+   var viewOpen=el('button','seat-map-btn','View Open Seating Areas');viewOpen.type='button';
+   viewOpen.addEventListener('click',function(){
+      openSeatingVisible=true;renderOpenSeating();
+      document.getElementById('open-seating-panel').scrollIntoView({behavior:'smooth',block:'start'});
+   });
+   target.append(viewOpen);return
+ }
  target.className='seating-results';
  matches.forEach(function(c){
    var card=el('article','seat-card');card.append(el('h3','',c.church),el('div','seat-city',c.city+', Illinois'));
