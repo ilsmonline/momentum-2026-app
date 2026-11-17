@@ -304,7 +304,7 @@ function adjustMapZoom(){
 }
 var day='friday',filter='all',saved;
 try{saved=new Set(JSON.parse(localStorage.getItem('momentum26:saved')||'[]'))}catch(e){saved=new Set()}
-function showSchedule(){document.querySelectorAll('[data-day]').forEach(function(x){x.setAttribute('aria-selected',String(x.dataset.day===day))});var list=document.getElementById('schedule-list');list.textContent='';S[day].forEach(function(x){var row=el('div','event'),clock=el('div','eventtime',x[0]),box=el('button','eventbox');box.append(el('small','','MOMENTUM · '+x[0]),el('strong','',x[1]));if(x[4])box.append(el('span','session-speaker','Featured speaker: '+x[4]));box.append(el('span','place','⌖ '+x[2]));row.append(clock,box);box.addEventListener('click',function(){openDetail(x)});list.append(row)})}
+function showSchedule(){document.querySelectorAll('[data-day]').forEach(function(x){x.setAttribute('aria-selected',String(x.dataset.day===day))});var list=document.getElementById('schedule-list');list.textContent='';S[day].filter(function(x){return !(isYouthReceptionPast()&&x[1]==='Youth Pastor Reception')}).forEach(function(x){var row=el('div','event'),clock=el('div','eventtime',x[0]),box=el('button','eventbox');box.append(el('small','','MOMENTUM · '+x[0]),el('strong','',x[1]));if(x[4])box.append(el('span','session-speaker','Featured speaker: '+x[4]));box.append(el('span','place','⌖ '+x[2]));row.append(clock,box);box.addEventListener('click',function(){openDetail(x)});list.append(row)})}
 function openDetail(x){var d=document.getElementById('event-dialog'),body=document.getElementById('dialog-content');body.textContent='';body.append(el('span','kicker',x[0]),el('h2','',x[1]));if(x[4])body.append(el('p','session-speaker','Featured speaker: '+x[4]));body.append(el('p','',x[2]),el('p','',x[3]));d.showModal()}
 function showBreakouts(){
  var q=document.getElementById('breakout-search').value.trim().toLowerCase();
@@ -409,7 +409,9 @@ document.getElementById('open-seating-toggle').addEventListener('click',function
 window.addEventListener('hashchange',function(){go(location.hash.slice(1)||'home')});
 showSchedule();showBreakouts();showPartners();setMap('arena');updateNow();go(location.hash.slice(1)||'home');
 setInterval(function(){
- if(updateYouthReception()&&document.querySelector('[data-page="reception"]').classList.contains('active'))go('more')
+ var expired=updateYouthReception();
+ if(expired&&document.querySelector('[data-page="reception"]').classList.contains('active'))go('more');
+ if(expired&&document.querySelector('[data-page="schedule"]').classList.contains('active'))showSchedule()
 },60000);
 })();
 </script>
