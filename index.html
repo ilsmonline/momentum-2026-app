@@ -125,7 +125,7 @@ function mapSelectionText(){
  if(activeMap!=='arena')return;
  if(mapFocus.type==='church'&&seatingData&&seatingData.published){
    var c=seatingData.churches.find(function(x){return x.church===mapFocus.church&&x.city===mapFocus.city});
-   if(c){summary.append(el('strong','',c.church+' · '+c.city));c.allocations.forEach(function(a){summary.append(el('div','','Section '+a.section+' · Rows '+a.rows+(a.seats?' · Seats '+a.seats:'')))});return}
+   if(c){summary.append(el('strong','',c.church+' · '+c.city));c.allocations.forEach(function(a){summary.append(el('div','','Section '+a.section+' · Rows '+a.rows+(a.seats?' · Seats '+a.seats:'')))});if(c.allocations.some(function(a){return !!a.seats}))summary.append(el('div','','Striped row bands indicate partial-row assignments. Use the seat numbers listed above.'));return}
  }
  summary.append(el('strong','',mapFocus.type==='open'?'OPEN SEATING HIGHLIGHTED':'ARENA SEATING GUIDE'));
  summary.append(el('div','',mapFocus.type==='open'?'All floor seating, rear middle seating, and green section rows are open seating.':'Green row bands show open seating. Search for a church to highlight its reserved rows in crimson.'));
