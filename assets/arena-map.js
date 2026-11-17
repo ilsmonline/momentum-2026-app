@@ -82,8 +82,8 @@
          var color=isMine?'#dd6375':isPartial?'url(#partial-band)':isOpen?(mode==='church'?'#48766b':'#6dbb9b'):'#55494b';
          add(g,'rect',{x:x+6,y:yy,width:w-12,height:rowHeight-0.75,rx:1.5,fill:color,stroke:isPartial?'#e9a2a1':'none','stroke-width':isPartial?0.8:0});
       });
-      add(g,'rect',{x:x+17,y:top?y-10:y+h-1,width:w-34,height:31,rx:7,fill:reserved?'#933949':'#4a393d',stroke:reserved?'#ef97a0':'#a78e83','stroke-width':1.3});
-      txt(g,x+w/2,top?y+12:y+h+22,section,22,'#fff2e5','900',{'text-anchor':'middle'});
+      add(g,'rect',{x:x+17,y:top?y-38:y+h+2,width:w-34,height:31,rx:7,fill:reserved?'#933949':'#4a393d',stroke:reserved?'#ef97a0':'#a78e83','stroke-width':1.3});
+      txt(g,x+w/2,top?y-16:y+h+25,section,22,'#fff2e5','900',{'text-anchor':'middle'});
       add(g,'title',{},'Section '+section+(reserved?' · Your church: '+selected.church:'')+(open[section]?' · Includes designated open rows':''));
    });
    // Entire floor seating is first-come; six clusters schematically reflect the source plan.
