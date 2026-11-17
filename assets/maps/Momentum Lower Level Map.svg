@@ -53,18 +53,18 @@
  <text x="244.5" y="443" class="amenity">NURSING</text>
  <text x="244.5" y="465" class="amenity-small">MOTHER’S ROOM</text>
 </g>
-<g class="other"><rect x="178" y="635" width="133" height="62" rx="9"/><text class="other-label" x="244.5" y="670">OTHER</text></g>
-<g class="other"><rect x="178" y="976" width="133" height="100" rx="9"/><text class="other-label" x="244.5" y="1030">B8</text></g>
-<g class="other"><rect x="178" y="1111" width="133" height="132" rx="9"/><text class="other-label" x="244.5" y="1181">B9</text></g>
+<g class="other"><rect x="178" y="635" width="133" height="62" rx="9"/></g>
+<g class="other"><rect x="178" y="976" width="133" height="100" rx="9"/></g>
+<g class="other"><rect x="178" y="1111" width="133" height="132" rx="9"/></g>
 <g><rect x="321" y="381" width="122" height="94" rx="9" fill="#51433e" stroke="#b79a7c" stroke-width="2"/><path d="M337 391 v74 m13 -74 v74 m13 -74 v74 m13 -74 v74 m13 -74 v74" stroke="#e1c7a1" stroke-width="2" opacity=".45"/><rect x="331" y="414" width="102" height="27" rx="4" fill="#4d3936"/><text class="stair-label" x="382" y="433">STAIRS</text></g>
 <g><rect x="319" y="977" width="122" height="100" rx="9" fill="#51433e" stroke="#b79a7c" stroke-width="2"/><path d="M335 987 v80 m13 -80 v80 m13 -80 v80 m13 -80 v80 m13 -80 v80" stroke="#e1c7a1" stroke-width="2" opacity=".45"/><rect x="329" y="1013" width="102" height="27" rx="4" fill="#4d3936"/><text class="stair-label" x="380" y="1032">STAIRS</text></g>
 <!-- Restrooms are upper-right and lower-right in source layout -->
 <g><rect x="563" y="247" width="143" height="125" rx="22" fill="#33463f" stroke="#83a491" stroke-width="2"/><text x="634" y="281" class="amenity">RESTROOMS</text><path d="M634 295V360" stroke="#719481" stroke-width="2"/><text x="602" y="329" class="amenity-small">MEN</text><text x="671" y="329" class="amenity-small">WOMEN</text></g>
 <g><rect x="549" y="1056" width="159" height="117" rx="21" fill="#33463f" stroke="#83a491" stroke-width="2"/><text x="628" y="1092" class="amenity">RESTROOMS</text><path d="M628 1106V1160" stroke="#719481" stroke-width="2"/><text x="589" y="1141" class="amenity-small">MEN</text><text x="669" y="1141" class="amenity-small">WOMEN</text></g>
-<g class="other"><rect x="714" y="1056" width="110" height="117" rx="9"/><text class="other-label" x="769" y="1118.5">VIP</text></g>
+<g class="other"><rect x="714" y="1056" width="110" height="117" rx="9"/></g>
 <path d="M707 385H827V441H757" fill="none" stroke="#6d5b54" stroke-width="3"/>
 <rect x="755" y="377" width="72" height="57" rx="6" fill="#393336" stroke="#655551"/>
-<text x="791" y="399" font-size="11" font-weight="700" fill="#b29a90" text-anchor="middle">CATERING</text><text x="791" y="413" font-size="11" font-weight="700" fill="#b29a90" text-anchor="middle">AREA</text>
+
 <!-- Lobby-access route is not marked here: venue's source diagram does not identify that route.
      Both actual stair locations are shown; use main lobby stairs and posted event signage. -->
 <!-- Compact legend and mobile wayfinding note -->
