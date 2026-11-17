@@ -1,13 +1,11 @@
-# Momentum 2026 · public venue maps
+# Momentum 2026 venue map assets
 
-Use ONLY approved attendee-facing maps. Do not upload internal staff routes, electrical diagrams, security, or other sensitive production information.
+The app's **Lower Level** tab now uses `Lower Level Breakout Guide.svg`, a branded, mobile-readable room directory with **room number + speaker name only**.
 
-The venue map viewer in `index.html` expects the following three web-ready images, matching case and spaces precisely:
+**Important:** The SVG is a schematic directory, not a floor plan. It intentionally does not imply room positions or routes that have not been verified against the source plan. It omits elevator callouts. Attendees should use lobby stairs to reach lower-level breakouts; accessibility accommodations are coordinated with event staff and an accompanying adult leader.
 
-1. `Bos Seating - Momentum Map.png` from Dropbox `2026 Momentum/2026 Maps`. It is already a PNG and needs no editing to upload.
-2. `Lobby - Exhibitors.png`, exported as PNG from the attendee-appropriate version of the lobby/exhibitors plan. A Dropbox source candidate is `Lobby - Exhibitors.pdf`; review it first to confirm it's current and safe for attendees.
-3. `Lower Level with Speakers 2026.png`, exported as PNG from the current `Lower Level with Speakers 2026.indd` InDesign file. Export the page (not the whole workspace), ideally at 150–200 PPI, suitable for reading small room labels on phones.
+The **Arena Seating** tab uses the existing approved `Bos Seating - Momentum Map.png`. Future design refinement should preserve the source seating geometry and section numbering.
 
-**Upload the actual PNGs here** via Add file → Upload files → Commit changes.
+The **Lobby** tab expects `Lobby - Exhibitors.png` when an attendee-safe, accurate source map has been reviewed and styled. Never publish detailed electrical plans or other internal facility diagrams.
 
-The viewer supports switching between maps and 100–300% zoom. Until each image is uploaded, an on-screen placeholder appears. The maps are *not* yet interactive section overlays: do not add section polygons or ADA routes without verifying the underlying map.
+For an accurate stylized wayfinding floor plan, compare placements against the current source `Lower Level with Speakers.pdf` in Dropbox `2026 Momentum/To Print` before converting this directory into a true map.
