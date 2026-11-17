@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1430" role="img" aria-labelledby="title desc">
+<title id="title">Momentum 2026 lower level breakout room directory</title>
+<desc id="desc">Room number and speaker name directory. This is not a physical floor plan and does not show room locations.</desc>
+<defs>
+ <radialGradient id="glow" cx="0.8" cy="0.12" r="0.9"><stop stop-color="#60333c"/><stop offset="1" stop-color="#211c1c"/></radialGradient>
+ <style>.topline{fill:#d9a89a;font-family:Arial,Helvetica,sans-serif;font-weight:800;letter-spacing:4px;font-size:24px}.roomno{fill:#f3d0ba;font-family:Arial,Helvetica,sans-serif;font-weight:900;font-size:48px}.small{font-family:Arial,Helvetica,sans-serif;fill:#d1b9aa;font-size:24px}</style>
+</defs>
+<rect width="960" height="1430" fill="#211c1c"/><rect width="960" height="1430" fill="url(#glow)" />
+<path d="M50 70H910" stroke="#7b4146" stroke-width="3"/>
+<text x="52" y="124" class="topline">ILLINOIS STUDENT MINISTRIES</text>
+<text x="48" y="222" font-family="Arial Black,Impact,Arial,sans-serif" font-size="90" letter-spacing="-3" font-weight="900" fill="#f5e8db">LOWER LEVEL</text>
+<text x="54" y="274" class="topline">BREAKOUT ROOM DIRECTORY</text>
+<rect x="54" y="303" width="852" height="54" rx="9" fill="#74343f"/>
+<text x="78" y="338" fill="#fff0e1" font-family="Arial,Helvetica,sans-serif" font-size="24" font-weight="800">ACCESS: USE THE STAIRS IN THE LOBBY</text>
+<g transform="translate(54 380)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#3b2d2f" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B1</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="33" font-weight="700">Derek Burgin</text>
+</g>
+<g transform="translate(504 380)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#372c2d" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B2</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="33" font-weight="700">Luke Keen</text>
+</g>
+<g transform="translate(54 540)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#3b2d2f" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B4</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="29" font-weight="700">Caleb Pellizzer</text>
+</g>
+<g transform="translate(504 540)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#372c2d" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B6</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="33" font-weight="700">Cohl Callies</text>
+</g>
+<g transform="translate(54 700)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#3b2d2f" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B7</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="29" font-weight="700">Joshua Hinzman</text>
+</g>
+<g transform="translate(504 700)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#372c2d" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B10</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="29" font-weight="700">Called College</text>
+</g>
+<g transform="translate(54 860)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#3b2d2f" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B11A</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="33" font-weight="700">Izzy Marti</text>
+</g>
+<g transform="translate(504 860)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#372c2d" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B11B</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="29" font-weight="700">Jaimee Jennings</text>
+</g>
+<g transform="translate(54 1020)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#3b2d2f" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B11C</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="25" font-weight="700">Todd &amp; Shawndra Lucas</text>
+</g>
+<g transform="translate(504 1020)">
+<rect x="0" y="0" width="402" height="141" rx="16" fill="#372c2d" stroke="#8e5754" stroke-width="2"/>
+<rect x="0" y="0" width="9" height="141" rx="5" fill="#b44d55"/>
+<text x="30" y="61" class="roomno">B11D</text>
+<text x="30" y="111" font-family="Arial, Helvetica, sans-serif" fill="#f3e5d6" font-size="33" font-weight="700">Jacob Dilger</text>
+</g>
+<rect x="54" y="1210" width="852" height="80" rx="14" fill="#292325" stroke="#a37d6e" stroke-width="2"/>
+<text x="80" y="1259" font-family="Arial,Helvetica,sans-serif" font-size="30" font-weight="800" fill="#f3e5d6">Nursing / Mother's Room</text>
+<text x="54" y="1340" class="small">ROOM DIRECTORY ONLY · NOT A PHYSICAL FLOOR PLAN</text>
+<text x="54" y="1381" class="small">Follow on-site room signs and staff directions.</text>
+</svg>
