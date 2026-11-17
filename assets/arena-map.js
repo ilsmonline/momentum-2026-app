@@ -72,11 +72,10 @@
       var top=i<5,col=top?i:i-5,x=247+col*120,y=top?192:518,w=110,h=188;
       var g=add(svg,'g',{'data-section':section});
       add(g,'rect',{x:x,y:y,width:w,height:h,rx:7,fill:'#3e3436',stroke:'#9b7b71','stroke-width':1.5});
-      var rowHeight=8.15,rowOffset=top?y+12:y+16;
+      var rowHeight=8.15,rowOffset=top?y+12:y+16,reserved=mine[section]||null;
       // Row A faces the central floor for both banks.
       order.forEach(function(row,j){
          var rowIndex=top?order.length-1-j:j,letter=order[rowIndex],yy=rowOffset+j*rowHeight;
-         var reserved=mine[section]||null;
          var isMine=reserved&&reserved.full.has(letter),isPartial=reserved&&reserved.partial.has(letter);
          var isOpen=open[section]&&open[section].has(letter);
          var color=isMine?'#dd6375':isPartial?'url(#partial-band)':isOpen?(mode==='church'?'#48766b':'#6dbb9b'):'#55494b';
