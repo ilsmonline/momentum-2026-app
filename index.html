@@ -113,6 +113,10 @@
 @media(max-width:410px){#venue-list .venue-location-card{padding:14px 13px;gap:8px}#venue-list .venue-location-title{font-size:16px}#venue-list .venue-location-description{font-size:13px}#venue-list .venue-location-action{font-size:11px;max-width:75px}}
 .route-card[hidden]{display:none}.map-panel{background:#312929;border:1px solid #65514b;border-radius:11px;overflow:hidden;margin-bottom:8px}
 .map-stage{position:relative;background:#e9dfd1;overflow:auto;width:100%;height:clamp(260px,58vw,440px);overscroll-behavior:contain;touch-action:pan-x pan-y;scrollbar-color:#88645d #d5c9bf}
+/* The arena SVG is 1100 x 865. At default zoom, display its full height so the bottom legend is visible without scrolling.
+   When zoomed past 100%, the stage keeps this original footprint and allows panning. Lower-level map keeps its own scroll height. */
+.map-panel[data-active-map="arena"] .map-stage{height:auto;aspect-ratio:1100 / 865;overflow:auto;background:#211b1e}
+
 .map-stage img{width:100%;max-width:none;height:auto;display:none;user-select:none;pointer-events:none}.arena-svg-wrap{width:100%;min-width:100%;background:#211b1e}.arena-svg-wrap svg{display:block;width:100%;height:auto;max-width:none}.arena-svg-wrap[hidden]{display:none}.map-selection-summary:not(:empty){background:#332829;border:1px solid #80595c;border-radius:10px;padding:13px 15px;font-size:13px;color:#f5dcd1;margin-bottom:16px}.map-selection-summary strong{color:#fff0e1;font-size:15px}
 .map-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:23px;background:linear-gradient(150deg,#3d2e2d,#211b1c);color:#e5c7b9;font-size:14px}
 .map-tools{display:flex;gap:7px;align-items:center;justify-content:flex-end;padding:10px;background:#2d2526}
