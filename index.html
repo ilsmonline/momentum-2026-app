@@ -140,6 +140,27 @@
 .arrival-packet-link>span:last-child{font-size:23px;color:#e9b3a5}
 @media(min-width:540px){.arrival-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.arrival-section .section-head{font-size:25px}}
 .worship-home-section{padding-top:6px}.worship-feature{background:#302628;border:1px solid #735453;border-radius:15px;overflow:hidden}.worship-photo{position:relative;aspect-ratio:16/9;background:radial-gradient(circle at 50% 70%,#695056,#392c30);overflow:hidden}.worship-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 60%}.worship-photo-tag{position:absolute;bottom:11px;left:13px;display:inline-block;padding:7px 10px;border-radius:6px;background:#241b1ddc;color:#fff0e5;letter-spacing:1px;font-size:10px;font-weight:900}.worship-content{padding:19px clamp(16px,4vw,26px) 21px}.worship-overline{font-size:10px;letter-spacing:1.8px;color:#ddaca0;font-weight:900}.worship-content h3{font-size:clamp(20px,4vw,27px);letter-spacing:.2px;line-height:1.2;color:#fff0e5;margin:8px 0 13px}.worship-content>p{font-size:14px;color:#e5d2c8;line-height:1.7;margin:0 0 16px}.worship-about{border-top:1px solid #735651;padding-top:6px}.worship-about summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:9px;padding:11px 0 4px;color:#f2b9aa;font-weight:850;font-size:13px}.worship-about summary::-webkit-details-marker{display:none}.worship-about summary span{font-size:21px;line-height:1;transition:transform .2s}.worship-about[open] summary span{transform:rotate(45deg)}.worship-about-body{padding:7px 0 0}.worship-about-body p{color:#d9c5bc;font-size:14px;line-height:1.75;margin:0 0 13px}.worship-about-body p:last-child{margin-bottom:0}.worship-about-body em{font-style:italic;color:#ffe1cf}@media(min-width:600px){.hero{min-height:420px}.hero h1{font-size:82px}.section{padding-top:30px;padding-bottom:30px}.speaker{min-height:180px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Featured speaker biographies: compact card buttons and mobile-friendly reading overlay */
+.speaker-card-footer{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.speaker-card-footer strong{overflow-wrap:anywhere;line-height:1.3}
+.speaker-card-footer small{display:block;line-height:1.4;margin-top:4px}
+.speaker-bio-button{display:block;width:100%;min-height:36px;margin-top:11px;border:1px solid #d7a494;background:#edd1c6;color:#3c252a;border-radius:7px;padding:8px 5px;font-weight:900;font-size:11px;line-height:1.25;text-align:center}
+.speaker-bio-button:hover,.speaker-bio-button:focus-visible{background:#fff0e5;border-color:#fff0e5}
+.speaker-bio-dialog{position:fixed;inset:0;margin:auto;width:min(540px,calc(100% - 24px));max-width:none;max-height:min(750px,calc(100dvh - 24px));padding:0;border:1px solid #96675f;border-radius:15px;overflow:hidden;background:#241e20;color:#f4e8df;box-shadow:0 20px 65px #0009}
+.speaker-bio-dialog::backdrop{background:#090708dc}
+.speaker-bio-shell{display:flex;flex-direction:column;max-height:min(750px,calc(100dvh - 24px))}
+.speaker-bio-topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;background:#35292b;border-bottom:1px solid #765551}
+.speaker-bio-topbar span{color:#d8ac9f;font-weight:900;letter-spacing:1.2px;font-size:10px;line-height:1.4}
+.speaker-bio-topbar .speaker-bio-close{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid #a67c72;background:#64454b;color:#fff1e8;font-size:26px;line-height:1;padding:0}
+.speaker-bio-scroll{overflow-y:auto;overscroll-behavior:contain;padding:23px clamp(18px,5vw,28px) 29px}
+.speaker-bio-heading{display:flex;align-items:center;gap:17px;padding-bottom:22px;border-bottom:1px solid #6c5050}
+.speaker-bio-heading img{width:96px;height:96px;flex:none;object-fit:cover;border-radius:50%;background:#62464c;border:3px solid #a8786b}
+.speaker-bio-heading span{display:block;font-size:10px;font-weight:900;letter-spacing:1.4px;color:#deafa1}
+.speaker-bio-heading h2{color:#fff0e7;font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,5vw,30px);line-height:1.2;margin:7px 0 0}
+.speaker-bio-paragraphs p{margin:19px 0 0;color:#ebd7cb;font-size:15px;line-height:1.78;overflow-wrap:break-word}
+@media(max-width:370px){.speaker-bio-heading img{width:76px;height:76px}.speaker-bio-heading{gap:12px}.speaker-bio-paragraphs p{font-size:14px}}
+
 </style>
 </head>
 <body>
@@ -233,6 +254,15 @@
 <nav class="bottom" aria-label="Primary navigation"><button class="nav" data-go="home" aria-current="page"><span class="symbol">⌂</span>Home</button><button class="nav" data-go="schedule"><span class="symbol">▦</span>Schedule</button><button class="nav" data-go="breakouts"><span class="symbol">✳</span>Breakouts</button><button class="nav" data-go="venue"><span class="symbol">⌖</span>Venue</button><button class="nav" data-go="more"><span class="symbol">☷</span>More</button></nav>
 </div>
 <dialog id="event-dialog"><div id="dialog-content"></div><div class="actions"><button id="close-dialog">Close</button></div></dialog>
+<dialog class="speaker-bio-dialog" id="speaker-bio-dialog" aria-labelledby="speaker-bio-name">
+ <div class="speaker-bio-shell">
+  <div class="speaker-bio-topbar"><span>FEATURED SPEAKER · MOMENTUM ’26</span><button id="speaker-bio-close" class="speaker-bio-close" type="button" aria-label="Close speaker biography">×</button></div>
+  <div class="speaker-bio-scroll">
+   <div class="speaker-bio-heading"><img id="speaker-bio-photo" alt="" loading="eager"><div><span>ABOUT THE SPEAKER</span><h2 id="speaker-bio-name"></h2></div></div>
+   <div class="speaker-bio-paragraphs" id="speaker-bio-paragraphs"></div>
+  </div>
+ </div>
+</dialog>
 <dialog class="partner-ad-dialog" id="partner-ad-dialog" aria-label="Partner advertisement"><div class="partner-ad-shell"><header class="partner-ad-toolbar"><div><div id="partner-ad-title" class="partner-ad-title"></div><p class="partner-ad-hint">Tap outside the ad or press × to close</p></div><button id="partner-ad-close" class="partner-ad-close" aria-label="Close advertisement" type="button">×</button></header><div class="partner-ad-stage" id="partner-ad-stage"><img id="partner-ad-image" alt="" hidden><p id="partner-ad-error" class="partner-ad-error" hidden></p></div></div></dialog>
 <script src="assets/arena-map.js"></script>
 <script>
@@ -259,6 +289,7 @@ var S={
  ['2:00 PM','Final General Session Program','Main Arena','Includes Called College, Youth Alive, worship, and a message from Steve Svoboda later in the program. Expected conclusion around 4:30 PM.','Steve Svoboda']
  ]};
 var speakerNames=[['Kendall Alfaro','Featured Speaker','assets/speakers/Kendall Alfaro.webp'],['Ricky Spindler','Featured Speaker','assets/speakers/Ricky Spindler.png'],['Steve Svoboda','Featured Speaker','assets/speakers/Steve Svoboda.png']];
+var speakerBios={"Kendall Alfaro":["Kendall Alfaro serves as the National Speed the Light Director, where he is passionate about mobilizing the next generation to live generously and advance the mission of Jesus around the world. He has been married to his wife, Jillian, for 20 years, and together they are raising their three sons—Heisman, Roman Champion, and Kingman. Kendall shares a deep passion for developing leaders and equipping students to step confidently into their God-given calling and impact their generation."],"Ricky Spindler":["Ricky Spindler has served as lead pastor of Stone Creek Church since 2017 and has been part of the church for 20 years. He has served in youth, children’s, family and men’s ministry, along with what he jokingly calls his favorite role: parking director.","Located near the University of Illinois in Champaign-Urbana, Stone Creek Church is a diverse congregation representing more than 40 nations each week. Ricky earned a bachelor’s degree in Pastoral Studies from North Central University and a master’s degree in Leadership from Indiana Wesleyan University. He and his family have five children and a Labrador named Indy."],"Steve Svoboda":["Steve Svoboda has been in ministry for over fifteen years and is now serving on the Called team at the National Office of the Assemblies of God. He is passionate about helping people discover and live out their God given purpose and calling.","Steve is dedicated to advancing the Church, staying active through running, triathlon and fitness, and making lasting memories with his family.","Steve and his wife, Bennett, live in Missouri with their two sons and daughter."]};
 var breakoutPairs=[["Derek Burgin","B1","How to Build a Consistent Prayer and Devotional Life","Spending time with the Lord is important! In this workshop, you'll learn the value of building a consistent prayer and devotional life and how to cultivate it. You'll walk away with practical steps and tools to help strengthen and shape your time spent with the Lord!"],["Called College · Grayson Wade","B10","Is God Calling Me?","How do you know if God is calling you into ministry? In this session, we’ll explore how to discern God’s calling, recognize signs that He may be leading you toward ministry, and discover practical next steps to respond to His direction for your life."],["Izzy Marti","B11 A","Hostile Territory","Practical ways for staying true to your faith in difficult environments. What does it mean for a teenager to keep living for Jesus when everyone else seems so hostile towards it?"],["Jaimee Jennings","B11 B","Who told you that? (Discovering your identity)","Have you ever stopped and wondered who you really are? Between social media, friendships, expectations, and trying to figure out where you fit in, it's easy to start believing things about ourselves that aren't even true. So who gets to decide who you are? Let's talk about what God says about you, who He created you to be, and how to start seeing yourself the way He sees you."],["Todd & Shawndra Lucas","B11 C","Leveling Up: Finding Your People and Purpose in College","JUNIORS AND SENIORS GET READY! The college years should be a fun, fulfilling, and fruitful time in a young believer’s life. Learn from campus missionaries and students how to approach college purposefully, build community, and grow spiritually and socially."],["Jacob Dilger","B11 D","Pray Like This","When the disciples asked Jesus how to pray, He said, “Pray like this.” The question we’ll explore in this workshop is, “How do we move from just wishing we prayed more to actually making prayer part of our everyday lives?”"],["Luke Keen","B2","Revival: it starts with you!","Revival sounds exciting, but it's about more than packed churches, powerful worship, and viral videos. What does genuine revival actually look like? We'll explore the history of revival, why it matters today, and how you can be the spark that ignites revival!"],["Caleb Pellizzer","B4","Loving the House and Reaching the Hometown","Hear directly from students as they share what it looks like to genuinely love their youth group and the people who make it home. Through their personal experiences and perspectives, discover how that love can extend beyond the church walls and become a passionate zeal for reaching their schools and community with the love of Jesus. Because when you truly love where you belong, you’ll want others to experience it too."],["Cohl Callies","B6","Who's in Your Circle?","The people you surround yourself with help shape the person you become. Discover how to cultivate Christ-centered friendships that strengthen your faith, encourage spiritual growth, and point one another toward Jesus."],["Joshua Hinzman","B7","Monday Morning Faith","Your faith isn't just about Sundays, or when we're surrounded by other Christians. It's about what happens when Monday morning comes and we're faced with the opportunity to stand for Jesus in our everyday lives. Let's talk about what it really means to live unashamed of the Gospel, boldly follow Jesus, and make our faith something the world can see."],["Rick McGough","Main Hall","Faith & Reason Made Simple","Rational Evidence Confirming the Christian Faith\n\nExplore how science, world history, and life today offer reasons to believe the Christian faith."],["David Anderson","South Mezzanine","Don’t Go Broke: Financial Decisions Your Future Self Will Thank You For","Someday you'll be old… like 30! Believe it or not, the money choices you make now can make or break your future. Let's talk about God's plan for handling money so future you has more freedom, less stress, and a little extra cash!"],["Mike Alvarez","North Mezzanine","Don’t Borrow Someone Else’s Dream","Everybody has an opinion about what you should do with your life. Through biblical truth and honest reflection, learn to recognize the difference between chasing approval and pursuing purpose. Discover what matters, who you’re becoming, and how to take your next faithful step."]];
 var breakoutPhotoMap={"Derek Burgin":"Derek Burgin.PNG","Called College · Grayson Wade":"Grayson Wade.png","Izzy Marti":"Izzy Marti.png","Jaimee Jennings":"Jaimee Jennings.jpeg","Todd & Shawndra Lucas":"Todd Lucas.jpeg","Jacob Dilger":"Jacob Dilger.png","Luke Keen":"Luke Keen.jpeg","Caleb Pellizzer":"Caleb Pellizzer.jpeg","Cohl Callies":"Cohl Callies.jpg","Joshua Hinzman":"Joshua Hinzman.jpeg","Rick McGough":"Rick McGough.jpg","David Anderson":"David Anderson.jpg","Mike Alvarez":"Mike Alvarez.jpeg"};
 var places=[['Main Arena','General sessions, Worship & Apologetics Breakout with Rick McGough','arena'],['North Mezzanine','Youth Pastor Reception; Young Adult Breakout with Mike Alvarez. From the arena entrance, turn left and continue to the ramp.'],['South Mezzanine','Young Adult Breakout with David Anderson. From the arena entrance, turn right and continue to the ramp.'],['Lower Level Rooms','Use the stairs in the lobby for lower-level breakout access. Rooms B1, B2, B4, B6, B7, B10, and B11 A–D.','lower'],['ISM Information Booth','Registration Check-in; Conference help and lost-and-found assistance']];
@@ -358,7 +389,36 @@ function cardLink(page,title,desc){
  if(external){b.href=external;b.target='_blank';b.rel='noopener noreferrer';b.setAttribute('aria-label',title+' (opens a new tab)')}else b.dataset.go=page;
  var t=el('span');t.append(el('strong','',title),el('small','',desc));b.append(t,el('b','', '↗'));return b
 }
-speakerNames.forEach(function(s){var c=el('div','speaker'),p=el('div','portrait'),im=el('img'),initial=el('span','portrait-initials',initials(s[0])),bottom=el('div');im.alt='Portrait of '+s[0];im.loading='eager';im.onload=function(){im.classList.add('is-loaded');initial.hidden=true};im.onerror=function(){im.remove();initial.hidden=false};p.append(initial,im);im.src=s[2];bottom.append(el('strong','',s[0]),el('br'),el('small','',s[1]));c.append(p,bottom);document.getElementById('speakers').append(c)});
+speakerNames.forEach(function(s){
+ var card=el('div','speaker'),portrait=el('div','portrait'),photo=el('img'),initialsEl=el('span','portrait-initials',initials(s[0])),footer=el('div','speaker-card-footer');
+ photo.alt='Portrait of '+s[0];photo.loading='eager';
+ photo.onload=function(){photo.classList.add('is-loaded');initialsEl.hidden=true};
+ photo.onerror=function(){photo.remove();initialsEl.hidden=false};
+ portrait.append(initialsEl,photo);photo.src=s[2];
+ footer.append(el('strong','',s[0]),el('small','',s[1]));
+ var button=el('button','speaker-bio-button','Read Bio');
+ button.type='button';button.setAttribute('aria-label','Read biography of '+s[0]);
+ button.addEventListener('click',function(){openSpeakerBio(s)});
+ footer.append(button);card.append(portrait,footer);
+ document.getElementById('speakers').append(card)
+});
+function openSpeakerBio(speaker){
+ var dialog=document.getElementById('speaker-bio-dialog');
+ var title=document.getElementById('speaker-bio-name'),image=document.getElementById('speaker-bio-photo'),content=document.getElementById('speaker-bio-paragraphs');
+ title.textContent=speaker[0];
+ image.alt='Portrait of '+speaker[0];image.style.display='block';
+ image.onerror=function(){image.style.display='none'};
+ image.src=speaker[2];
+ content.textContent='';
+ (speakerBios[speaker[0]]||[]).forEach(function(paragraph){content.append(el('p','',paragraph))});
+ dialog.showModal();
+}
+document.getElementById('speaker-bio-close').addEventListener('click',function(){
+ document.getElementById('speaker-bio-dialog').close()
+});
+document.getElementById('speaker-bio-dialog').addEventListener('click',function(e){
+ if(e.target===this)this.close()
+});
 extras.forEach(function(x,i){document.getElementById('more-list').append(cardLink(x[0],x[1],x[2]));if(i<4)document.getElementById('home-links').append(cardLink(x[0],x[1],x[2]))});
 places.forEach(function(x){var c=el(x[2]?'button':'div',(x[2]?'listbtn':'card')+' venue-location-card'),txt=el('div','venue-location-copy');var subtitle=el('p','venue-location-description',x[1]);if(x[0]==='North Mezzanine')subtitle.id='north-mezzanine-description';txt.append(el('strong','venue-location-title',x[0]),subtitle);c.append(txt);if(x[2]){c.append(el('b','venue-location-action','View map ↗'));c.addEventListener('click',function(){setMap(x[2]);document.getElementById('map-panel').scrollIntoView({block:'center',behavior:'smooth'})})}document.getElementById('venue-list').append(c)});
 rules.forEach(function(x){var c=el('div','card');c.append(el('h3','',x[0]),el('p','',x[1]));document.getElementById('rules-list').append(c)});
