@@ -166,6 +166,43 @@
 .speaker-bio-paragraphs p{margin:19px 0 0;color:#ebd7cb;font-size:15px;line-height:1.78;overflow-wrap:break-word}
 @media(max-width:370px){.speaker-bio-heading img{width:76px;height:76px}.speaker-bio-heading{gap:12px}.speaker-bio-paragraphs p{font-size:14px}}
 
+
+/* Maestra live interpretation - Spanish-first and mobile-first. */
+.translation-page{padding-bottom:42px}
+.translation-intro{margin-top:15px;padding:24px 21px 22px;background:linear-gradient(125deg,#693943,#3b292e);border:1px solid #97696a;border-radius:14px}
+.translation-eyebrow{display:block;color:#e9bba8;font-size:10px;font-weight:900;letter-spacing:1.3px;line-height:1.4}
+.translation-intro h2{font-family:Georgia,'Times New Roman',serif;color:#fff0e2;font-size:29px;line-height:1.15;margin:11px 0}
+.translation-intro p{color:#f1d9d0;font-size:15px;line-height:1.7;margin:0 0 20px}
+.translation-intro p strong{color:#fff1dd}
+.translation-device-note{display:flex;align-items:center;gap:13px;background:#241d20;border:1px solid #a47a71;border-radius:10px;padding:13px}
+.translation-headphone{display:grid;place-items:center;width:41px;height:41px;border-radius:9px;background:#e7bfac;color:#352426;font-size:24px;flex:none}
+.translation-device-note strong{display:block;color:#fff0df;font-size:14px;line-height:1.4}
+.translation-device-note small{display:block;color:#cdb4ac;font-size:12px;line-height:1.4;margin-top:3px}
+.translation-access{padding:22px 20px 20px;margin-top:17px;background:#302629;border:1px solid #765955;border-radius:14px}
+.translation-access-header h2{font-size:23px;margin:7px 0 8px;line-height:1.2}
+.translation-access-header p{color:#e0c9bd;font-size:14px;line-height:1.6;margin:0 0 16px}
+.translation-launch{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:14px 16px;border-radius:9px;background:#e9c3b4;color:#312127;text-decoration:none;font-size:14px;letter-spacing:.2px;font-weight:900}
+.translation-launch:hover,.translation-launch:focus-visible{background:#fff1e6}
+.translation-launch span{font-size:22px;line-height:1;flex:none}
+.translation-english-action{color:#dcc4b7;font-size:12px;margin:7px 3px 0}
+.translation-qr-zone{margin-top:20px;padding-top:20px;border-top:1px solid #75514f;display:grid;grid-template-columns:1fr;justify-items:center;gap:14px}
+.translation-qr-image{display:grid;place-items:center;background:#fff;border:1px solid #fff;border-radius:9px;padding:10px;width:min(100%,232px);aspect-ratio:1}
+.translation-qr-image img{display:block;width:100%;height:auto;image-rendering:pixelated}
+.translation-qr-copy{width:100%}
+.translation-qr-copy h3{font-size:16px;color:#ffe4d8;margin:0 0 8px}
+.translation-qr-copy p{color:#e3cbc0;font-size:13px;line-height:1.6;margin:0}
+.translation-qr-copy small{display:block;color:#bfa8a0;font-size:12px;line-height:1.5;margin-top:9px}
+.translation-instructions{margin-top:25px}
+.translation-instructions h2,.translation-english-summary h2{font-size:20px;line-height:1.3;margin:0 0 15px;color:#f9e5d8}
+.translation-instructions ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.translation-instructions li{display:flex;align-items:flex-start;gap:13px;padding:12px 14px;background:#31272a;border:1px solid #604c48;border-radius:10px}
+.translation-instructions li>span{font-size:16px;color:#e9aa9f;font-weight:900;line-height:1.5}
+.translation-instructions li p{font-size:13px;line-height:1.65;margin:0;color:#e7d0c5}
+.translation-english-summary{margin-top:22px;background:#282224;border-left:3px solid #c49085;padding:17px 17px 18px;border-radius:0 9px 9px 0}
+.translation-english-summary h2{font-size:17px;margin-bottom:8px}
+.translation-english-summary p{margin:0;color:#d6c4b9;font-size:13px;line-height:1.65}
+@media(min-width:560px){.translation-qr-zone{grid-template-columns:215px minmax(0,1fr);justify-items:stretch;align-items:center;gap:23px}.translation-qr-image{width:215px}.translation-access{padding:26px}}
+
 </style>
 </head>
 <body>
@@ -238,7 +275,27 @@
 <section class="screen" data-page="seating"><div class="section"><span class="kicker">CHURCH RESERVED SEATING</span><h1 class="page-title">FIND MY <span style="color:#d89f94">CHURCH.</span></h1><p class="lead">Search your church's name to locate assigned reserved seating.</p><input class="search" id="church-search" type="search" placeholder="Enter church name" aria-label="Search church name"><p class="seat-last-updated muted" id="seat-updated" aria-live="polite"></p><div id="seating-results" class="empty" aria-live="polite">Loading 2026 reserved seating directory…</div><button id="open-seating-toggle" class="open-seat-toggle" type="button" aria-expanded="false" aria-controls="open-seating-panel">View Open Seating Areas <span aria-hidden="true">⌄</span></button><div id="open-seating-panel" hidden></div><p class="muted"><em>Not all groups are assigned seats</em>. If your church isn't listed, check with your church leader or the ISM Information Booth. Follow on-site reserved seating signs. Arena floor seating remains first-come, first-served.</p></div></section>
 <section class="screen" data-page="reception"><div class="section"><span class="kicker">FRIDAY · SPECIAL EVENT</span><h1 class="page-title">YOUTH PASTOR <span style="color:#d89f94">RECEPTION.</span></h1><div class="card"><h3>Youth Pastors & Spouses, This One's for You!</h3><p>We’re hosting a special reception to honor your work in ministry. Full-time and volunteer youth leaders, along with their spouses, are invited.</p><p><strong>When:</strong> Friday, following the first worship song during Session 1, on Pastor Chris’s release.</p><p><strong>Where:</strong> North Mezzanine</p><p><strong>Please remain in service with your group until Pastor Chris releases you.</strong></p></div></div></section>
 <section class="screen" data-page="welcome"><div class="section"><span class="kicker">FROM OUR DIRECTORS</span><h1 class="page-title">A WORD OF <span style="color:#d89f94">WELCOME.</span></h1><article id="welcome-letter" class="welcome-letter" aria-label="Welcome letter from Pastors Chris and Christina Stanley"></article></div></section>
-<section class="screen" data-page="maestra"><div class="section"><span class="kicker">TRADUCCIÓN EN VIVO</span><h1 class="page-title">MAESTRA <span style="color:#d89f94">TRANSLATION.</span></h1><div class="card"><h3>Spanish Translation Available</h3><p>Live Spanish interpretation is available during general sessions and the breakout in the Main Auditorium.</p><p>Bring a mobile phone and headphones. Scan the Maestra QR displayed at the conference to listen to translated audio on your device.</p><p class="muted">The direct event link and QR graphic are being added to this page.</p></div></div></section>
+<section class="screen" data-page="maestra"><div class="section translation-page">
+ <span class="kicker">ESPAÑOL · LIVE INTERPRETATION</span>
+ <h1 class="page-title" lang="es">TRADUCCIÓN <span style="color:#d89f94">EN VIVO.</span></h1>
+ <div class="translation-intro" lang="es">
+  <span class="translation-eyebrow">MOMENTUM 2026 · MAESTRA</span>
+  <h2>¡Bienvenidos!</h2>
+  <p>Escucha Momentum en español desde tu teléfono. Habrá interpretación en vivo durante <strong>todas las sesiones generales</strong> y el <strong>taller en el Auditorio Principal</strong>.</p>
+  <div class="translation-device-note"><span class="translation-headphone" aria-hidden="true">♫</span><span><strong>Necesitas un teléfono móvil y audífonos.</strong><small>Bring a mobile device and headphones.</small></span></div>
+ </div>
+ <div class="translation-access">
+  <div class="translation-access-header"><span class="translation-eyebrow">ÚNETE A LA TRADUCCIÓN</span><h2 lang="es">Escucha en español</h2><p lang="es">Si estás usando tu propio teléfono, toca el botón para abrir la traducción.</p></div>
+  <a class="translation-launch" href="https://live.maestra.ai/room/-P65WqO6HhQvMC8cDEoC" target="_blank" rel="noopener noreferrer" lang="es">ABRIR TRADUCCIÓN EN VIVO <span aria-hidden="true">↗</span></a>
+  <p class="translation-english-action">Open live Spanish translation</p>
+  <div class="translation-qr-zone"><div class="translation-qr-image"><img src="assets/maestra-translation-qr.svg" width="240" height="240" alt="Código QR para abrir la traducción en vivo de Momentum en Maestra" loading="eager"></div><div class="translation-qr-copy" lang="es"><h3>¿Estás usando otro dispositivo?</h3><p>Escanea este código QR con la cámara de tu teléfono para abrir la misma traducción.</p><small>Scan from another device, or use the button above on this phone.</small></div></div>
+ </div>
+ <div class="translation-instructions">
+  <h2 lang="es">Cómo escuchar</h2>
+  <ol lang="es"><li><span>01</span><p>Ten listo tu <strong>teléfono y audífonos</strong>.</p></li><li><span>02</span><p>Toca <strong>Abrir traducción en vivo</strong> o escanea el código QR desde otro dispositivo.</p></li><li><span>03</span><p>Conecta tus audífonos y escucha la <strong>interpretación en español</strong> durante la sesión.</p></li></ol>
+ </div>
+ <div class="translation-english-summary" lang="en"><h2>For English-speaking leaders</h2><p>Live Spanish interpretation is available during <strong>all general sessions</strong> and the <strong>breakout session in the Main Auditorium</strong>. Students will need their own mobile device and headphones. Tap the link above on the listening device, or scan the QR code with a different device.</p></div>
+ </div></section>
 <section class="screen" data-page="rules"><div class="section"><span class="kicker">A GREAT WEEKEND FOR EVERYONE</span><h1 class="page-title">RULES & <span style="color:#d89f94">EXPECTATIONS.</span></h1><div id="rules-list"></div><p class="muted">This is a quick reference. Your church leaders have the full conference information packet.</p></div></section>
 <section class="screen" data-page="grave"><div class="section"><span class="kicker">CELEBRATING GENEROSITY &amp; FAITHFULNESS</span><h1 class="page-title">GRAVE ROBBERS <span style="color:#d89f94">CLUB.</span></h1>
  <div class="honor-hero"><span class="honor-eyebrow">MOMENTUM 2026 · STUDENT HONORS</span><h2>Honoring the next generation.</h2><p>Thank you for giving selflessly, serving tirelessly, and allowing the Holy Spirit to lead you! We are so proud of the dedication and determination you showed and we honor you for your passionate sacrifice.</p>
@@ -299,7 +356,7 @@ var breakoutPairs=[["Derek Burgin","B1","How to Build a Consistent Prayer and De
 var breakoutPhotoMap={"Derek Burgin":"Derek Burgin.PNG","Called College · Grayson Wade":"Grayson Wade.png","Izzy Marti":"Izzy Marti.png","Jaimee Jennings":"Jaimee Jennings.jpeg","Todd & Shawndra Lucas":"Todd Lucas.jpeg","Jacob Dilger":"Jacob Dilger.png","Luke Keen":"Luke Keen.jpeg","Caleb Pellizzer":"Caleb Pellizzer.jpeg","Cohl Callies":"Cohl Callies.jpg","Joshua Hinzman":"Joshua Hinzman.jpeg","Rick McGough":"Rick McGough.jpg","David Anderson":"David Anderson.jpg","Mike Alvarez":"Mike Alvarez.jpeg"};
 var places=[['Main Arena','General sessions, Worship & Apologetics Breakout with Rick McGough','arena'],['North Mezzanine','Youth Pastor Reception; Young Adult Breakout with Mike Alvarez. From the arena entrance, turn left and continue to the ramp.'],['South Mezzanine','Young Adult Breakout with David Anderson. From the arena entrance, turn right and continue to the ramp.'],['Lower Level Rooms','Use the stairs in the lobby for lower-level breakout access. Rooms B1, B2, B4, B6, B7, B10, and B11 A–D.','lower'],['ISM Information Booth','Registration Check-in; Conference help and lost-and-found assistance']];
 var partnerData=[{"name":"Evangel University","category":"college","logo":"evangel-university.png","ad":"ValorBooklet.png"},{"name":"North Central University","category":"college","logo":"North Central.webp","ad":"WI_YOUTH_CONVENTION-3.png"},{"name":"Called College","category":"college","logo":"CalledCollege_Logo_Full_Color.jpg","ad":"Digital_Booklet_Ad_Fall 2026.png"},{"name":"City First Leadership College","category":"college","logo":"CFLC-export-06.png","ad":"9dd57825-7492-4651-94a2-f714429752bb.png"},{"name":"Gospel Encounter","category":"college","logo":"Gospel Encounter Logo Black Text Under.png","ad":"Digital Booklet - Gospel Encounter.png"},{"name":"Illinois Chi Alpha","category":"ministry","logo":"XA@300x.png","ad":"ilsmonline_232416851317050_6696418958219086042_ILLINOIS XA Promo Card (4 x 6 in)_7337.png"},{"name":"Youth Alive","category":"ministry","logo":"Youth Alive Brandmark Black.png","ad":"Youth Alive Ad.png"}];
-var extras=[['welcome','Welcome Letter','From Chris and Christina Stanley'],['reception','Youth Pastor Reception','Friday during Session 1'],['maestra','Spanish Translation','Maestra mobile interpretation'],['seating','Find My Church','Reserved seating search'],['grave','Grave Robbers Club','Recognizing ministry generosity'],['colleges','Colleges & Partners','Schools and ministry exhibitors'],['rules','Rules & Expectations','Important event information'],['events','2027 Events','Stay connected'],['giving','Give to Speed the Light','Open secure giving page'],['restaurants','Local Dining Guide','Springfield restaurant listings'],['packet','2026 Information Packet','Full conference details (PDF)']];
+var extras=[['welcome','Welcome Letter','From Chris and Christina Stanley'],['reception','Youth Pastor Reception','Friday during Session 1'],['maestra','Spanish Translation','Live interpretation · Español'],['seating','Find My Church','Reserved seating search'],['grave','Grave Robbers Club','Recognizing ministry generosity'],['colleges','Colleges & Partners','Schools and ministry exhibitors'],['rules','Rules & Expectations','Important event information'],['events','2027 Events','Stay connected'],['giving','Give to Speed the Light','Open secure giving page'],['restaurants','Local Dining Guide','Springfield restaurant listings'],['packet','2026 Information Packet','Full conference details (PDF)']];
 var rules=[['Wear Your Wristband','Keep your conference wristband on at all times.'],['Stay With Your Group','Church leaders are responsible for student supervision throughout the event and in hotels.'],['Honor Curfew','Be in your hotel room by midnight with lights out by 12:15 AM.'],['Respect Others and the Venue','Follow staff direction. Respect BOS Center staff, property, students, and leaders.'],['Prohibited Items','No fireworks, smoking, alcohol, illegal drugs, weapons (including knives), or profanity.'],['Appropriate Conduct','Attend scheduled activities. Do not enter unsupervised mixed-gender hotel rooms, and avoid public displays of affection.']];
 var welcome=[
  "Welcome to Momentum’26!",
