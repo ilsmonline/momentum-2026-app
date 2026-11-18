@@ -96,8 +96,6 @@
       var x=864,y=319+i*83;
       add(svg,'rect',{x:x,y:y,width:165,height:76,rx:9,fill:mode==='church'?'#466a60':'#4d9078',stroke:'#afc7b4','stroke-width':1.5});
    });
-   add(svg,'rect',{x:854,y:578,width:185,height:49,rx:9,fill:'#183a31',stroke:'#619783','stroke-width':1.2});
-   txt(svg,946,608,'OPEN SEATING',16,'#e6f7eb','900',{'text-anchor':'middle'});
    // Map legend and disclaimers.
    add(svg,'line',{x1:54,y1:754,x2:1045,y2:754,stroke:'#634d4c','stroke-width':1});
    add(svg,'rect',{x:55,y:773,width:20,height:19,rx:4,fill:'#da6072'});
