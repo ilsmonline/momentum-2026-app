@@ -41,10 +41,14 @@
       var key=a.section,rec=mine[key]||(mine[key]={full:new Set(),partial:new Set()});
       rowsIn(a.rows).forEach(function(r){(a.seats?rec.partial:rec.full).add(r)})
    });
-   if(data&&data.openSeating)(data.openSeating.sections||[]).forEach(function(a){open[a.section]=new Set(rowsIn(a.rows))});
+   if(data&&data.openSeating)(data.openSeating.sections||[]).forEach(function(a){
+      var section=open[a.section]||(open[a.section]={full:new Set(),partial:new Set()});
+      rowsIn(a.rows).forEach(function(r){section.full.add(r)});
+      if(a.partialRows&&a.partialSeats)rowsIn(a.partialRows).forEach(function(r){section.partial.add(r)});
+   });
    var svg=add(parent,'svg',{class:'arena-svg',width:'100%',height:'auto',viewBox:'0 0 1100 865',role:'img','aria-label':selected?'Momentum arena map showing '+selected.church+' reserved seating. Red highlights show assigned rows. Green highlights show open rows.':'Momentum arena map showing open seating and reserved sections. Green areas are designated open seating.'});
    add(svg,'title',{},'Momentum 2026 · BOS Center arena seating');
-   add(svg,'desc',{},'Stage at left. Floor seating in the middle and rear seating on right are open. Green row bands are designated open seating. Red row bands indicate the selected church. This is a schematic, not a scale floor plan.');
+   add(svg,'desc',{},'Stage at left. Floor seating in the middle and rear seating on right are open. Solid green row bands indicate open rows. Striped green bands in section 117 rows A through C indicate only seats 1 through 4 are open. Red bands indicate the selected church. This is a schematic, not a scale floor plan.');
    var defs=add(svg,'defs');
    var grad=add(defs,'linearGradient',{id:'arena-bg',x1:'0%',y1:'0%',x2:'100%',y2:'100%'});
    add(grad,'stop',{offset:'0%','stop-color':'#35262b'});
@@ -52,6 +56,9 @@
    var pattern=add(defs,'pattern',{id:'partial-band',width:9,height:9,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'});
    add(pattern,'rect',{width:9,height:9,fill:'#624047'});
    add(pattern,'rect',{width:3,height:9,fill:'#ed8690'});
+   var partialOpen=add(defs,'pattern',{id:'partial-open-band',width:9,height:9,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'});
+   add(partialOpen,'rect',{width:9,height:9,fill:'#28453b'});
+   add(partialOpen,'rect',{width:4,height:9,fill:'#86d8aa'});
    add(svg,'rect',{width:1100,height:865,fill:'url(#arena-bg)'});
    add(svg,'rect',{x:20,y:16,width:1060,height:834,rx:24,fill:'none',stroke:'#69484b','stroke-width':2});
    txt(svg,56,67,'MOMENTUM ’26',34,'#f5e7da','900',{'letter-spacing':1});
@@ -77,13 +84,14 @@
       order.forEach(function(row,j){
          var rowIndex=top?order.length-1-j:j,letter=order[rowIndex],yy=rowOffset+j*rowHeight;
          var isMine=reserved&&reserved.full.has(letter),isPartial=reserved&&reserved.partial.has(letter);
-         var isOpen=open[section]&&open[section].has(letter);
-         var color=isMine?'#dd6375':isPartial?'url(#partial-band)':isOpen?(mode==='church'?'#48766b':'#6dbb9b'):'#55494b';
-         add(g,'rect',{x:x+6,y:yy,width:w-12,height:rowHeight-0.75,rx:1.5,fill:color,stroke:isPartial?'#e9a2a1':'none','stroke-width':isPartial?0.8:0});
+         var isOpen=open[section]&&open[section].full.has(letter);
+         var isPartialOpen=open[section]&&open[section].partial.has(letter);
+         var color=isMine?'#dd6375':isPartial?'url(#partial-band)':isPartialOpen?'url(#partial-open-band)':isOpen?(mode==='church'?'#48766b':'#6dbb9b'):'#55494b';
+         add(g,'rect',{x:x+6,y:yy,width:w-12,height:rowHeight-0.75,rx:1.5,fill:color,stroke:isPartial?'#e9a2a1':isPartialOpen?'#a8dec2':'none','stroke-width':isPartial||isPartialOpen?0.8:0});
       });
       add(g,'rect',{x:x+17,y:top?y-38:y+h+2,width:w-34,height:31,rx:7,fill:reserved?'#933949':'#4a393d',stroke:reserved?'#ef97a0':'#a78e83','stroke-width':1.3});
       txt(g,x+w/2,top?y-16:y+h+25,section,22,'#fff2e5','900',{'text-anchor':'middle'});
-      add(g,'title',{},'Section '+section+(reserved?' · Your church: '+selected.church:'')+(open[section]?' · Includes designated open rows':''));
+      add(g,'title',{},'Section '+section+(reserved?' · Your church: '+selected.church:'')+(open[section]?' · Includes designated open rows':'')+(open[section]&&open[section].partial.size?' · Rows A–C: only seats 1–4 open':''));
    });
    // A single compact green floor zone leaves all numbered section bands unobstructed.
    // Upper section rows end before y=380; lower section rows begin after y=518.
