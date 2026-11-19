@@ -509,7 +509,7 @@ rules.forEach(function(x){var c=el('div','card');c.append(el('h3','',x[0]),el('p
  content.append(signature);root.append(content)
 })();
 var mapDefinitions={
- arena:{src:'assets/maps/Bos Seating - Momentum Map.png',alt:'Momentum 2026 arena seating map',caption:'Custom Momentum arena seating diagram, not to scale. Colored row bands represent reserved or open areas. Follow posted signs for exact seat locations.'},
+ arena:{src:'assets/maps/Bos Seating - Momentum Map.png',alt:'Momentum 2026 arena seating map',caption:'Arena map is illustrative, not to scale. Solid green indicates open rows. In Section 117, striped green in rows A–C means only seats 1–4 are open. Follow posted section signs for exact seats.'},
  lower:{src:'assets/maps/Momentum Lower Level Map.svg',alt:'Momentum 2026 lower-level breakout room map with speakers, stairs and restrooms',caption:'Map based on the BOS Center lower-level diagram. Use lobby stairs and follow posted signs.'}
 };
 var activeMap='arena',mapZoom=100,mapFocus={type:'overview'},mapDataLoading=false;
@@ -521,7 +521,7 @@ function mapSelectionText(){
    if(c){summary.append(el('strong','',c.church+' · '+c.city));c.allocations.forEach(function(a){summary.append(el('div','','Section '+a.section+' · Rows '+a.rows+(a.seats?' · Seats '+a.seats:'')))});if(c.allocations.some(function(a){return !!a.seats}))summary.append(el('div','','Striped row bands indicate partial-row assignments. Use the seat numbers listed above.'));return}
  }
  summary.append(el('strong','',mapFocus.type==='open'?'OPEN SEATING HIGHLIGHTED':'ARENA SEATING GUIDE'));
- summary.append(el('div','',mapFocus.type==='open'?'All floor seating, rear middle seating, and green section rows are open seating.':'Green row bands show open seating. Search for a church to highlight its reserved rows in crimson.'));
+ summary.append(el('div','',mapFocus.type==='open'?'Open seating includes all floor and rear middle seating, solid green rows, and Section 117 rows A–C seats 1–4 only (striped green).':'Solid green rows are open. Section 117 has partially open rows A–C, seats 1–4 only (striped green). Search a church to highlight its reserved rows in crimson.'));
 }
 function renderArena(){
  var mount=document.getElementById('arena-svg-wrap'),fallback=document.getElementById('map-fallback');
@@ -603,9 +603,11 @@ function renderOpenSeating(){
  var grid=el('div','open-seat-grid');
  seatingData.openSeating.sections.forEach(function(a){
    var all=a.rows==='A–W',card=el('div','open-seat-card'+(all?' all-open':'')),copy=el('div','open-rows',all?'Entire section':'Rows '+a.rows);
-   copy.append(el('small','',all?'All numbered rows':'Open rows only'));card.append(el('div','open-num',a.section),copy);grid.append(card);
+   if(a.partialRows&&a.partialSeats)copy.append(el('small','','Plus rows '+a.partialRows+': seats '+a.partialSeats+' ONLY'));
+   else copy.append(el('small','',all?'All numbered rows':'Open rows only'));
+   card.append(el('div','open-num',a.section),copy);grid.append(card);
  });
- guide.append(grid,el('p','open-seat-note','Open rows in shared sections are beyond the reserved rows. Check posted signs before selecting seats.'));
+ guide.append(grid,el('p','open-seat-note','Some partially open rows have specific seat numbers. Follow posted signs and verify open seats before sitting.'));
  var mapBtn=el('button','seat-map-btn','View Arena Seating Map');mapBtn.type='button';
  mapBtn.addEventListener('click',function(){go('venue');setMap('arena',{type:'open'})});guide.append(mapBtn);
  panel.append(guide);
