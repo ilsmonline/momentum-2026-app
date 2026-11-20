@@ -272,7 +272,7 @@
  </div>
  <a class="arrival-packet-link" href="https://drive.google.com/file/d/1qLtrB8Rx6Kcmmcxqpgf2DB_dXWMlD9lo/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><span><strong>Full Momentum 2026 Information Packet</strong><small>Parking diagrams, group policies, hotel information and more · PDF</small></span><span aria-hidden="true">↗</span></a>
 </section></div></section>
-<section class="screen" data-page="seating"><div class="section"><span class="kicker">CHURCH RESERVED SEATING</span><h1 class="page-title">FIND MY <span style="color:#d89f94">CHURCH.</span></h1><p class="lead">Search your church's name to locate assigned reserved seating, if applicable. Please note: not all groups are assigned seating. </p><input class="search" id="church-search" type="search" placeholder="Enter church name" aria-label="Search church name"><p class="seat-last-updated muted" id="seat-updated" aria-live="polite"></p><div id="seating-results" class="empty" aria-live="polite">Loading 2026 reserved seating directory…</div><button id="open-seating-toggle" class="open-seat-toggle" type="button" aria-expanded="false" aria-controls="open-seating-panel">View Open Seating Areas <span aria-hidden="true">⌄</span></button><div id="open-seating-panel" hidden></div><p class="muted"><em>Not all groups are assigned seats</em>. If your church isn't listed, check with your church leader or the ISM Information Booth. Follow on-site reserved seating signs. Arena floor seating remains first-come, first-served.</p></div></section>
+<section class="screen" data-page="seating"><div class="section"><span class="kicker">CHURCH RESERVED SEATING</span><h1 class="page-title">FIND MY <span style="color:#d89f94">CHURCH.</span></h1><p class="lead">Search your church's name to locate assigned reserved seating, if applicable. Please note: not all groups are assigned seating. </p><input class="search" id="church-search" type="search" placeholder="Enter church name" aria-label="Search church name"><div id="seating-results" class="empty" aria-live="polite">Loading 2026 reserved seating directory…</div><button id="open-seating-toggle" class="open-seat-toggle" type="button" aria-expanded="false" aria-controls="open-seating-panel">View Open Seating Areas <span aria-hidden="true">⌄</span></button><div id="open-seating-panel" hidden></div><p class="muted"><em>Not all groups are assigned seats</em>. If your church isn't listed, check with your church leader or the ISM Information Booth. Follow on-site reserved seating signs. Arena floor seating remains first-come, first-served.</p></div></section>
 <section class="screen" data-page="reception"><div class="section"><span class="kicker">FRIDAY · SPECIAL EVENT</span><h1 class="page-title">YOUTH PASTOR <span style="color:#d89f94">RECEPTION.</span></h1><div class="card"><h3>Youth Pastors & Spouses, This One's for You!</h3><p>We’re hosting a special reception to honor your work in ministry. Full-time and volunteer youth leaders, along with their spouses, are invited.</p><p><strong>When:</strong> Friday, following the first worship song during Session 1, on Pastor Chris’s release.</p><p><strong>Where:</strong> North Mezzanine</p><p><strong>Please remain in service with your group until Pastor Chris releases you.</strong></p></div></div></section>
 <section class="screen" data-page="welcome"><div class="section"><span class="kicker">FROM OUR DIRECTORS</span><h1 class="page-title">A WORD OF <span style="color:#d89f94">WELCOME.</span></h1><article id="welcome-letter" class="welcome-letter" aria-label="Welcome letter from Pastors Chris and Christina Stanley"></article></div></section>
 <section class="screen" data-page="maestra"><div class="section translation-page">
@@ -614,7 +614,7 @@ function renderOpenSeating(){
 }
 function normalizeSeatSearch(str){return String(str||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
 function showSeating(){
- var target=document.getElementById('seating-results'),input=document.getElementById('church-search'),updated=document.getElementById('seat-updated');
+ var target=document.getElementById('seating-results'),input=document.getElementById('church-search');
  if(!seatingData){
    target.className='empty';target.textContent=seatingError?'Unable to load seating assignments. Check your connection and try again.':'Loading the reserved seating directory…';
    if(seatingError){var retry=el('button','seat-map-btn','Try again');retry.addEventListener('click',function(){seatingError=false;showSeating()});target.append(retry)}
@@ -626,8 +626,7 @@ function showSeating(){
    }
    return;
  }
- if(!seatingData.published){updated.textContent='';target.className='empty';target.textContent='Reserved seating assignments are not yet published. Please check with your church leader.';return}
- updated.textContent=seatingData.updated?'Seating assignments updated '+new Date(seatingData.updated+'T12:00:00').toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+'.':'';
+ if(!seatingData.published){target.className='empty';target.textContent='Reserved seating assignments are not yet published. Please check with your church leader.';return}
  renderOpenSeating();
  var query=normalizeSeatSearch(input.value),matches=query?seatingData.churches.filter(function(c){return normalizeSeatSearch(c.church+' '+c.city).includes(query)||normalizeSeatSearch(c.city+' '+c.church).includes(query)}):[];
  target.textContent='';
