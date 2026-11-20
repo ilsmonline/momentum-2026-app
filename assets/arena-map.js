@@ -48,7 +48,7 @@
    });
    var svg=add(parent,'svg',{class:'arena-svg',width:'100%',height:'auto',viewBox:'0 0 1100 865',role:'img','aria-label':selected?'Momentum arena map showing '+selected.church+' reserved seating. Red highlights show assigned rows. Green highlights show open rows.':'Momentum arena map showing open seating and reserved sections. Green areas are designated open seating.'});
    add(svg,'title',{},'Momentum 2026 · BOS Center arena seating');
-   add(svg,'desc',{},'Stage at left. Floor seating in the middle and rear seating on right are open. Solid green row bands indicate open rows. Striped green bands in section 117 rows A through C indicate only seats 1 through 4 are open. Red bands indicate the selected church. This is a schematic, not a scale floor plan.');
+   add(svg,'desc',{},'Stage at right. Floor seating in the middle and rear seating on right are open. Solid green row bands indicate open rows. Striped green bands in section 117 rows A through C indicate only seats 1 through 4 are open. Red bands indicate the selected church. This is a schematic, not a scale floor plan.');
    var defs=add(svg,'defs');
    var grad=add(defs,'linearGradient',{id:'arena-bg',x1:'0%',y1:'0%',x2:'100%',y2:'100%'});
    add(grad,'stop',{offset:'0%','stop-color':'#35262b'});
@@ -66,17 +66,19 @@
    var banner=selected?selected.church+' · '+selected.city:mode==='open'?'OPEN SEATING':'ARENA SEATING GUIDE';
    txt(svg,1070,66,banner,20,'#f2d7ca','800',{'text-anchor':'end'});
    txt(svg,1070,95,selected?'Highlighted reserved rows are shown in crimson.':mode==='open'?'All floor, rear middle, and green row bands are first-come.':'Green indicates open seating; other rows may be reserved.',13,'#d4bab0','500',{'text-anchor':'end'});
+   // Mirror the seating geometry so the stage appears on the right, without mirroring labels.
+   function flipX(x,width){return 1100-x-(width||0)}
    // Outer hall outline and stage orientation
    add(svg,'rect',{x:35,y:155,width:1030,height:570,rx:28,fill:'#2b2828',stroke:'#6f5756','stroke-width':2});
-   add(svg,'rect',{x:56,y:315,width:133,height:250,rx:12,fill:'#151719',stroke:'#b89c8e','stroke-width':2});
-   txt(svg,124,446,'STAGE',31,'#f7e8db','900',{'text-anchor':'middle','letter-spacing':4,transform:'rotate(-90 124 446)'});
-   add(svg,'rect',{x:206,y:211,width:28,height:168,rx:7,fill:'#534648',stroke:'#85706a'});
-   txt(svg,220,402,'101',16,'#d1b2aa','700',{'text-anchor':'middle'});
-   add(svg,'rect',{x:206,y:509,width:28,height:168,rx:7,fill:'#534648',stroke:'#85706a'});
-   txt(svg,220,498,'120',16,'#d1b2aa','700',{'text-anchor':'middle'});
+   add(svg,'rect',{x:flipX(56,133),y:315,width:133,height:250,rx:12,fill:'#151719',stroke:'#b89c8e','stroke-width':2});
+   txt(svg,flipX(124),446,'STAGE',31,'#f7e8db','900',{'text-anchor':'middle','letter-spacing':4,transform:'rotate(-90 '+flipX(124)+' 446)'});
+   add(svg,'rect',{x:flipX(206,28),y:211,width:28,height:168,rx:7,fill:'#534648',stroke:'#85706a'});
+   txt(svg,flipX(220),402,'101',16,'#d1b2aa','700',{'text-anchor':'middle'});
+   add(svg,'rect',{x:flipX(206,28),y:509,width:28,height:168,rx:7,fill:'#534648',stroke:'#85706a'});
+   txt(svg,flipX(220),498,'120',16,'#d1b2aa','700',{'text-anchor':'middle'});
    var sections=['102','103','104','105','106','119','118','117','116','115'];
    sections.forEach(function(section,i){
-      var top=i<5,col=top?i:i-5,x=247+col*120,y=top?192:518,w=110,h=188;
+      var top=i<5,col=top?i:i-5,x=flipX(247+col*120,110),y=top?192:518,w=110,h=188;
       var g=add(svg,'g',{'data-section':section});
       add(g,'rect',{x:x,y:y,width:w,height:h,rx:7,fill:'#3e3436',stroke:'#9b7b71','stroke-width':1.5});
       var rowHeight=8.15,rowOffset=top?y+12:y+16,reserved=mine[section]||null;
@@ -96,12 +98,12 @@
    // A single compact green floor zone leaves all numbered section bands unobstructed.
    // Upper section rows end before y=380; lower section rows begin after y=518.
    var floor=add(svg,'g',{'aria-label':'All floor seating is open'});
-   add(floor,'rect',{x:247,y:387,width:557,height:125,rx:16,fill:mode==='church'?'#446d5f':'#498e76',stroke:'#a8c8b0','stroke-width':2});
-   txt(floor,525,444,'ALL FLOOR SEATING',23,'#eef8ec','900',{'text-anchor':'middle','letter-spacing':1});
-   txt(floor,525,480,'OPEN · FIRST-COME',17,'#d4e9d7','800',{'text-anchor':'middle','letter-spacing':1});
+   add(floor,'rect',{x:flipX(247,557),y:387,width:557,height:125,rx:16,fill:mode==='church'?'#446d5f':'#498e76',stroke:'#a8c8b0','stroke-width':2});
+   txt(floor,flipX(525),444,'ALL FLOOR SEATING',23,'#eef8ec','900',{'text-anchor':'middle','letter-spacing':1});
+   txt(floor,flipX(525),480,'OPEN · FIRST-COME',17,'#d4e9d7','800',{'text-anchor':'middle','letter-spacing':1});
    // Public venue reference identifies back-center modules. Their seating is open.
    [0,1,2].forEach(function(i){
-      var x=864,y=319+i*83;
+      var x=flipX(864,165),y=319+i*83;
       add(svg,'rect',{x:x,y:y,width:165,height:76,rx:9,fill:mode==='church'?'#466a60':'#4d9078',stroke:'#afc7b4','stroke-width':1.5});
    });
    // Map legend and disclaimers.
