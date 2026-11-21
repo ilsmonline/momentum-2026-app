@@ -1,0 +1,316 @@
+{
+  "schema": 1,
+  "published": true,
+  "updated": "2026-11-19",
+  "churches": [
+    {
+      "church": "Abundant Life Church",
+      "city": "Alton",
+      "allocations": [
+        {
+          "section": "105",
+          "rows": "A–C"
+        }
+      ]
+    },
+    {
+      "church": "Belmont Assembly of God",
+      "city": "Chicago",
+      "allocations": [
+        {
+          "section": "118",
+          "rows": "C–K"
+        }
+      ]
+    },
+    {
+      "church": "Calvary Church",
+      "city": "Springfield",
+      "allocations": [
+        {
+          "section": "116",
+          "rows": "F–J"
+        }
+      ]
+    },
+    {
+      "church": "Carlinville First Assembly",
+      "city": "Carlinville",
+      "allocations": [
+        {
+          "section": "116",
+          "rows": "A–B"
+        }
+      ]
+    },
+    {
+      "church": "City Church",
+      "city": "Pekin",
+      "allocations": [
+        {
+          "section": "116",
+          "rows": "C–E"
+        }
+      ]
+    },
+    {
+      "church": "Connect Church",
+      "city": "Washington",
+      "allocations": [
+        {
+          "section": "117",
+          "rows": "D–G"
+        }
+      ]
+    },
+    {
+      "church": "Cornerstone Church",
+      "city": "Bethalto",
+      "allocations": [
+        {
+          "section": "103",
+          "rows": "D–F"
+        }
+      ]
+    },
+    {
+      "church": "First Assembly",
+      "city": "Olney",
+      "allocations": [
+        {
+          "section": "119",
+          "rows": "E–J"
+        }
+      ]
+    },
+    {
+      "church": "First Assembly of God",
+      "city": "Havana",
+      "allocations": [
+        {
+          "section": "118",
+          "rows": "A–B"
+        }
+      ]
+    },
+    {
+      "church": "First Assembly of God",
+      "city": "Normal",
+      "allocations": [
+        {
+          "section": "105",
+          "rows": "H–K"
+        }
+      ]
+    },
+    {
+      "church": "Harvest Chapel",
+      "city": "Sandwich",
+      "allocations": [
+        {
+          "section": "103",
+          "rows": "J–L"
+        }
+      ]
+    },
+    {
+      "church": "Hope Church",
+      "city": "La Grange",
+      "allocations": [
+        {
+          "section": "103",
+          "rows": "G–H"
+        }
+      ]
+    },
+    {
+      "church": "Life Community Church",
+      "city": "Columbia",
+      "allocations": [
+        {
+          "section": "117",
+          "rows": "H–M"
+        }
+      ]
+    },
+    {
+      "church": "Marengo First Assembly Of God",
+      "city": "Marengo",
+      "allocations": [
+        {
+          "section": "102",
+          "rows": "H–L"
+        }
+      ]
+    },
+    {
+      "church": "Meadowbrook Community Church",
+      "city": "Champaign",
+      "allocations": [
+        {
+          "section": "105",
+          "rows": "D–G"
+        }
+      ]
+    },
+    {
+      "church": "Metropraise International",
+      "city": "Chicago",
+      "allocations": [
+        {
+          "section": "102",
+          "rows": "E–G"
+        }
+      ]
+    },
+    {
+      "church": "New Beginnings Church",
+      "city": "Fairfield",
+      "allocations": [
+        {
+          "section": "104",
+          "rows": "J–L"
+        }
+      ]
+    },
+    {
+      "church": "New Hope Church",
+      "city": "Glen Carbon",
+      "allocations": [
+        {
+          "section": "103",
+          "rows": "A–C"
+        }
+      ]
+    },
+    {
+      "church": "New Life Fellowship",
+      "city": "Moline",
+      "allocations": [
+        {
+          "section": "103",
+          "rows": "M–R"
+        }
+      ]
+    },
+    {
+      "church": "Northwest Assemblies of God",
+      "city": "Mount Prospect",
+      "allocations": [
+        {
+          "section": "104",
+          "rows": "A–B"
+        }
+      ]
+    },
+    {
+      "church": "Revive",
+      "city": "Collinsville",
+      "allocations": [
+        {
+          "section": "119",
+          "rows": "A–D"
+        }
+      ]
+    },
+    {
+      "church": "RockChurch",
+      "city": "East Peoria",
+      "allocations": [
+        {
+          "section": "102",
+          "rows": "M–R"
+        }
+      ]
+    },
+    {
+      "church": "The Bridge",
+      "city": "Greenville",
+      "allocations": [
+        {
+          "section": "119",
+          "rows": "K–N"
+        }
+      ]
+    },
+    {
+      "church": "The Fields Church",
+      "city": "Mattoon",
+      "allocations": [
+        {
+          "section": "104",
+          "rows": "C–H"
+        }
+      ]
+    },
+    {
+      "church": "Trinity Christian Center",
+      "city": "Zion",
+      "allocations": [
+        {
+          "section": "102",
+          "rows": "A–D"
+        }
+      ]
+    }
+  ],
+  "openSeating": {
+    "sections": [
+      {
+        "section": "102",
+        "rows": "S–W"
+      },
+      {
+        "section": "103",
+        "rows": "S–W"
+      },
+      {
+        "section": "104",
+        "rows": "M–W"
+      },
+      {
+        "section": "105",
+        "rows": "L–W"
+      },
+      {
+        "section": "106",
+        "rows": "A–W"
+      },
+      {
+        "section": "115",
+        "rows": "A–W"
+      },
+      {
+        "section": "116",
+        "rows": "K–W"
+      },
+      {
+        "section": "117",
+        "rows": "N–W",
+        "partialRows": "A–C",
+        "partialSeats": "1–4"
+      },
+      {
+        "section": "118",
+        "rows": "L–W"
+      },
+      {
+        "section": "119",
+        "rows": "P–W"
+      }
+    ],
+    "firstComeFirstServed": true,
+    "areas": [
+      {
+        "id": "floor",
+        "title": "All Floor Seating",
+        "description": "Every floor seating area is open seating."
+      },
+      {
+        "id": "rear-middle",
+        "title": "Back Seating · Middle Section",
+        "description": "The rear seating area in the middle section is open seating."
+      }
+    ]
+  }
+}

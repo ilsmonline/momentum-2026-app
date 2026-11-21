@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#211c1c">
+<meta name="description" content="Momentum 2026 youth conference companion, November 20–21, Springfield, Illinois.">
+<title>Momentum '26 | Conference Companion</title>
+<style>
+:root{--ink:#211c1c;--ink2:#312928;--cream:#f1e7d9;--muted:#b7a9a0;--red:#893640;--soft:#eacfc4;--line:#50433f;--pad:clamp(17px,4vw,30px)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#181516;color:var(--cream);font-family:Arial,Helvetica,sans-serif;line-height:1.5}button,input,a{font:inherit}button{cursor:pointer}a{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #f1b0a2;outline-offset:3px}.app{max-width:700px;min-height:100dvh;margin:auto;background:var(--ink);padding-bottom:84px;box-shadow:0 0 60px #0008}.top{height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;text-decoration:none}.logo{font-size:27px;font-weight:900;letter-spacing:-2px;color:#f8e9d8}.brandcopy{display:grid;line-height:1.03;letter-spacing:2px;font-weight:900;font-size:14px}.brandcopy small{font-size:8px;letter-spacing:2.5px;color:var(--muted);margin-top:5px}.hero{position:relative;min-height:345px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px 22px;background:radial-gradient(ellipse at 50% 35%,#803640aa 0%,transparent 55%),linear-gradient(165deg,#201b1b,#41262b 48%,#211c1c)}.hero{background-image:linear-gradient(0deg,#211c1cf2 0%,#211c1c40 45%,#211c1c88 100%),url('assets/Crimson Throne Amidst Misty Columns.png'),radial-gradient(ellipse at 50% 35%,#803640aa 0%,transparent 55%),linear-gradient(165deg,#201b1b,#41262b 48%,#211c1c);background-size:cover;background-position:center}.hero:before,.hero:after{content:"";position:absolute;width:350px;height:250px;border-radius:50%;filter:blur(50px);opacity:.3;pointer-events:none}.hero:before{background:#f3c8b3;top:-185px;left:-120px}.hero:after{background:#ae3e51;bottom:-170px;right:-90px}.kicker{font-size:10px;letter-spacing:2.7px;text-transform:uppercase;font-weight:700;color:#e0b7a8}.hero h1{font-family:Impact,'Arial Narrow','Arial Black',sans-serif;font-weight:900;font-size:clamp(46px,10vw,76px);letter-spacing:.015em;line-height:1.02;margin:19px 0 20px;text-shadow:0 3px 20px #0006}.hero p{font-size:11px;letter-spacing:1.7px;color:#eed7cf}.hero>.kicker,.hero>h1,.hero>p{position:relative;z-index:1}.section{padding:24px var(--pad)}h2,h3,p{margin-top:0}.section-head{font-size:25px;font-weight:900;letter-spacing:-1px;margin-bottom:15px}.section-head em{color:#d99c91;font-style:normal}h1.page-title{font-family:Georgia,serif;line-height:1.05;font-size:39px;letter-spacing:-1px;margin:9px 0 18px}.section .lead{color:var(--muted);font-size:14px}.quick{display:grid;grid-template-columns:1fr 1fr;gap:10px}.tile{appearance:none;background:#352d2d;border:1px solid #5d4b49;color:var(--cream);min-height:105px;text-align:left;border-radius:9px;padding:16px;display:flex;flex-direction:column;justify-content:space-between;font-weight:800}.tile:hover,.tile:focus-visible{border-color:#d3a69c;background:#453335}
+/* A timely, easy-to-find arrival shortcut and a venue seating search shortcut. */
+#quick-parking{grid-column:1/-1;min-height:83px;display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:13px;padding:15px 16px;background:#55363c;border-color:#9c6765}
+#quick-parking[hidden]{display:none!important}
+.tile-parking-icon{flex:none;display:grid;place-items:center;width:43px;height:43px;border-radius:10px;background:#e4b7aa;color:#38272b;font-weight:900;font-size:22px}
+.tile-parking-copy{display:flex;flex:1;min-width:0;flex-direction:column;gap:3px}
+.tile-parking-copy strong{font-size:16px;color:#fff0e5;line-height:1.2}
+.tile-parking-copy small{font-size:11px;color:#eed0c5;font-weight:500;line-height:1.4}
+.tile-parking-arrow{flex:none;font-size:23px;color:#edbbac}
+.venue-seat-tools{display:flex;align-items:center;gap:10px 16px;flex-wrap:wrap;margin:16px 0 18px}
+.venue-seat-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:12px;flex:none;min-height:44px;margin:0;padding:9px 14px;background:#54343c;border:1px solid #996a67;border-radius:9px;color:#fce6d9;font-size:14px;font-weight:800;text-align:left}
+.venue-seat-shortcut:hover,.venue-seat-shortcut:focus-visible{background:#694049;border-color:#e1aea0}
+.venue-seat-shortcut .venue-seat-arrow{color:#f0b8a5;font-size:18px;line-height:1}
+.venue-seat-note{flex:1 1 190px;margin:0!important;color:#cdb5ad;font-size:12px;line-height:1.45}
+.venue-seat-note strong{color:#e9c3b7}
+#arrival-title{scroll-margin-top:25px}
+.tile i{font-style:normal;font-size:25px;color:#e2ab9c}.news{background:#4e282f;border:1px solid #985c63;padding:16px;border-radius:9px;margin-top:12px}.news strong{display:block;font-size:16px}.news small{color:#f7d2c8;letter-spacing:1.2px;font-size:10px}.news p{margin:5px 0 0;color:#f4ddd3;font-size:13px}.rowhead{display:flex;justify-content:space-between;align-items:center;gap:10px}.textlink{background:none;border:none;color:#e6b2a4;font-weight:bold;font-size:12px}.speakergrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.speaker{min-height:150px;background:linear-gradient(145deg,#693942,#2e2425);border:1px solid #6b4d4b;border-radius:9px;padding:13px 10px;display:flex;flex-direction:column;justify-content:space-between}.portrait{width:52px;height:52px;border-radius:50%;background:#e1b7a3;color:#3c2325;display:grid;place-items:center;font-size:21px;font-weight:900}.speaker .portrait img,.breakout .portrait img{width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block}.speaker .portrait:has(img),.breakout .portrait:has(img){overflow:hidden}.speaker .portrait{width:70px;height:70px}.speaker strong{font-size:13px;line-height:1.2}.speaker small{font-size:10px;color:#e6c1b5}.screen{display:none}.screen.active{display:block}.screen[hidden],[data-go="reception"][hidden]{display:none!important}.tabs,.filterrow{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:18px}.tab,.filter{border:1px solid #6a5150;background:#332829;color:#dbc9c2;padding:10px 15px;border-radius:25px;font-size:13px}.tab[aria-selected=true],.filter[aria-pressed=true]{background:#e7cdc0;color:#352524;border-color:#e7cdc0;font-weight:800}.timeline{display:grid;gap:10px}.event{display:grid;grid-template-columns:85px minmax(0,1fr);gap:10px}.eventtime{font-size:13px;font-weight:800;text-align:right;padding-top:14px;white-space:nowrap}.eventbox{background:#332b2b;border:1px solid #604c48;text-align:left;color:var(--cream);border-radius:9px;padding:15px}.eventbox:hover{border-color:#c6978a}.eventbox small{display:block;color:#e4ab9e;letter-spacing:1.3px;font-size:9px;font-weight:800;margin-bottom:6px}.eventbox strong{display:block;font-size:16px}.eventbox .sub,.eventbox .place{display:block;font-size:12px;color:#cdbdb5;margin-top:5px}.eventbox .place{color:#e6b7aa}.eventbox .session-speaker{display:block;margin-top:11px;font-size:13px;font-weight:800;color:#f4d7ca;border-left:3px solid #bd6570;padding-left:9px}.search{width:100%;border-radius:9px;background:#f1e5d8;color:#241d1d;padding:14px 15px;border:0;margin-bottom:15px}.breakout{display:flex;gap:14px;border:1px solid #594846;background:#302829;border-radius:10px;padding:15px;margin-bottom:10px}.breakout .portrait{flex:none;width:61px;height:61px;font-size:17px;background:#5b3c3e}.breakout .portrait img{object-position:center 28%}.breakoutmain{flex:1;min-width:0}.roomlink{background:none;border:0;color:#efbdb2;padding:0;font-size:11px;letter-spacing:1px;text-align:left;font-weight:bold}.roomlink:hover{text-decoration:underline} .breakout h3{font-size:17px;margin:4px 0;line-height:1.3}.presenter{color:#d1b7ab;text-transform:uppercase;letter-spacing:1px;font-size:11px;font-weight:800;margin-bottom:10px}.description summary{font-size:12px;color:#efbdb2;cursor:pointer;user-select:none;padding:5px 0}.description p{padding-top:8px;line-height:1.55;white-space:pre-line}.status-note{display:block;margin-top:8px;color:#e7b2a8;font-size:11px}.breakout p{font-size:13px;color:#c7b7b0;margin:0 0 7px}.room{font-size:10px;color:#f0bbaa;letter-spacing:1px;text-transform:uppercase}.save{flex:none;background:none;color:#f6c8b7;border:none;font-size:24px;align-self:flex-start}.save[aria-pressed=true]{color:#ffd08c}.muted{color:#bfaea5;font-size:13px}
+.year-date-note{display:flex;gap:14px;align-items:center;border-radius:10px;padding:16px;background:#41312f;border:1px solid #835753;margin:18px 0 27px}.year-date-note strong{color:#f6d6c5;min-width:92px;font-size:14px;line-height:1.25}.year-date-note span{font-size:13px;color:#e4cdc0}.year-group-heading{font-size:12px;color:#e9a59e;letter-spacing:2px;font-weight:900;margin:28px 0 12px}.year-event-list{display:grid;gap:9px}.year-event{display:grid;grid-template-columns:minmax(82px,102px) 1fr;gap:14px;align-items:center;padding:15px;border:1px solid #57433f;border-radius:10px;background:#31292a}.year-date{font-size:14px;font-weight:900;color:#f7d4c2;border-right:1px solid #69494a;padding-right:9px;line-height:1.2}.year-content h3{font-size:15px;line-height:1.3;margin:0 0 4px;color:#f4e5d9}.year-content p{font-size:12px;color:#d1b6ab;margin:0;line-height:1.45}.year-disclaimer{margin-top:25px}
+.partner-group-title{font-size:12px;letter-spacing:2.5px;color:#e5a99f;font-weight:900;margin:27px 0 12px}
+.partner-list{display:grid;gap:12px}
+.partner-card{border:1px solid #6d5351;background:#30282a;border-radius:13px;padding:16px;overflow:hidden}
+.partner-header{display:flex;align-items:center;gap:16px}
+.partner-logo{flex:none;width:126px;height:90px;border-radius:9px;background:#f7f1e9;display:flex;align-items:center;justify-content:center;padding:12px;overflow:hidden}
+.partner-logo img{width:100%;max-height:100%;object-fit:contain}
+.partner-logo-fallback{text-align:center;color:#5b4643;font-size:12px;font-weight:800;line-height:1.3}
+.partner-details{min-width:0;flex:1}
+.partner-details h3{font-size:17px;line-height:1.25;margin:0 0 7px;color:#f5e3d8}
+.partner-details p{margin:0;color:#c8b0a4;font-size:12px;line-height:1.4}
+.partner-ad{margin-top:13px;border-top:1px solid #715551;padding-top:11px}
+.partner-ad[hidden]{display:none}.partner-ad-file{display:inline-block;margin-top:14px;padding:10px 13px;border:1px solid #86645a;border-radius:8px;color:#efc9b8;font-weight:800;font-size:13px;text-decoration:none}.partner-ad-file:hover{text-decoration:underline}
+.partner-ad summary{color:#edc0b4;font-size:13px;font-weight:800;cursor:pointer;padding:7px 2px}
+.partner-ad summary:hover{text-decoration:underline}
+.partner-ad-image{margin-top:13px;background:#f8f3eb;border-radius:8px;overflow:hidden;line-height:0}
+.partner-ad-image img{display:block;width:100%;height:auto;object-fit:contain;max-height:100vh}
+@media(max-width:370px){.partner-logo{width:102px;height:77px;padding:8px}.partner-header{gap:11px}.partner-details h3{font-size:15px}}
+
+/* Clearer partner presentation and full-screen viewer */
+.partner-logo{position:relative}
+.partner-logo img{position:absolute;inset:0;width:100%;height:100%;max-height:none;padding:11px;background:#f7f1e9;object-fit:contain;visibility:hidden}
+.partner-logo img.is-loaded{visibility:visible}
+.partner-logo-fallback[hidden]{display:none}
+.partner-ad-open{display:flex;align-items:center;justify-content:center;width:100%;margin-top:15px;padding:12px;border:1px solid #a76e69;border-radius:9px;background:#61363f;color:#ffe8dc;font-weight:850;font-size:14px}
+.partner-ad-open:hover,.partner-ad-open:focus-visible{background:#79434c}
+.partner-ad-dialog{position:fixed;inset:0;width:100vw;max-width:none;height:100vh;height:100dvh;max-height:none;margin:0;padding:0;border:0;border-radius:0;overflow:hidden;background:#1d171a}
+.partner-ad-dialog::backdrop{background:#080506ed}
+.partner-ad-shell{height:100%;display:flex;flex-direction:column}
+.partner-ad-toolbar{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#2d2428;border-bottom:1px solid #67474a}
+.partner-ad-title{font-size:16px;line-height:1.25;font-weight:900;color:#f7e4d8}
+.partner-ad-hint{font-size:11px;color:#d1b8ad;margin:4px 0 0}
+.partner-ad-close{flex:none;display:grid;place-items:center;background:#56393f;border:1px solid #9c7771;color:#ffe7de;border-radius:50%;width:44px;height:44px;padding:0;font-size:29px;line-height:1}
+.partner-ad-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:auto;padding:12px;background:#181316}
+.partner-ad-stage img{display:block;max-width:100%;max-height:100%;height:auto;width:auto;object-fit:contain;border-radius:4px}
+.partner-ad-stage img[hidden],.partner-ad-error[hidden]{display:none}
+.partner-ad-error{max-width:350px;color:#f3d5c8;text-align:center;font-size:14px;line-height:1.6}
+.speaker .portrait,.breakout .portrait{position:relative;overflow:hidden}
+.speaker .portrait img,.breakout .portrait img{position:absolute;inset:0;opacity:0;transition:opacity .15s ease}
+.speaker .portrait img.is-loaded,.breakout .portrait img.is-loaded{opacity:1}
+.portrait-initials[hidden]{display:none}
+.more-external-note{font-size:12px;line-height:1.55;color:#b7a29b;margin:17px 0 0}
+
+
+/* Student Honors page */
+.honor-hero{margin:20px 0 33px;padding:27px clamp(20px,5vw,35px);background:linear-gradient(140deg,#67383f 0%,#3a292d 65%,#282124);border:1px solid #8f5d5b;border-radius:17px}
+.honor-eyebrow{display:block;color:#e7aea2;font-size:11px;font-weight:900;letter-spacing:1.6px;margin-bottom:13px}
+.honor-hero h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(26px,6vw,38px);line-height:1.18;margin:0 0 17px;color:#fff0e3}
+.honor-hero>p{font-size:15px;line-height:1.78;color:#e8d3ca;max-width:57ch;margin:0}
+.honor-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:27px;border-top:1px solid #795551;padding-top:23px}
+.honor-metrics>div{display:flex;flex-direction:column;gap:4px;min-width:0}
+.honor-metrics strong{font-size:30px;color:#ffe4d4;line-height:1}
+.honor-metrics span{font-size:9px;letter-spacing:.7px;color:#d9b5aa;font-weight:800;line-height:1.4}
+.honor-collection-head{margin:26px 0 14px}
+.honor-collection-head .kicker{font-size:10px;letter-spacing:1.6px}
+.honor-collection-head h2{font-size:23px;line-height:1.25;font-weight:900;margin:7px 0 8px;color:#fff0e6}
+.honor-collection-head em{color:#dfa79b;font-style:normal}
+.honor-collection-head p{font-size:13px;color:#c9b1a8;line-height:1.6;margin:0}
+.honor-group{background:#302729;border:1px solid #68504e;border-radius:13px;overflow:hidden;margin-bottom:16px}
+.honor-group-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:20px 19px 16px;border-bottom:1px solid #5e4946;background:#392d2f}
+.honor-group-kicker{font-size:10px;font-weight:900;letter-spacing:1.4px;color:#c99c91}
+.honor-group h3{font-size:19px;line-height:1.25;margin:5px 0 5px;color:#f5e8dc}
+.honor-group-head p{font-size:12px;line-height:1.6;color:#cdb8b0;margin:0}
+.honor-count{flex:none;text-align:center;min-width:60px;border:1px solid #805b59;background:#52383e;border-radius:10px;padding:7px 9px}
+.honor-count strong{display:block;font-size:22px;line-height:1.2;color:#f8dfd3}
+.honor-count span{display:block;font-size:8px;font-weight:900;letter-spacing:.4px;color:#e1b5a8}
+.honor-student-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.honor-student{padding:17px 15px;min-width:0;border-bottom:1px solid #51403f}
+.honor-student:nth-child(odd){border-right:1px solid #51403f}
+.honor-student strong{display:block;font-size:14px;line-height:1.4;color:#f4e8dc;overflow-wrap:break-word}
+.honor-student span{display:block;font-size:11px;line-height:1.5;margin-top:6px;color:#cba99e;overflow-wrap:break-word}
+.honor-student-list .honor-student:last-child,.honor-student-list .honor-student:nth-last-child(2):nth-child(odd){border-bottom:0}
+.honor-footer{margin:30px 0 10px;padding:20px 0;border-top:1px solid #674947;font-family:Georgia,"Times New Roman",serif;color:#f0cab9;font-size:19px;line-height:1.5;text-align:center}
+@media(max-width:390px){.honor-student-list{grid-template-columns:1fr}.honor-student{border-right:0!important;border-bottom:1px solid #51403f!important}.honor-student:last-child{border-bottom:0!important}.honor-metrics strong{font-size:25px}.honor-metrics span{font-size:8px}}
+
+.route-card{border:1px solid #765453;background:#302728;border-radius:12px;padding:16px 17px;margin:18px 0 23px}.route-card h3{color:#f1bcb2;font-size:13px;font-weight:900;letter-spacing:1.3px;margin:0 0 10px}.route-card p{font-size:13px;color:#e0cfc4;margin:0 0 10px;line-height:1.6}.route-card p:last-child{margin-bottom:0}.map-tabs{display:flex;gap:7px;overflow-x:auto;white-space:nowrap;margin:15px 0 12px;padding-bottom:3px}
+.map-tabs .tab{white-space:nowrap;flex:none}
+.map-panel[data-active-map="lower"] .map-stage{height:min(78vh,680px);background:#211b1e}.venue-extra-details{margin:20px 0 12px;border:1px solid #654f4c;border-radius:11px;background:#30272a;padding:12px 14px}.venue-extra-details summary{font-size:14px;font-weight:800;color:#f0c8b8;cursor:pointer;padding:5px 2px}.venue-extra-details #venue-list{padding-top:16px}
+
+/* Venue locations: titles and descriptions must never run together. */
+#venue-list .venue-location-card{display:flex;align-items:flex-start;gap:14px;min-width:0;padding:17px 18px;margin:0 0 11px;text-align:left}
+#venue-list .venue-location-card:last-child{margin-bottom:0}
+#venue-list .venue-location-copy{display:flex;flex:1 1 auto;min-width:0;flex-direction:column;align-items:flex-start;gap:9px}
+#venue-list .venue-location-title{display:block;font-size:18px;font-weight:800;line-height:1.3;color:#f5e8db}
+#venue-list .venue-location-description{display:block;width:100%;margin:0;font-size:14px;line-height:1.55;color:#dac4ba;white-space:normal;overflow-wrap:break-word}
+#venue-list .venue-location-action{display:block;flex:none;max-width:92px;text-align:right;font-size:12px;line-height:1.45;color:#e4ab9e;white-space:normal}
+#venue-list button.venue-location-card:hover{border-color:#b4857a}
+@media(max-width:410px){#venue-list .venue-location-card{padding:14px 13px;gap:8px}#venue-list .venue-location-title{font-size:16px}#venue-list .venue-location-description{font-size:13px}#venue-list .venue-location-action{font-size:11px;max-width:75px}}
+.route-card[hidden]{display:none}.map-panel{background:#312929;border:1px solid #65514b;border-radius:11px;overflow:hidden;margin-bottom:8px}
+.map-stage{position:relative;background:#e9dfd1;overflow:auto;width:100%;height:clamp(260px,58vw,440px);overscroll-behavior:contain;touch-action:pan-x pan-y;scrollbar-color:#88645d #d5c9bf}
+/* The arena SVG is 1100 x 865. At default zoom, display its full height so the bottom legend is visible without scrolling.
+   When zoomed past 100%, the stage keeps this original footprint and allows panning. Lower-level map keeps its own scroll height. */
+.map-panel[data-active-map="arena"] .map-stage{height:auto;aspect-ratio:1100 / 865;overflow:auto;background:#211b1e}
+
+.map-stage img{width:100%;max-width:none;height:auto;display:none;user-select:none;pointer-events:none}.arena-svg-wrap{width:100%;min-width:100%;background:#211b1e}.arena-svg-wrap svg{display:block;width:100%;height:auto;max-width:none}.arena-svg-wrap[hidden]{display:none}.map-selection-summary:not(:empty){background:#332829;border:1px solid #80595c;border-radius:10px;padding:13px 15px;font-size:13px;color:#f5dcd1;margin-bottom:16px}.map-selection-summary strong{color:#fff0e1;font-size:15px}
+.map-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:23px;background:linear-gradient(150deg,#3d2e2d,#211b1c);color:#e5c7b9;font-size:14px}
+.map-tools{display:flex;gap:7px;align-items:center;justify-content:flex-end;padding:10px;background:#2d2526}
+.map-tools button{border:1px solid #745851;background:#433337;color:#f3e0d3;padding:8px 12px;border-radius:6px;min-width:37px}
+.map-tools output{font-size:12px;color:#f0dbcf;min-width:42px;text-align:center}
+.map-panel+.muted{margin-bottom:25px}
+.card{background:#342c2c;border:1px solid #5d4e4b;padding:19px;border-radius:10px;margin-bottom:13px}.card p:last-child{margin-bottom:0}.card h3{margin:0 0 9px;font-size:17px}.card p{color:#daccc5;font-size:14px}.card small{font-size:11px;color:#d8a89d}.listbtn{width:100%;display:flex;justify-content:space-between;gap:10px;text-align:left;align-items:center;background:#302829;color:var(--cream);border:1px solid #51413e;border-radius:9px;padding:16px;margin-bottom:9px}.listbtn strong{display:block}.listbtn small{display:block;color:#b8a9a3;font-size:12px;margin-top:4px}.listbtn b{color:#d3a496}.empty{padding:22px;background:#352e2d;border:1px dashed #685550;border-radius:10px;color:#dbc4b9;font-size:13px}.seating-results{display:grid;gap:12px;margin:10px 0 20px}.seat-card{border:1px solid #6e4e4c;background:#302729;border-radius:12px;padding:18px}.seat-card h3{margin:0;color:#f4e9db;font-size:20px;line-height:1.25}.seat-city{font-size:12px;color:#e1b1a6;margin:3px 0 14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}.seat-location{padding:14px;background:#3d3032;border:1px solid #674c4c;border-radius:9px;margin:8px 0;display:flex;gap:12px;align-items:center}.seat-section{font:900 26px Arial,Helvetica,sans-serif;color:#fff0e6;background:#853e4c;border-radius:7px;padding:8px 11px;min-width:77px;text-align:center}.seat-rows{color:#f1e2d7;font-size:14px;font-weight:bold}.seat-seats{color:#e6bbac;font-size:12px}.seat-map-btn{display:block;margin-top:12px;border:1px solid #a26768;background:transparent;color:#f0c5b9;border-radius:8px;padding:9px 12px;font-size:13px;font-weight:bold;width:100%;text-align:center}.seat-last-updated{margin-top:-6px;margin-bottom:12px}.open-seat-toggle{display:flex;width:100%;align-items:center;justify-content:space-between;background:#74434a;color:#fff0e5;font-size:15px;font-weight:900;border:1px solid #ad706a;border-radius:10px;padding:15px 17px;margin:16px 0 12px}.open-seat-toggle[aria-expanded=true]{background:#884951}.open-seat-toggle span{font-size:24px;line-height:1}.open-seat-guide{border:1px solid #6c4b4e;background:#2d2627;border-radius:12px;padding:17px;margin-bottom:18px}.open-seat-guide h3{font-size:15px;margin:0 0 6px;color:#f7e6d8}.open-seat-guide p{font-size:13px;color:#ddc9bc;margin:0 0 14px}.open-seat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.open-seat-card{display:flex;gap:8px;align-items:center;padding:10px;border:1px solid #705452;background:#3b3030;border-radius:9px}.open-seat-card .open-num{font-size:22px;font-weight:900;color:#fff1e5;background:#685c50;border-radius:6px;min-width:55px;text-align:center;padding:5px 2px}.open-seat-card.all-open .open-num{background:#527265}.open-seat-card .open-rows{color:#f0ddd0;font-size:12px;font-weight:700;line-height:1.3}.open-seat-card .open-rows small{display:block;color:#c5afa3;font-weight:400;font-size:11px}.open-seat-note{color:#dbc7b9;font-size:12px;margin-top:12px}.open-area-list{display:grid;gap:9px;margin:8px 0 20px}.open-area-card{padding:15px;border-radius:10px;background:#35443c;border:1px solid #648273}.open-area-card strong{display:block;color:#f5e9da;font-size:15px}.open-area-card span{display:block;color:#d8e3d8;font-size:12px;margin-top:4px}.open-seat-subhead{color:#e7d4c8;font-size:13px;text-transform:uppercase;letter-spacing:1px;font-weight:800;margin:13px 0 10px}.welcome-letter{margin:20px 0 14px;border:1px solid #69504b;border-radius:16px;background:#2d2627;overflow:hidden;box-shadow:0 10px 34px #100c0d35}.letter-intro{position:relative;background:linear-gradient(145deg,#633840,#32282b 85%);padding:29px clamp(20px,5vw,38px) 31px;border-bottom:1px solid #86534c}.letter-intro::after{content:"";display:block;width:68px;height:3px;background:#e6b29e;border-radius:3px;margin-top:23px}.letter-eyebrow{font-size:10px;font-weight:900;letter-spacing:2.1px;color:#f3c7b3;display:block;margin-bottom:17px}.letter-greeting{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,5.4vw,39px);line-height:1.17;font-weight:700;letter-spacing:-.7px;color:#fff5e9;margin:0 0 19px}.letter-lead{font-size:17px;line-height:1.8;color:#f2ddd1;margin:0;max-width:58ch}.letter-content{padding:23px clamp(20px,5vw,38px) 30px}.letter-part{margin:0;padding:18px 0 19px;border-bottom:1px solid #54413f}.letter-part:first-child{padding-top:4px}.letter-part:last-of-type{border-bottom:0}.letter-part h3{color:#eeb5a6;text-transform:uppercase;font-size:11px;letter-spacing:2px;line-height:1.4;font-weight:900;margin:0 0 15px}.letter-part p{font-size:16px;line-height:1.8;color:#f1e4d9;margin:0 0 16px;max-width:64ch}.letter-part p:last-child{margin-bottom:0}.letter-close{background:#493239;padding:21px 23px;border-left:4px solid #d99b8e;border-radius:4px 9px 9px 4px;margin:7px 0 25px}.letter-close p{font-family:Georgia,"Times New Roman",serif;color:#fff0e3;font-weight:700;font-size:22px;line-height:1.42;margin:0}.letter-signature{padding-top:3px}.letter-signature span{display:block;font-size:10px;letter-spacing:2px;font-weight:900;color:#d0a59c;margin-bottom:5px}.letter-signature strong{display:block;color:#f5e5db;font-family:Georgia,"Times New Roman",serif;font-size:23px;line-height:1.35;font-weight:700}@media(min-width:600px){.letter-content{padding-top:33px;padding-bottom:40px}.letter-part{padding-top:25px;padding-bottom:26px}.letter-intro{padding-top:39px;padding-bottom:42px}}.bottom{position:fixed;z-index:10;bottom:0;left:50%;transform:translateX(-50%);width:min(700px,100%);display:grid;grid-template-columns:repeat(5,1fr);background:#181415;border-top:1px solid #634947;padding:9px 4px max(9px,env(safe-area-inset-bottom))}.nav{background:none;color:#b9a49e;border:0;display:grid;justify-items:center;gap:2px;font-size:10px;padding:5px 0}.nav .symbol{font-size:20px;line-height:1.2}.nav[aria-current=page]{color:#f6d2bd}dialog{background:#2e2526;color:var(--cream);border:1px solid #a47770;border-radius:15px;width:min(500px,calc(100% - 26px));padding:25px}dialog::backdrop{background:#000b}dialog button{background:#793a45;border:0;color:white;padding:11px 15px;border-radius:6px}.actions{display:flex;gap:10px;justify-content:flex-end}.counter{color:#cab7af;font-size:12px;margin:0 0 14px}
+
+.arrival-section{margin:28px 0 8px}.arrival-section .rowhead{margin-bottom:6px}.arrival-section .section-head{font-size:23px}
+.arrival-lead{color:#d2bab0;font-size:13px;line-height:1.55;margin:0 0 15px}
+.arrival-grid{display:grid;grid-template-columns:1fr;gap:10px}
+.arrival-card{background:#30282b;border:1px solid #66504d;border-radius:12px;padding:18px 17px}
+.arrival-card-primary{background:linear-gradient(135deg,#57363d,#36282c);border-color:#9b6466}
+.arrival-card-head{display:flex;align-items:center;gap:11px;margin-bottom:9px}
+.arrival-icon{display:grid;place-items:center;flex:none;width:37px;height:37px;border-radius:10px;background:#523b3e;border:1px solid #9b6c67;color:#fbe1d3;font-size:18px;font-weight:900}
+.arrival-kicker{display:block;color:#e0ad9d;font-size:9px;line-height:1.35;font-weight:900;letter-spacing:1.15px}
+.arrival-card h3{font-size:17px;line-height:1.25;color:#f5e4db;margin:3px 0 0}
+.arrival-card p{font-size:13px;line-height:1.65;color:#ddc9bf;margin:0}
+.arrival-card strong{color:#fae8dc}
+.arrival-card .arrival-fineprint{color:#c2a9a0;font-size:11px;margin:10px 0}
+.arrival-link{display:inline-block;color:#f0b6a6;font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:3px}
+.arrival-packet-link{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:13px 0 0;padding:16px 17px;border-radius:11px;border:1px solid #84615a;background:#443337;text-decoration:none}
+.arrival-packet-link strong{display:block;font-size:14px;line-height:1.4;color:#ffebda}
+.arrival-packet-link small{display:block;font-size:11px;line-height:1.55;color:#d2b3a6;margin-top:3px}
+.arrival-packet-link>span:last-child{font-size:23px;color:#e9b3a5}
+@media(min-width:540px){.arrival-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.arrival-section .section-head{font-size:25px}}
+.worship-home-section{padding-top:6px}.worship-feature{background:#302628;border:1px solid #735453;border-radius:15px;overflow:hidden}.worship-photo{position:relative;aspect-ratio:16/9;background:radial-gradient(circle at 50% 70%,#695056,#392c30);overflow:hidden}.worship-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 60%}.worship-photo-tag{position:absolute;bottom:11px;left:13px;display:inline-block;padding:7px 10px;border-radius:6px;background:#241b1ddc;color:#fff0e5;letter-spacing:1px;font-size:10px;font-weight:900}.worship-content{padding:19px clamp(16px,4vw,26px) 21px}.worship-overline{font-size:10px;letter-spacing:1.8px;color:#ddaca0;font-weight:900}.worship-content h3{font-size:clamp(20px,4vw,27px);letter-spacing:.2px;line-height:1.2;color:#fff0e5;margin:8px 0 13px}.worship-content>p{font-size:14px;color:#e5d2c8;line-height:1.7;margin:0 0 16px}.worship-about{border-top:1px solid #735651;padding-top:6px}.worship-about summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:9px;padding:11px 0 4px;color:#f2b9aa;font-weight:850;font-size:13px}.worship-about summary::-webkit-details-marker{display:none}.worship-about summary span{font-size:21px;line-height:1;transition:transform .2s}.worship-about[open] summary span{transform:rotate(45deg)}.worship-about-body{padding:7px 0 0}.worship-about-body p{color:#d9c5bc;font-size:14px;line-height:1.75;margin:0 0 13px}.worship-about-body p:last-child{margin-bottom:0}.worship-about-body em{font-style:italic;color:#ffe1cf}@media(min-width:600px){.hero{min-height:420px}.hero h1{font-size:82px}.section{padding-top:30px;padding-bottom:30px}.speaker{min-height:180px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Featured speaker biographies: compact card buttons and mobile-friendly reading overlay */
+.speaker-card-footer{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.speaker-card-footer strong{overflow-wrap:anywhere;line-height:1.3}
+.speaker-card-footer small{display:block;line-height:1.4;margin-top:4px}
+.speaker-bio-button{display:block;width:100%;min-height:36px;margin-top:11px;border:1px solid #d7a494;background:#edd1c6;color:#3c252a;border-radius:7px;padding:8px 5px;font-weight:900;font-size:11px;line-height:1.25;text-align:center}
+.speaker-bio-button:hover,.speaker-bio-button:focus-visible{background:#fff0e5;border-color:#fff0e5}
+.speaker-bio-dialog{position:fixed;inset:0;margin:auto;width:min(540px,calc(100% - 24px));max-width:none;max-height:min(750px,calc(100dvh - 24px));padding:0;border:1px solid #96675f;border-radius:15px;overflow:hidden;background:#241e20;color:#f4e8df;box-shadow:0 20px 65px #0009}
+.speaker-bio-dialog::backdrop{background:#090708dc}
+.speaker-bio-shell{display:flex;flex-direction:column;max-height:min(750px,calc(100dvh - 24px))}
+.speaker-bio-topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 14px;background:#35292b;border-bottom:1px solid #765551}
+.speaker-bio-topbar span{color:#d8ac9f;font-weight:900;letter-spacing:1.2px;font-size:10px;line-height:1.4}
+.speaker-bio-topbar .speaker-bio-close{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid #a67c72;background:#64454b;color:#fff1e8;font-size:26px;line-height:1;padding:0}
+.speaker-bio-scroll{overflow-y:auto;overscroll-behavior:contain;padding:23px clamp(18px,5vw,28px) 29px}
+.speaker-bio-heading{display:flex;align-items:center;gap:17px;padding-bottom:22px;border-bottom:1px solid #6c5050}
+.speaker-bio-heading img{width:96px;height:96px;flex:none;object-fit:cover;border-radius:50%;background:#62464c;border:3px solid #a8786b}
+.speaker-bio-heading span{display:block;font-size:10px;font-weight:900;letter-spacing:1.4px;color:#deafa1}
+.speaker-bio-heading h2{color:#fff0e7;font-family:Georgia,'Times New Roman',serif;font-size:clamp(23px,5vw,30px);line-height:1.2;margin:7px 0 0}
+.speaker-bio-paragraphs p{margin:19px 0 0;color:#ebd7cb;font-size:15px;line-height:1.78;overflow-wrap:break-word}
+@media(max-width:370px){.speaker-bio-heading img{width:76px;height:76px}.speaker-bio-heading{gap:12px}.speaker-bio-paragraphs p{font-size:14px}}
+
+
+/* Maestra live interpretation - Spanish-first and mobile-first. */
+.translation-page{padding-bottom:42px}
+.translation-intro{margin-top:15px;padding:24px 21px 22px;background:linear-gradient(125deg,#693943,#3b292e);border:1px solid #97696a;border-radius:14px}
+.translation-eyebrow{display:block;color:#e9bba8;font-size:10px;font-weight:900;letter-spacing:1.3px;line-height:1.4}
+.translation-intro h2{font-family:Georgia,'Times New Roman',serif;color:#fff0e2;font-size:29px;line-height:1.15;margin:11px 0}
+.translation-intro p{color:#f1d9d0;font-size:15px;line-height:1.7;margin:0 0 20px}
+.translation-intro p strong{color:#fff1dd}
+.translation-device-note{display:flex;align-items:center;gap:13px;background:#241d20;border:1px solid #a47a71;border-radius:10px;padding:13px}
+.translation-headphone{display:grid;place-items:center;width:41px;height:41px;border-radius:9px;background:#e7bfac;color:#352426;font-size:24px;flex:none}
+.translation-device-note strong{display:block;color:#fff0df;font-size:14px;line-height:1.4}
+.translation-device-note small{display:block;color:#cdb4ac;font-size:12px;line-height:1.4;margin-top:3px}
+.translation-access{padding:22px 20px 20px;margin-top:17px;background:#302629;border:1px solid #765955;border-radius:14px}
+.translation-access-header h2{font-size:23px;margin:7px 0 8px;line-height:1.2}
+.translation-access-header p{color:#e0c9bd;font-size:14px;line-height:1.6;margin:0 0 16px}
+.translation-launch{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:14px 16px;border-radius:9px;background:#e9c3b4;color:#312127;text-decoration:none;font-size:14px;letter-spacing:.2px;font-weight:900}
+.translation-launch:hover,.translation-launch:focus-visible{background:#fff1e6}
+.translation-launch span{font-size:22px;line-height:1;flex:none}
+.translation-english-action{color:#dcc4b7;font-size:12px;margin:7px 3px 0}
+.translation-qr-zone{margin-top:20px;padding-top:20px;border-top:1px solid #75514f;display:grid;grid-template-columns:1fr;justify-items:center;gap:14px}
+.translation-qr-image{display:grid;place-items:center;background:#fff;border:1px solid #fff;border-radius:9px;padding:10px;width:min(100%,232px);aspect-ratio:1}
+.translation-qr-image img{display:block;width:100%;height:auto;image-rendering:pixelated}
+.translation-qr-copy{width:100%}
+.translation-qr-copy h3{font-size:16px;color:#ffe4d8;margin:0 0 8px}
+.translation-qr-copy p{color:#e3cbc0;font-size:13px;line-height:1.6;margin:0}
+.translation-qr-copy small{display:block;color:#bfa8a0;font-size:12px;line-height:1.5;margin-top:9px}
+.translation-instructions{margin-top:25px}
+.translation-instructions h2,.translation-english-summary h2{font-size:20px;line-height:1.3;margin:0 0 15px;color:#f9e5d8}
+.translation-instructions ol{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.translation-instructions li{display:flex;align-items:flex-start;gap:13px;padding:12px 14px;background:#31272a;border:1px solid #604c48;border-radius:10px}
+.translation-instructions li>span{font-size:16px;color:#e9aa9f;font-weight:900;line-height:1.5}
+.translation-instructions li p{font-size:13px;line-height:1.65;margin:0;color:#e7d0c5}
+.translation-english-summary{margin-top:22px;background:#282224;border-left:3px solid #c49085;padding:17px 17px 18px;border-radius:0 9px 9px 0}
+.translation-english-summary h2{font-size:17px;margin-bottom:8px}
+.translation-english-summary p{margin:0;color:#d6c4b9;font-size:13px;line-height:1.65}
+@media(min-width:560px){.translation-qr-zone{grid-template-columns:215px minmax(0,1fr);justify-items:stretch;align-items:center;gap:23px}.translation-qr-image{width:215px}.translation-access{padding:26px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top"><a href="#home" class="brand"><span class="logo">M'26</span><span class="brandcopy">MOMENTUM<small>YOUTH CONFERENCE</small></span></a></header>
+<main>
+<section class="screen active" data-page="home">
+  <div class="hero"><span class="kicker">ILLINOIS STUDENT MINISTRIES PRESENTS</span><h1>MOMENTUM '26</h1><p>NOVEMBER 20–21, 2026 · SPRINGFIELD, IL</p></div>
+  <div class="section"><div class="news"><small id="now-label">CONFERENCE COMPANION</small><strong id="now-title">The weekend is almost here.</strong><p id="now-detail">Your schedule, breakouts, and venue information in one place.</p></div></div>
+  <div class="section"><div class="rowhead"><h2 class="section-head">QUICK <em>ACCESS.</em></h2></div><div class="quick"><button class="tile" data-go="schedule"><i>▦</i>Event Schedule</button><button class="tile" data-go="breakouts"><i>✳</i>Find a Breakout</button><button class="tile" data-go="seating"><i>⌕</i>Find My Church</button><button class="tile" data-go="venue"><i>⌖</i>Venue Guide</button><button class="tile" id="quick-parking" type="button" data-go="venue" data-jump="arrival-title"><span class="tile-parking-icon" aria-hidden="true">P</span><span class="tile-parking-copy"><strong>Parking &amp; Arrival</strong><small>Drop-off · Bus parking · Group Check-In</small></span><span class="tile-parking-arrow" aria-hidden="true">↗</span></button></div></div>
+  <div class="section"><div class="rowhead"><h2 class="section-head">FEATURED <em>SPEAKERS.</em></h2></div><div class="speakergrid" id="speakers"></div></div>
+  <div class="section worship-home-section"><div class="rowhead"><h2 class="section-head">FEATURED <em>WORSHIP.</em></h2></div>
+   <article class="worship-feature" aria-label="Featured worship team River Valley Worship">
+    <div class="worship-photo"><img src="assets/worship/River%20Valley%20Worship.jpg" alt="Members of River Valley Worship standing together for a group photo" loading="eager" decoding="async"><span class="worship-photo-tag">LIVE AT MOMENTUM '26</span></div>
+    <div class="worship-content">
+     <span class="worship-overline">OUR WORSHIP TEAM</span><h3>RIVER VALLEY WORSHIP</h3>
+     <p>River Valley Worship is a collective of worship pastors, songwriters and musicians from River Valley Church in the Twin Cities, creating artful, congregational and Spirit-filled music.</p>
+     <details class="worship-about"><summary>Read About the Band <span aria-hidden="true">+</span></summary>
+      <div class="worship-about-body">
+       <p>Based out of River Valley Church in the Twin Cities, River Valley Worship seeks to pioneer new sonic landscapes for the Church on both local and global levels.</p>
+       <p>The band's 2018 release <em>Million Lifetimes</em>, their first record with BEC Recordings, included the Billboard Christian Top 25 anthem <em>Hope Has A Name</em>. Their subsequent projects include <em>Altars</em> and <em>Attention EP</em>.</p>
+       <p>In June 2022, the group released its seventh full-length record, <em>Faith In Our Time</em>, a live album recorded in downtown Minneapolis. With a passion for writing songs that serve the local church and reach the global Church, the team continues to lead others in worship.</p>
+      </div>
+     </details>
+    </div>
+   </article>
+  </div>
+  <div class="section"><div class="rowhead"><h2 class="section-head">EXPLORE <em>MORE.</em></h2><button class="textlink" data-go="more">View all ↗</button></div><div id="home-links"></div></div>
+</section>
+<section class="screen" data-page="schedule"><div class="section"><span class="kicker">PLAN YOUR WEEKEND</span><h1 class="page-title">EVENT <span style="color:#d89f94">SCHEDULE.</span></h1><p class="lead">Attendee schedule. Tap any event for details.</p><div class="tabs"><button class="tab" data-day="friday" aria-selected="true">Friday, Nov 20</button><button class="tab" data-day="saturday" aria-selected="false">Saturday, Nov 21</button></div><div id="schedule-list" class="timeline"></div></div></section>
+<section class="screen" data-page="breakouts"><div class="section"><span class="kicker">SATURDAY · 1:00–1:45 PM</span><h1 class="page-title">EXPLORE <span style="color:#d89f94">BREAKOUTS.</span></h1><input class="search" id="breakout-search" type="search" placeholder="Search workshop, speaker, or room" aria-label="Search workshops, speakers and rooms"><div class="filterrow"><button class="filter" data-filter="all" aria-pressed="true">All Sessions</button><button class="filter" data-filter="saved" aria-pressed="false">★ My Sessions</button></div><p class="counter" id="breakout-count"></p><div id="breakout-list"></div></div></section>
+<section class="screen" data-page="venue"><div class="section"><span class="kicker">FIND YOUR WAY</span><h1 class="page-title">VENUE <span style="color:#d89f94">GUIDE.</span></h1><p class="lead">Find your reserved seating or breakout room on the maps below.</p><div class="venue-seat-tools"><button type="button" class="venue-seat-shortcut" data-go="seating">Find My Church <span class="venue-seat-arrow" aria-hidden="true">↗</span></button><p class="venue-seat-note"><strong>Please note:</strong> Not all churches have assigned seating.</p></div>
+ <div class="map-tabs" role="tablist" aria-label="Venue maps">
+ <button class="tab" data-map="arena" role="tab" aria-selected="true">Arena Seating</button>
+ <button class="tab" data-map="lower" role="tab" aria-selected="false">Breakout Rooms</button>
+ </div>
+ <div class="map-panel" id="map-panel" role="tabpanel">
+ <div class="map-stage" id="map-stage"><div id="arena-svg-wrap" class="arena-svg-wrap" hidden></div><img id="map-image" alt="" draggable="false"><div id="map-fallback" class="map-fallback" role="status">Loading venue map…</div></div>
+ <div class="map-tools">
+ <button type="button" data-map-zoom="out" aria-label="Zoom out">−</button><output id="map-zoom-label" aria-live="polite">100%</output><button type="button" data-map-zoom="in" aria-label="Zoom in">+</button><button type="button" data-map-zoom="reset">Reset</button></div>
+ </div>
+ <p class="muted" id="map-caption"></p><div id="map-selection-summary" class="map-selection-summary" role="status" aria-live="polite"></div><div class="route-card" id="breakout-route" hidden><h3>GETTING TO YOUR BREAKOUT</h3><p><strong>Lower-level rooms:</strong> Take the main lobby stairs and follow signs to B1, B2, B4, B6, B7, B10 and B11 A–D.</p><p><strong>North Mezzanine:</strong> From the arena entrance, turn left and follow the ramp.</p><p><strong>South Mezzanine:</strong> Follow posted directional signs.</p><p class="muted">Students needing accessibility accommodations should ask event staff for assistance and be accompanied by an adult leader.</p></div>
+ 
+<details class="venue-extra-details"><summary>Other venue locations</summary><div id="venue-list"></div></details>
+<section class="arrival-section" aria-labelledby="arrival-title">
+ <div class="rowhead"><h2 class="section-head" id="arrival-title">PARKING <em>&amp; ARRIVAL.</em></h2></div>
+ <p class="arrival-lead">Save these details for when your group arrives at BOS Center.</p>
+ <div class="arrival-grid">
+  <article class="arrival-card arrival-card-primary">
+   <div class="arrival-card-head"><span class="arrival-icon" aria-hidden="true">↘</span><div><span class="arrival-kicker">FIRST STOP</span><h3>Student Drop-Off</h3></div></div>
+   <p>Unload passengers on <strong>Washington Street, between 7th and 9th Streets</strong>, on the north side of BOS Center. Unload before moving buses to their parking location.</p>
+  </article>
+  <article class="arrival-card">
+   <div class="arrival-card-head"><span class="arrival-icon" aria-hidden="true">▣</span><div><span class="arrival-kicker">MOTORCOACH · SCHOOL BUS · LARGE VAN</span><h3>Convention Lot 24</h3></div></div>
+   <p><strong>301 N. 5th Street, Springfield.</strong> Use this designated lot for buses and large vans after dropping off passengers.</p>
+  </article>
+  <article class="arrival-card">
+   <div class="arrival-card-head"><span class="arrival-icon" aria-hidden="true">P</span><div><span class="arrival-kicker">STANDARD VEHICLES</span><h3>Plaza Parking Garage</h3></div></div>
+   <p>Enter from <strong>7th Street or Washington Street</strong>. Maximum vehicle height: <strong>6′6″</strong>. The garage is automated; bring your ticket when paying. Accessible spaces are on Level 3 South (street level).</p>
+   <p class="arrival-fineprint">Parking charges vary by event. Check the posted rates and current venue information.</p>
+   <a class="arrival-link" href="https://www.theboscenter.com/parking" target="_blank" rel="noopener noreferrer">BOS Center Parking Details ↗</a>
+  </article>
+  <article class="arrival-card">
+   <div class="arrival-card-head"><span class="arrival-icon" aria-hidden="true">✓</span><div><span class="arrival-kicker">FRIDAY · 12:00–2:00 PM</span><h3>Group Check-In</h3></div></div>
+   <p>Church leaders check in their registered groups at the <strong>ISM Information Booth in the arena</strong>. Students should remain with their group while leaders handle check-in.</p>
+  </article>
+ </div>
+ <a class="arrival-packet-link" href="https://drive.google.com/file/d/1qLtrB8Rx6Kcmmcxqpgf2DB_dXWMlD9lo/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><span><strong>Full Momentum 2026 Information Packet</strong><small>Parking diagrams, group policies, hotel information and more · PDF</small></span><span aria-hidden="true">↗</span></a>
+</section></div></section>
+<section class="screen" data-page="seating"><div class="section"><span class="kicker">CHURCH RESERVED SEATING</span><h1 class="page-title">FIND MY <span style="color:#d89f94">CHURCH.</span></h1><p class="lead">Search your church's name to locate assigned reserved seating, if applicable. Please note: not all groups are assigned seating. </p><input class="search" id="church-search" type="search" placeholder="Enter church name" aria-label="Search church name"><div id="seating-results" class="empty" aria-live="polite">Loading 2026 reserved seating directory…</div><button id="open-seating-toggle" class="open-seat-toggle" type="button" aria-expanded="false" aria-controls="open-seating-panel">View Open Seating Areas <span aria-hidden="true">⌄</span></button><div id="open-seating-panel" hidden></div><p class="muted"><em>Not all groups are assigned seats</em>. If your church isn't listed, check with your church leader or the ISM Information Booth. Follow on-site reserved seating signs. Arena floor seating remains first-come, first-served.</p></div></section>
+<section class="screen" data-page="reception"><div class="section"><span class="kicker">FRIDAY · SPECIAL EVENT</span><h1 class="page-title">YOUTH PASTOR <span style="color:#d89f94">RECEPTION.</span></h1><div class="card"><h3>Youth Pastors & Spouses, This One's for You!</h3><p>We’re hosting a special reception to honor your work in ministry. Full-time and volunteer youth leaders, along with their spouses, are invited.</p><p><strong>When:</strong> Friday, following the first worship song during Session 1, on Pastor Chris’s release.</p><p><strong>Where:</strong> North Mezzanine</p><p><strong>Please remain in service with your group until Pastor Chris releases you.</strong></p></div></div></section>
+<section class="screen" data-page="welcome"><div class="section"><span class="kicker">FROM OUR DIRECTORS</span><h1 class="page-title">A WORD OF <span style="color:#d89f94">WELCOME.</span></h1><article id="welcome-letter" class="welcome-letter" aria-label="Welcome letter from Pastors Chris and Christina Stanley"></article></div></section>
+<section class="screen" data-page="maestra"><div class="section translation-page">
+ <span class="kicker">ESPAÑOL · LIVE INTERPRETATION</span>
+ <h1 class="page-title" lang="es">TRADUCCIÓN <span style="color:#d89f94">EN VIVO.</span></h1>
+ <div class="translation-intro" lang="es">
+  <span class="translation-eyebrow">MOMENTUM 2026 · MAESTRA</span>
+  <h2>¡Bienvenidos!</h2>
+  <p>Escucha Momentum en español desde tu teléfono. Habrá interpretación en vivo durante <strong>todas las sesiones generales</strong> y el <strong>taller en el Auditorio Principal</strong>.</p>
+  <div class="translation-device-note"><span class="translation-headphone" aria-hidden="true">♫</span><span><strong>Necesitas un teléfono móvil y audífonos.</strong><small>Bring a mobile device and headphones.</small></span></div>
+ </div>
+ <div class="translation-access">
+  <div class="translation-access-header"><span class="translation-eyebrow">ÚNETE A LA TRADUCCIÓN</span><h2 lang="es">Escucha en español</h2><p lang="es">Si estás usando tu propio teléfono, toca el botón para abrir la traducción.</p></div>
+  <a class="translation-launch" href="https://live.maestra.ai/room/-P65WqO6HhQvMC8cDEoC" target="_blank" rel="noopener noreferrer" lang="es">ABRIR TRADUCCIÓN EN VIVO <span aria-hidden="true">↗</span></a>
+  <p class="translation-english-action">Open live Spanish translation</p>
+  <div class="translation-qr-zone"><div class="translation-qr-image"><img src="assets/maestra-translation-qr.svg" width="240" height="240" alt="Código QR para abrir la traducción en vivo de Momentum en Maestra" loading="eager"></div><div class="translation-qr-copy" lang="es"><h3>¿Estás usando otro dispositivo?</h3><p>Escanea este código QR con la cámara de tu teléfono para abrir la misma traducción.</p><small>Scan from another device, or use the button above on this phone.</small></div></div>
+ </div>
+ <div class="translation-instructions">
+  <h2 lang="es">Cómo escuchar</h2>
+  <ol lang="es"><li><span>01</span><p>Ten listo tu <strong>teléfono y audífonos</strong>.</p></li><li><span>02</span><p>Toca <strong>Abrir traducción en vivo</strong> o escanea el código QR desde otro dispositivo.</p></li><li><span>03</span><p>Conecta tus audífonos y escucha la <strong>interpretación en español</strong> durante la sesión.</p></li></ol>
+ </div>
+ <div class="translation-english-summary" lang="en"><h2>For English-speaking leaders</h2><p>Live Spanish interpretation is available during <strong>all general sessions</strong> and the <strong>breakout session in the Main Auditorium</strong>. Students will need their own mobile device and headphones. Tap the link above on the listening device, or scan the QR code with a different device.</p></div>
+ </div></section>
+<section class="screen" data-page="rules"><div class="section"><span class="kicker">A GREAT WEEKEND FOR EVERYONE</span><h1 class="page-title">RULES & <span style="color:#d89f94">EXPECTATIONS.</span></h1><div id="rules-list"></div><p class="muted">This is a quick reference. Your church leaders have the full conference information packet.</p></div></section>
+<section class="screen" data-page="grave"><div class="section"><span class="kicker">CELEBRATING GENEROSITY &amp; FAITHFULNESS</span><h1 class="page-title">GRAVE ROBBERS <span style="color:#d89f94">CLUB.</span></h1>
+ <div class="honor-hero"><span class="honor-eyebrow">MOMENTUM 2026 · STUDENT HONORS</span><h2>Honoring the next generation.</h2><p>Thank you for giving selflessly, serving tirelessly, and allowing the Holy Spirit to lead you! We are so proud of the dedication and determination you showed and we honor you for your passionate sacrifice.</p>
+ <div class="honor-metrics"><div><strong>29</strong><span>STUDENTS HONORED</span></div><div><strong>21</strong><span>YOUTH ALIVE &amp; PRAYER</span></div><div><strong>8</strong><span>STL GIVING</span></div></div></div>
+ <div class="honor-collection-head"><span class="kicker">STUDENT RECOGNITION</span><h2>YOUTH ALIVE <em>&amp; PRAYER.</em></h2><p>Celebrating students who started Youth Alive Clubs or prayer tables.</p></div>
+ <section class="honor-group" aria-labelledby="honors-youth-alive"><div class="honor-group-head"><div><span class="honor-group-kicker">SCHOOL OUTREACH</span><h3 id="honors-youth-alive">Youth Alive Club</h3><p>Students recognized for launching a Youth Alive Club.</p></div><div class="honor-count" aria-label="20 honorees"><strong>20</strong><span>STUDENTS</span></div></div><div class="honor-student-list"><div class="honor-student"><strong>Alec Bowlin</strong><span>Meadowbrook Community</span></div><div class="honor-student"><strong>Blake Determan</strong><span>New Life Fellowship</span></div><div class="honor-student"><strong>Essence Englin</strong><span>City Church</span></div><div class="honor-student"><strong>Brooke Feicht</strong><span>Harvest Chapel</span></div><div class="honor-student"><strong>Grady Feicht</strong><span>Harvest Chapel</span></div><div class="honor-student"><strong>Jeremiah Gatenby</strong><span>Harvest Chapel</span></div><div class="honor-student"><strong>Captain Hawkins</strong><span>City Church</span></div><div class="honor-student"><strong>Kaylynn Henry</strong><span>City Church</span></div><div class="honor-student"><strong>Colton Holub</strong><span>City Church</span></div><div class="honor-student"><strong>Abby Hosmon</strong><span>Abundant Life</span></div><div class="honor-student"><strong>Audrey Hotle</strong><span>New Life Fellowship</span></div><div class="honor-student"><strong>Eliana Mead</strong><span>Harvest Chapel</span></div><div class="honor-student"><strong>Isaiah Rangel</strong><span>New Life Fellowship</span></div><div class="honor-student"><strong>Selah Springer</strong><span>City Church</span></div><div class="honor-student"><strong>Leah Sturm</strong><span>The Journey Church</span></div><div class="honor-student"><strong>Chelsie Thomas</strong><span>New Life Fellowship</span></div><div class="honor-student"><strong>Ava Tracy</strong><span>The Journey Church</span></div><div class="honor-student"><strong>Elli Tracy</strong><span>The Journey Church</span></div><div class="honor-student"><strong>Alena Turner</strong><span>New Life Fellowship</span></div><div class="honor-student"><strong>Yandel Velazquez</strong><span>Belmont Assembly of God</span></div></div></section>
+ <section class="honor-group" aria-labelledby="honors-prayer-table"><div class="honor-group-head"><div><span class="honor-group-kicker">SCHOOL OUTREACH</span><h3 id="honors-prayer-table">Prayer Table</h3><p>Students recognized for beginning a prayer table.</p></div><div class="honor-count" aria-label="1 honorees"><strong>1</strong><span>STUDENTS</span></div></div><div class="honor-student-list"><div class="honor-student"><strong>Malachi Holem</strong><span>Abundant Life</span></div></div></section>
+ <div class="honor-collection-head"><span class="kicker">STUDENT RECOGNITION</span><h2>SPEED THE <em>LIGHT.</em></h2><p>Recognizing students who generously gave to missions.</p></div>
+ <section class="honor-group" aria-labelledby="honors-grand"><div class="honor-group-head"><div><span class="honor-group-kicker">STL GIVING</span><h3 id="honors-grand">Grand Club · $1,000+</h3><p>Students recognized at the Grand Club giving level.</p></div><div class="honor-count" aria-label="2 honorees"><strong>2</strong><span>STUDENTS</span></div></div><div class="honor-student-list"><div class="honor-student"><strong>Hannah Hobson</strong><span>Cornerstone Church</span></div><div class="honor-student"><strong>Seanna Larbi</strong><span>Living Water Community Church</span></div></div></section>
+ <section class="honor-group" aria-labelledby="honors-five-hundred"><div class="honor-group-head"><div><span class="honor-group-kicker">STL GIVING</span><h3 id="honors-five-hundred">Giving · $500+</h3><p>Students recognized at the $500+ giving level.</p></div><div class="honor-count" aria-label="6 honorees"><strong>6</strong><span>STUDENTS</span></div></div><div class="honor-student-list"><div class="honor-student"><strong>Eliott Barker</strong><span>Cornerstone Church</span></div><div class="honor-student"><strong>Hadley Barker</strong><span>Cornerstone Church</span></div><div class="honor-student"><strong>Hadassah Hobson</strong><span>Cornerstone Church</span></div><div class="honor-student"><strong>Jonathan Schneider</strong><span>Cornerstone Church</span></div><div class="honor-student"><strong>Karson West</strong><span>Cornerstone Church</span></div><div class="honor-student"><strong>Kaylauni West</strong><span>Cornerstone Church</span></div></div></section>
+ <p class="honor-footer">Thank you for being part of what God is doing through Illinois Student Ministries.</p>
+ </div></section>
+<section class="screen" data-page="colleges"><div class="section"><span class="kicker">DISCOVER WHAT'S NEXT</span><h1 class="page-title">COLLEGES <span style="color:#d89f94">& PARTNERS.</span></h1><p class="lead">Explore the colleges, discipleship training programs, and ministry partners joining us at Momentum. Tap View Ad to see a full-screen advertisement.</p><div id="partner-directory" class="partner-directory"></div></div></section>
+<section class="screen" data-page="events"><div class="section"><span class="kicker">KEEP THE MOMENTUM GOING</span><h1 class="page-title">2027 <span style="color:#d89f94">EVENTS.</span></h1><p class="lead">Mark your calendar for these upcoming Illinois Student Ministries and Illinois District events.</p><div class="year-date-note"><strong>JANUARY 22</strong><span>Illinois AG churches may begin requesting a camp Group Hold online.</span></div><h2 class="year-group-heading">WINTER &amp; EARLY SPRING</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Jan 16–18</div><div class="year-content"><h3>PK Retreat</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Feb 1–2</div><div class="year-content"><h3>Connected Conference</h3><p>Victory City Church · Joliet</p></div></article><article class="year-event"><div class="year-date">Feb 12–13</div><div class="year-content"><h3>NextGen Missions Tour · South Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Feb 19–20</div><div class="year-content"><h3>NextGen Missions Tour · Central Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Feb 26–27</div><div class="year-content"><h3>NextGen Missions Tour · North Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Mar 5–6</div><div class="year-content"><h3>NextGen Missions Tour · Chicago Region</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Mar 20</div><div class="year-content"><h3>Young Adults Equipping One-Day</h3><p>Location TBD · Date tentative</p></div></article></div><h2 class="year-group-heading">SPRING</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Apr 17</div><div class="year-content"><h3>Illinois District Fine Arts Festival</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">May 16–19</div><div class="year-content"><h3>District Council</h3><p>City First Church · Rockford</p></div></article></div><h2 class="year-group-heading">SUMMER CAMPS</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Jun 14–17</div><div class="year-content"><h3>Kids Camp · Week 1</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jun 18–21</div><div class="year-content"><h3>Teen Discipleship Camp</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jun 22–25</div><div class="year-content"><h3>Kids Camp · Week 2</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jul 12–16</div><div class="year-content"><h3>Teen Camp · Week 1</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Jul 19–23</div><div class="year-content"><h3>Teen Camp · Week 2</h3><p>Lake Williamson Christian Center</p></div></article></div><h2 class="year-group-heading">FALL</h2><div class="year-event-list"><article class="year-event"><div class="year-date">Sep 11</div><div class="year-content"><h3>Alive Conference</h3><p>First Assembly of God · Normal</p></div></article><article class="year-event"><div class="year-date">Fall · TBD</div><div class="year-content"><h3>KidMin Equipping One-Day</h3><p>Location TBD</p></div></article><article class="year-event"><div class="year-date">Oct 18–19</div><div class="year-content"><h3>NextGen Summit</h3><p>Lake Williamson Christian Center</p></div></article><article class="year-event"><div class="year-date">Nov 19–20</div><div class="year-content"><h3>Momentum Youth Conference</h3><p>BOS Center · Springfield</p></div></article></div><p class="muted year-disclaimer">Dates and locations are subject to change. Events marked TBD have not yet been assigned a final date or location.</p></div></section>
+<section class="screen" data-page="more"><div class="section"><span class="kicker">ALL THE EXTRAS</span><h1 class="page-title">MORE TO <span style="color:#d89f94">EXPLORE.</span></h1><div id="more-list"></div><p class="more-external-note">The dining guide is provided by the Springfield Convention &amp; Visitors Bureau. It is a third-party resource, not an ISM endorsement. Leaders should review dining options for their groups.</p></div></section>
+</main>
+<nav class="bottom" aria-label="Primary navigation"><button class="nav" data-go="home" aria-current="page"><span class="symbol">⌂</span>Home</button><button class="nav" data-go="schedule"><span class="symbol">▦</span>Schedule</button><button class="nav" data-go="breakouts"><span class="symbol">✳</span>Breakouts</button><button class="nav" data-go="venue"><span class="symbol">⌖</span>Venue</button><button class="nav" data-go="more"><span class="symbol">☷</span>More</button></nav>
+</div>
+<dialog id="event-dialog"><div id="dialog-content"></div><div class="actions"><button id="close-dialog">Close</button></div></dialog>
+<dialog class="speaker-bio-dialog" id="speaker-bio-dialog" aria-labelledby="speaker-bio-name">
+ <div class="speaker-bio-shell">
+  <div class="speaker-bio-topbar"><span>FEATURED SPEAKER · MOMENTUM ’26</span><button id="speaker-bio-close" class="speaker-bio-close" type="button" aria-label="Close speaker biography">×</button></div>
+  <div class="speaker-bio-scroll">
+   <div class="speaker-bio-heading"><img id="speaker-bio-photo" alt="" loading="eager"><div><span>ABOUT THE SPEAKER</span><h2 id="speaker-bio-name"></h2></div></div>
+   <div class="speaker-bio-paragraphs" id="speaker-bio-paragraphs"></div>
+  </div>
+ </div>
+</dialog>
+<dialog class="partner-ad-dialog" id="partner-ad-dialog" aria-label="Partner advertisement"><div class="partner-ad-shell"><header class="partner-ad-toolbar"><div><div id="partner-ad-title" class="partner-ad-title"></div><p class="partner-ad-hint">Tap outside the ad or press × to close</p></div><button id="partner-ad-close" class="partner-ad-close" aria-label="Close advertisement" type="button">×</button></header><div class="partner-ad-stage" id="partner-ad-stage"><img id="partner-ad-image" alt="" hidden><p id="partner-ad-error" class="partner-ad-error" hidden></p></div></div></dialog>
+<script src="assets/arena-map.js?v=20261119-stage-left"></script>
+<script>
+(function(){
+'use strict';
+var S={
+ friday:[
+ ['12:00 PM','Group Check-In','BOS Center','Church leaders check in their registered groups. Group Check-In closes at 2:00 PM.'],
+ ['2:00 PM','Arena Doors Open','Main Arena','General Session 1'],
+ ['3:00 PM','General Session 1','Main Arena','Worship and a message from Kendall Alfaro.','Kendall Alfaro'],
+ ['During Session 1','Youth Pastor Reception','North Mezzanine','Following the first worship song. Stay with your group until Pastor Chris releases you.'],
+ ['5:00 PM','Dinner Break','Off-site','Dinner on your own. Return in time for the evening session.'],
+ ['5:15 PM','Called Dinner','Abraham Lincoln Hotel · Salon C & D','Registered guests only.'],
+ ['7:00 PM','Arena Doors Open','Main Arena','General Session 2'],
+ ['7:30 PM','General Session 2','Main Arena','Worship and a message from Ricky Spindler.','Ricky Spindler'],
+ ['12:00 AM','Curfew','Your hotel','Be in rooms by midnight; lights out by 12:15 AM.']
+ ],
+ saturday:[
+ ['8:00 AM','Arena Doors Open','Main Arena','Morning session'],
+ ['9:00 AM','Missions / Speed the Light Session','Main Arena','Speed the Light service featuring a message from Kendall Alfaro.','Kendall Alfaro'],
+ ['11:00 AM','Lunch Break','Off-site','Lunch on your own. The venue must be vacated during the break.'],
+ ['1:00 PM','Breakout Sessions','Various rooms','Sessions run until 1:45 PM. Browse breakouts to choose a speaker.'],
+ ['2:00 PM','Arena Doors Open','Main Arena','After the auditorium breakout concludes and the arena is cleared.'],
+ ['2:00 PM','Final General Session Program','Main Arena','Includes Called College, Youth Alive, worship, and a message from Steve Svoboda later in the program. Expected conclusion around 4:30 PM.','Steve Svoboda']
+ ]};
+var speakerNames=[['Kendall Alfaro','Featured Speaker','assets/speakers/Kendall Alfaro.webp'],['Ricky Spindler','Featured Speaker','assets/speakers/Ricky Spindler.png'],['Steve Svoboda','Featured Speaker','assets/speakers/Steve Svoboda.png']];
+var speakerBios={"Kendall Alfaro":["Kendall Alfaro serves as the National Speed the Light Director, where he is passionate about mobilizing the next generation to live generously and advance the mission of Jesus around the world. He has been married to his wife, Jillian, for 20 years, and together they are raising their three sons—Heisman, Roman Champion, and Kingman. Kendall shares a deep passion for developing leaders and equipping students to step confidently into their God-given calling and impact their generation."],"Ricky Spindler":["Ricky Spindler has served as lead pastor of Stone Creek Church since 2017 and has been part of the church for 20 years. He has served in youth, children’s, family and men’s ministry, along with what he jokingly calls his favorite role: parking director.","Located near the University of Illinois in Champaign-Urbana, Stone Creek Church is a diverse congregation representing more than 40 nations each week. Ricky earned a bachelor’s degree in Pastoral Studies from North Central University and a master’s degree in Leadership from Indiana Wesleyan University. He and his family have five children and a Labrador named Indy."],"Steve Svoboda":["Steve Svoboda has been in ministry for over fifteen years and is now serving on the Called team at the National Office of the Assemblies of God. He is passionate about helping people discover and live out their God given purpose and calling.","Steve is dedicated to advancing the Church, staying active through running, triathlon and fitness, and making lasting memories with his family.","Steve and his wife, Bennett, live in Missouri with their two sons and daughter."]};
+var breakoutPairs=[["Derek Burgin","B1","How to Build a Consistent Prayer and Devotional Life","Spending time with the Lord is important! In this workshop, you'll learn the value of building a consistent prayer and devotional life and how to cultivate it. You'll walk away with practical steps and tools to help strengthen and shape your time spent with the Lord!"],["Called College · Grayson Wade","B10","Is God Calling Me?","How do you know if God is calling you into ministry? In this session, we’ll explore how to discern God’s calling, recognize signs that He may be leading you toward ministry, and discover practical next steps to respond to His direction for your life."],["Izzy Marti","B11 A","Hostile Territory","Practical ways for staying true to your faith in difficult environments. What does it mean for a teenager to keep living for Jesus when everyone else seems so hostile towards it?"],["Jaimee Jennings","B11 B","Who told you that? (Discovering your identity)","Have you ever stopped and wondered who you really are? Between social media, friendships, expectations, and trying to figure out where you fit in, it's easy to start believing things about ourselves that aren't even true. So who gets to decide who you are? Let's talk about what God says about you, who He created you to be, and how to start seeing yourself the way He sees you."],["Todd & Shawndra Lucas","B11 C","Leveling Up: Finding Your People and Purpose in College","JUNIORS AND SENIORS GET READY! The college years should be a fun, fulfilling, and fruitful time in a young believer’s life. Learn from campus missionaries and students how to approach college purposefully, build community, and grow spiritually and socially."],["Jacob Dilger","B11 D","Pray Like This","When the disciples asked Jesus how to pray, He said, “Pray like this.” The question we’ll explore in this workshop is, “How do we move from just wishing we prayed more to actually making prayer part of our everyday lives?”"],["Luke Keen","B2","Revival: it starts with you!","Revival sounds exciting, but it's about more than packed churches, powerful worship, and viral videos. What does genuine revival actually look like? We'll explore the history of revival, why it matters today, and how you can be the spark that ignites revival!"],["Caleb Pellizzer","B4","Loving the House and Reaching the Hometown","Hear directly from students as they share what it looks like to genuinely love their youth group and the people who make it home. Through their personal experiences and perspectives, discover how that love can extend beyond the church walls and become a passionate zeal for reaching their schools and community with the love of Jesus. Because when you truly love where you belong, you’ll want others to experience it too."],["Cohl Callies","B6","Who's in Your Circle?","The people you surround yourself with help shape the person you become. Discover how to cultivate Christ-centered friendships that strengthen your faith, encourage spiritual growth, and point one another toward Jesus."],["Joshua Hinzman","B7","Monday Morning Faith","Your faith isn't just about Sundays, or when we're surrounded by other Christians. It's about what happens when Monday morning comes and we're faced with the opportunity to stand for Jesus in our everyday lives. Let's talk about what it really means to live unashamed of the Gospel, boldly follow Jesus, and make our faith something the world can see."],["Rick McGough","Main Hall","Faith & Reason Made Simple","Rational Evidence Confirming the Christian Faith\n\nExplore how science, world history, and life today offer reasons to believe the Christian faith."],["David Anderson","South Mezzanine","Don’t Go Broke: Financial Decisions Your Future Self Will Thank You For","Someday you'll be old… like 30! Believe it or not, the money choices you make now can make or break your future. Let's talk about God's plan for handling money so future you has more freedom, less stress, and a little extra cash!"],["Mike Alvarez","North Mezzanine","Don’t Borrow Someone Else’s Dream","Everybody has an opinion about what you should do with your life. Through biblical truth and honest reflection, learn to recognize the difference between chasing approval and pursuing purpose. Discover what matters, who you’re becoming, and how to take your next faithful step."]];
+var breakoutPhotoMap={"Derek Burgin":"Derek Burgin.PNG","Called College · Grayson Wade":"Grayson Wade.png","Izzy Marti":"Izzy Marti.png","Jaimee Jennings":"Jaimee Jennings.jpeg","Todd & Shawndra Lucas":"Todd Lucas.jpeg","Jacob Dilger":"Jacob Dilger.png","Luke Keen":"Luke Keen.jpeg","Caleb Pellizzer":"Caleb Pellizzer.jpeg","Cohl Callies":"Cohl Callies.jpg","Joshua Hinzman":"Joshua Hinzman.jpeg","Rick McGough":"Rick McGough.jpg","David Anderson":"David Anderson.jpg","Mike Alvarez":"Mike Alvarez.jpeg"};
+var places=[['Main Arena','General sessions, Worship & Apologetics Breakout with Rick McGough','arena'],['North Mezzanine','Youth Pastor Reception; Young Adult Breakout with Mike Alvarez. From the arena entrance, turn left and continue to the ramp.'],['South Mezzanine','Young Adult Breakout with David Anderson. From the arena entrance, turn right and continue to the ramp.'],['Lower Level Rooms','Use the stairs in the lobby for lower-level breakout access. Rooms B1, B2, B4, B6, B7, B10, and B11 A–D.','lower'],['ISM Information Booth','Registration Check-in; Conference help and lost-and-found assistance']];
+var partnerData=[{"name":"Evangel University","category":"college","logo":"evangel-university.png","ad":"ValorBooklet.png"},{"name":"North Central University","category":"college","logo":"North Central.webp","ad":"WI_YOUTH_CONVENTION-3.png"},{"name":"Called College","category":"college","logo":"CalledCollege_Logo_Full_Color.jpg","ad":"Digital_Booklet_Ad_Fall 2026.png"},{"name":"City First Leadership College","category":"college","logo":"CFLC-export-06.png","ad":"9dd57825-7492-4651-94a2-f714429752bb.png"},{"name":"Gospel Encounter","category":"college","logo":"Gospel Encounter Logo Black Text Under.png","ad":"Digital Booklet - Gospel Encounter.png"},{"name":"Illinois Chi Alpha","category":"ministry","logo":"XA@300x.png","ad":"ilsmonline_232416851317050_6696418958219086042_ILLINOIS XA Promo Card (4 x 6 in)_7337.png"},{"name":"Youth Alive","category":"ministry","logo":"Youth Alive Brandmark Black.png","ad":"Youth Alive Ad.png"}];
+var extras=[['welcome','Welcome Letter','From Chris and Christina Stanley'],['reception','Youth Pastor Reception','Friday during Session 1'],['maestra','Spanish Translation','Live interpretation · Español'],['seating','Find My Church','Reserved seating search'],['grave','Grave Robbers Club','Recognizing ministry generosity'],['colleges','Colleges & Partners','Schools and ministry exhibitors'],['rules','Rules & Expectations','Important event information'],['events','2027 Events','Stay connected'],['giving','Give to Speed the Light','Open secure giving page'],['restaurants','Local Dining Guide','Springfield restaurant listings'],['packet','2026 Information Packet','Full conference details (PDF)']];
+var rules=[['Wear Your Wristband','Keep your conference wristband on at all times.'],['Stay With Your Group','Church leaders are responsible for student supervision throughout the event and in hotels.'],['Honor Curfew','Be in your hotel room by midnight with lights out by 12:15 AM.'],['Respect Others and the Venue','Follow staff direction. Respect BOS Center staff, property, students, and leaders.'],['Prohibited Items','No fireworks, smoking, alcohol, illegal drugs, weapons (including knives), or profanity.'],['Appropriate Conduct','Attend scheduled activities. Do not enter unsupervised mixed-gender hotel rooms, and avoid public displays of affection.']];
+var welcome=[
+ "Welcome to Momentum’26!",
+ "We’re so excited that you’ve joined us for this incredible weekend! Get ready for two days packed with powerful moments, deep connections, and life-changing encounters with God. We believe this weekend will challenge your faith, inspire your walk with Christ, and create unforgettable memories with the best students and leaders from across the state.",
+ "This year, we’re honored to welcome Kendall Alfaro, Ricky Spindler, and Steve Svoboda as our dynamic speakers. Together, they’ll deliver powerful messages that will equip and encourage you to step into all that God has for your life.",
+ "You’ll also experience impactful times of worship with River Valley Worship.",
+ "We’re thrilled to announce the continuance of our in-person workshops led by inspiring leaders from around Illinois. These sessions—available after lunch on Saturday—will give you practical tools and fresh insight to help you grow in your faith and leadership.",
+ "The booklet in your hands is your guide to Momentum’26. Inside, you’ll find an event schedule to help you make the most of every moment, along with key dates for 2027 that you’ll want to mark on your calendar. If you have any questions or just want to say hi, stop by the ISM Information Booth, located on the right of the main arena space next to the merch store.",
+ "A huge shoutout to our host, The Bank of Springfield Center. Their hospitality helps make this event possible, so let’s honor their staff by respecting the building and property throughout the weekend.",
+ "We’re thrilled to meet you, hear your story, and discover how ISM can partner with your journey. We believe each of you is here for a purpose, and our prayer is that you’ll leave this weekend with a renewed sense of calling, a deeper connection to Christ, and a heart full of His love.",
+ "Let’s make Momentum’26 unforgettable!"
+];
+function el(tag,cls,content){var n=document.createElement(tag);if(cls)n.className=cls;if(content!==undefined)n.textContent=content;return n}
+function initials(s){return s.replace('&',' ').split(' ').filter(Boolean).slice(0,2).map(function(x){return x[0]}).join('').toUpperCase()}
+function updateBreakoutDirections(){
+ var directions=document.getElementById('breakout-route');
+ if(!directions)return;
+ var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+ var at={};parts.forEach(function(p){at[p.type]=p.value});
+ var local=at.year+'-'+at.month+'-'+at.day+'T'+at.hour;
+ directions.hidden=local<'2026-11-21T10';
+}
+function isYouthReceptionPast(){
+ var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+ var at={};parts.forEach(function(p){at[p.type]=p.value});
+ return at.year+'-'+at.month+'-'+at.day+'T'+at.hour >= '2026-11-21T00';
+}
+function updateYouthReception(){
+ var ended=isYouthReceptionPast();
+ document.querySelectorAll('[data-go="reception"]').forEach(function(b){b.hidden=ended});
+ var screen=document.querySelector('[data-page="reception"]');if(screen)screen.hidden=ended;
+ var mez=document.getElementById('north-mezzanine-description');
+ if(mez)mez.textContent=(ended?'':'Youth Pastor Reception; ')+'Young Adult Breakout with Mike Alvarez. From the arena entrance, turn left and continue to the ramp.';
+ return ended;
+}
+function updateParkingQuickAccess(){
+ var tile=document.getElementById('quick-parking');
+ if(!tile)return;
+ var parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date());
+ var at={};parts.forEach(function(part){at[part.type]=part.value});
+ var local=at.year+'-'+at.month+'-'+at.day+'T'+at.hour+':'+at.minute;
+ tile.hidden=local>='2026-11-20T14:00';
+}
+function go(page){updateParkingQuickAccess();updateBreakoutDirections();var receptionEnded=updateYouthReception();if(page==='reception'&&receptionEnded)page='more';if(!document.querySelector('[data-page="'+page+'"]'))page='home';document.querySelectorAll('.screen').forEach(function(x){x.classList.toggle('active',x.dataset.page===page)});document.querySelectorAll('.nav').forEach(function(x){var yes=x.dataset.go===(['home','schedule','breakouts','venue'].includes(page)?page:'more');if(yes)x.setAttribute('aria-current','page');else x.removeAttribute('aria-current')});if(location.hash!=='#'+page)history.pushState(null,'','#'+page);window.scrollTo(0,0);if(page==='schedule')showSchedule();if(page==='breakouts')showBreakouts();if(page==='seating')showSeating();}
+function openPartnerAd(partner,url){
+ var dialog=document.getElementById('partner-ad-dialog');
+ var title=document.getElementById('partner-ad-title'),img=document.getElementById('partner-ad-image'),error=document.getElementById('partner-ad-error');
+ title.textContent=partner.name;error.hidden=true;error.textContent='';
+ img.hidden=true;img.alt=partner.name+' advertisement';
+ img.onload=function(){img.hidden=false;error.hidden=true};
+ img.onerror=function(){img.hidden=true;error.textContent='This advertisement could not be loaded. Please try again shortly.';error.hidden=false};
+ dialog.showModal();
+ img.src=url;
+}
+function showPartners(){
+ var root=document.getElementById('partner-directory');root.textContent='';
+ [['college','COLLEGES & MINISTRY TRAINING'],['ministry','MINISTRY PARTNERS']].forEach(function(group){
+  var matches=partnerData.filter(function(p){return p.category===group[0]});
+  if(!matches.length)return;
+  root.append(el('h2','partner-group-title',group[1]));
+  var list=el('div','partner-list');
+  matches.forEach(function(p){
+   var article=el('article','partner-card'),header=el('div','partner-header');
+   var logo=el('div','partner-logo'),fallback=el('span','partner-logo-fallback',p.name),img=el('img');
+   img.alt=p.name+' logo';img.loading='eager';
+   img.onload=function(){img.classList.add('is-loaded');fallback.hidden=true};
+   img.onerror=function(){img.remove();fallback.hidden=false};
+   logo.append(fallback,img);
+   img.src='assets/partners/'+encodeURIComponent(p.logo);
+   var details=el('div','partner-details');
+   details.append(el('h3','',p.name),el('p','','Meet them at Momentum in the arena lobby during free times.'));
+   header.append(logo,details);article.append(header);
+   if(p.ad&&!/\.heic$/i.test(p.ad)){
+    var assetUrl='assets/partners/'+encodeURIComponent(p.ad);
+    var button=el('button','partner-ad-open','Click Here');
+    button.type='button';button.hidden=true;
+    button.addEventListener('click',function(){openPartnerAd(p,assetUrl)});
+    article.append(button);
+    fetch(assetUrl,{method:'HEAD'}).then(function(response){if(response.ok)button.hidden=false}).catch(function(){});
+   }
+   list.append(article)
+  });
+  root.append(list)
+ });
+}
+document.getElementById('partner-ad-close').addEventListener('click',function(){document.getElementById('partner-ad-dialog').close()});
+document.getElementById('partner-ad-dialog').addEventListener('click',function(event){if(event.target===this||event.target.id==='partner-ad-stage')this.close()});
+document.getElementById('partner-ad-dialog').addEventListener('close',function(){var img=document.getElementById('partner-ad-image');img.onload=null;img.onerror=null;img.removeAttribute('src');img.hidden=true});
+function cardLink(page,title,desc){
+ var external=page==='giving'?'https://www.ilsmonline.com/give':page==='restaurants'?'https://www.visitspringfieldillinois.com/LocationSearches/EatAndDrink':page==='packet'?'https://drive.google.com/file/d/1qLtrB8Rx6Kcmmcxqpgf2DB_dXWMlD9lo/view?usp=drive_link':null;
+ var b=el(external?'a':'button','listbtn');
+ if(external){b.href=external;b.target='_blank';b.rel='noopener noreferrer';b.setAttribute('aria-label',title+' (opens a new tab)')}else b.dataset.go=page;
+ var t=el('span');t.append(el('strong','',title),el('small','',desc));b.append(t,el('b','', '↗'));return b
+}
+speakerNames.forEach(function(s){
+ var card=el('div','speaker'),portrait=el('div','portrait'),photo=el('img'),initialsEl=el('span','portrait-initials',initials(s[0])),footer=el('div','speaker-card-footer');
+ photo.alt='Portrait of '+s[0];photo.loading='eager';
+ photo.onload=function(){photo.classList.add('is-loaded');initialsEl.hidden=true};
+ photo.onerror=function(){photo.remove();initialsEl.hidden=false};
+ portrait.append(initialsEl,photo);photo.src=s[2];
+ footer.append(el('strong','',s[0]),el('small','',s[1]));
+ var button=el('button','speaker-bio-button','Read Bio');
+ button.type='button';button.setAttribute('aria-label','Read biography of '+s[0]);
+ button.addEventListener('click',function(){openSpeakerBio(s)});
+ footer.append(button);card.append(portrait,footer);
+ document.getElementById('speakers').append(card)
+});
+function openSpeakerBio(speaker){
+ var dialog=document.getElementById('speaker-bio-dialog');
+ var title=document.getElementById('speaker-bio-name'),image=document.getElementById('speaker-bio-photo'),content=document.getElementById('speaker-bio-paragraphs');
+ title.textContent=speaker[0];
+ image.alt='Portrait of '+speaker[0];image.style.display='block';
+ image.onerror=function(){image.style.display='none'};
+ image.src=speaker[2];
+ content.textContent='';
+ (speakerBios[speaker[0]]||[]).forEach(function(paragraph){content.append(el('p','',paragraph))});
+ dialog.showModal();
+}
+document.getElementById('speaker-bio-close').addEventListener('click',function(){
+ document.getElementById('speaker-bio-dialog').close()
+});
+document.getElementById('speaker-bio-dialog').addEventListener('click',function(e){
+ if(e.target===this)this.close()
+});
+extras.forEach(function(x,i){document.getElementById('more-list').append(cardLink(x[0],x[1],x[2]));if(i<4)document.getElementById('home-links').append(cardLink(x[0],x[1],x[2]))});
+places.forEach(function(x){var c=el(x[2]?'button':'div',(x[2]?'listbtn':'card')+' venue-location-card'),txt=el('div','venue-location-copy');var subtitle=el('p','venue-location-description',x[1]);if(x[0]==='North Mezzanine')subtitle.id='north-mezzanine-description';txt.append(el('strong','venue-location-title',x[0]),subtitle);c.append(txt);if(x[2]){c.append(el('b','venue-location-action','View map ↗'));c.addEventListener('click',function(){setMap(x[2]);document.getElementById('map-panel').scrollIntoView({block:'center',behavior:'smooth'})})}document.getElementById('venue-list').append(c)});
+rules.forEach(function(x){var c=el('div','card');c.append(el('h3','',x[0]),el('p','',x[1]));document.getElementById('rules-list').append(c)});
+(function renderWelcome(){
+ var root=document.getElementById('welcome-letter');root.textContent='';
+ var intro=el('header','letter-intro');
+ intro.append(el('span','letter-eyebrow','A PERSONAL WELCOME'));
+ intro.append(el('h2','letter-greeting',welcome[0]));
+ intro.append(el('p','letter-lead',welcome[1]));
+ root.append(intro);
+ var content=el('div','letter-content');
+ [
+  {heading:'THE WEEKEND AHEAD',paragraphs:[2,3,4]},
+  {heading:'YOUR CONFERENCE GUIDE',paragraphs:[5]},
+  {heading:'WITH GRATITUDE',paragraphs:[6]},
+  {heading:'OUR PRAYER FOR YOU',paragraphs:[7]}
+ ].forEach(function(item){
+  var section=el('section','letter-part');
+  section.append(el('h3','',item.heading));
+  item.paragraphs.forEach(function(i){section.append(el('p','',welcome[i]))});
+  content.append(section);
+ });
+ var closer=el('div','letter-close');closer.append(el('p','',welcome[8]));content.append(closer);
+ var signature=el('div','letter-signature');
+ signature.append(el('span','','FROM YOUR DIRECTORS'));
+ signature.append(el('strong','','Pastors Chris & Christina Stanley'));
+ content.append(signature);root.append(content)
+})();
+var mapDefinitions={
+ arena:{src:'assets/maps/Bos Seating - Momentum Map.png',alt:'Momentum 2026 arena seating map',caption:'Arena map is illustrative, not to scale. Solid green indicates open rows. In Section 117, striped green in rows A–C means only seats 1–4 are open. Follow posted section signs for exact seats.'},
+ lower:{src:'assets/maps/Momentum Lower Level Map.svg',alt:'Momentum 2026 lower-level breakout room map with speakers, stairs and restrooms',caption:'Map based on the BOS Center lower-level diagram. Use lobby stairs and follow posted signs.'}
+};
+var activeMap='arena',mapZoom=100,mapFocus={type:'overview'},mapDataLoading=false;
+function mapSelectionText(){
+ var summary=document.getElementById('map-selection-summary');summary.textContent='';
+ if(activeMap!=='arena')return;
+ if(mapFocus.type==='church'&&seatingData&&seatingData.published){
+   var c=seatingData.churches.find(function(x){return x.church===mapFocus.church&&x.city===mapFocus.city});
+   if(c){summary.append(el('strong','',c.church+' · '+c.city));c.allocations.forEach(function(a){summary.append(el('div','','Section '+a.section+' · Rows '+a.rows+(a.seats?' · Seats '+a.seats:'')))});if(c.allocations.some(function(a){return !!a.seats}))summary.append(el('div','','Striped row bands indicate partial-row assignments. Use the seat numbers listed above.'));return}
+ }
+ summary.append(el('strong','',mapFocus.type==='open'?'OPEN SEATING HIGHLIGHTED':'ARENA SEATING GUIDE'));
+ summary.append(el('div','',mapFocus.type==='open'?'Open seating includes all floor and rear middle seating, solid green rows, and Section 117 rows A–C seats 1–4 only (striped green).':'Solid green rows are open. Section 117 has partially open rows A–C, seats 1–4 only (striped green). Search a church to highlight its reserved rows in crimson.'));
+}
+function renderArena(){
+ var mount=document.getElementById('arena-svg-wrap'),fallback=document.getElementById('map-fallback');
+ if(activeMap!=='arena')return;
+ if(!seatingData){
+   fallback.style.display='flex';fallback.textContent='Preparing the interactive arena map…';
+   if(mapDataLoading)return;
+   mapDataLoading=true;
+   fetch('data/seating.json?updated='+Date.now(),{cache:'no-store'})
+   .then(function(r){if(!r.ok)throw Error('Seating data unavailable');return r.json()})
+   .then(function(data){
+     if(!data||!data.published||!Array.isArray(data.churches)||!data.openSeating)throw Error('Missing published seating');
+     seatingData=data;mapDataLoading=false;if(activeMap==='arena')renderArena();
+   }).catch(function(){mapDataLoading=false;if(activeMap==='arena'){fallback.style.display='flex';fallback.textContent='Unable to load seating map data. Please refresh and try again.'}});
+   return;
+ }
+ if(!window.MomentumArena){fallback.textContent='Map visual is unavailable. Please refresh.';fallback.style.display='flex';return}
+ window.MomentumArena.render(mount,seatingData,mapFocus);
+ mount.hidden=false;fallback.style.display='none';mapSelectionText();adjustMapZoom()
+}
+function setMap(id,focus){
+ if(!mapDefinitions[id])return;
+ activeMap=id;mapZoom=100;if(id==='arena')mapFocus=focus||{type:'overview'};
+ var def=mapDefinitions[id],img=document.getElementById('map-image'),fallback=document.getElementById('map-fallback'),mount=document.getElementById('arena-svg-wrap');
+ document.querySelectorAll('[data-map]').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.map===id))});
+ img.onload=null;img.onerror=null;img.style.display='none';mount.hidden=true;
+ document.getElementById('map-caption').textContent=def.caption;document.getElementById('map-selection-summary').textContent='';
+ document.getElementById('map-panel').dataset.activeMap=id;var stage=document.getElementById('map-stage');stage.scrollLeft=0;stage.scrollTop=0;
+ if(id==='arena'){fallback.style.display='flex';fallback.textContent='Preparing the interactive arena map…';renderArena();return}
+ fallback.style.display='flex';fallback.textContent='Loading breakout room map…';
+ img.onload=function(){if(activeMap!==id)return;fallback.style.display='none';img.style.display='block';adjustMapZoom()};
+ img.onerror=function(){if(activeMap!==id)return;img.style.display='none';fallback.textContent='Unable to load the breakout room map. Please refresh and try again.';fallback.style.display='flex'};
+ img.alt=def.alt;img.src=encodeURI(def.src);adjustMapZoom()
+}
+function adjustMapZoom(){
+ var img=document.getElementById('map-image'),mount=document.getElementById('arena-svg-wrap');
+ if(activeMap==='arena')mount.style.width=mapZoom+'%';else img.style.width=mapZoom+'%';
+ document.getElementById('map-zoom-label').textContent=mapZoom+'%'
+}
+var day='friday',filter='all',saved;
+try{saved=new Set(JSON.parse(localStorage.getItem('momentum26:saved')||'[]'))}catch(e){saved=new Set()}
+function showSchedule(){document.querySelectorAll('[data-day]').forEach(function(x){x.setAttribute('aria-selected',String(x.dataset.day===day))});var list=document.getElementById('schedule-list');list.textContent='';S[day].filter(function(x){return !(isYouthReceptionPast()&&x[1]==='Youth Pastor Reception')}).forEach(function(x){var row=el('div','event'),clock=el('div','eventtime',x[0]),box=el('button','eventbox');box.append(el('small','','MOMENTUM · '+x[0]),el('strong','',x[1]));if(x[4])box.append(el('span','session-speaker','Featured speaker: '+x[4]));box.append(el('span','place','⌖ '+x[2]));row.append(clock,box);box.addEventListener('click',function(){openDetail(x)});list.append(row)})}
+function openDetail(x){var d=document.getElementById('event-dialog'),body=document.getElementById('dialog-content');body.textContent='';body.append(el('span','kicker',x[0]),el('h2','',x[1]));if(x[4])body.append(el('p','session-speaker','Featured speaker: '+x[4]));body.append(el('p','',x[2]),el('p','',x[3]));d.showModal()}
+function showBreakouts(){
+ var q=document.getElementById('breakout-search').value.trim().toLowerCase();
+ var list=document.getElementById('breakout-list');list.textContent='';
+ var visible=breakoutPairs.filter(function(x,i){return x.slice(0,4).join(' ').toLowerCase().includes(q)&&(filter==='all'||saved.has(i))});
+ document.getElementById('breakout-count').textContent=visible.length+' of '+breakoutPairs.length+' workshops · Saturday, 1:00–1:45 PM';
+ if(!visible.length){list.append(el('div','empty',filter==='saved'?'No saved sessions yet. Tap a star to add one.':'No matching sessions.'));return}
+ visible.forEach(function(x){
+  var id=breakoutPairs.indexOf(x),card=el('article','breakout'),photo=el('div','portrait',initials(x[0])),main=el('div','breakoutmain'),save=el('button','save',saved.has(id)?'★':'☆');
+  var file=breakoutPhotoMap[x[0]];if(file){var img=el('img'),initial=el('span','portrait-initials',initials(x[0]));var preferred='assets/breakouts/'+encodeURIComponent(file.replace(/\.[^.]+$/,'.jpg'));var originalFile='assets/breakouts/'+encodeURIComponent(file);photo.textContent='';photo.append(initial,img);img.alt=x[0]+' speaker photo';img.loading='lazy';img.onload=function(){img.classList.add('is-loaded');initial.hidden=true};img.onerror=function(){if(img.src.indexOf(encodeURIComponent(file.replace(/\.[^.]+$/,'.jpg')))!==-1&&preferred!==originalFile){img.onerror=function(){img.remove();initial.hidden=false};img.src=originalFile}else{img.remove();initial.hidden=false}};img.src=preferred}
+  var roomBtn=el('button','roomlink','⌖ '+x[1]);roomBtn.type='button';roomBtn.title='View venue information';roomBtn.addEventListener('click',function(){go('venue');if(/^B\d/i.test(x[1]))setMap('lower')});main.append(roomBtn,el('h3','',x[2]),el('div','presenter','WITH '+x[0]));
+  var d=el('details','description');d.append(el('summary','', 'Read session description'),el('p','',x[3]));main.append(d);
+  save.setAttribute('aria-label',(saved.has(id)?'Remove ':'Save ')+x[2]);save.setAttribute('title',saved.has(id)?'Remove from My Sessions':'Save to My Sessions');
+  save.setAttribute('aria-pressed',String(saved.has(id)));
+  save.addEventListener('click',function(){if(saved.has(id))saved.delete(id);else saved.add(id);try{localStorage.setItem('momentum26:saved',JSON.stringify(Array.from(saved)))}catch(e){}showBreakouts()});
+  card.append(photo,main,save);list.append(card);
+ })
+}
+var seatingData=null,seatingLoading=false,seatingError=false,openSeatingVisible=false;
+function renderOpenSeating(){
+ var button=document.getElementById('open-seating-toggle'),panel=document.getElementById('open-seating-panel');
+ button.setAttribute('aria-expanded',String(openSeatingVisible));button.lastElementChild.textContent=openSeatingVisible?'⌃':'⌄';
+ panel.hidden=!openSeatingVisible;panel.textContent='';if(!openSeatingVisible)return;
+ var guide=el('div','open-seat-guide'),title=el('h3','','Designated Open Seating'),desc=el('p','','Floor seating, rear middle seating, and the listed arena sections/rows are designated first-come seating. This guide does not show live seat availability.');
+ guide.append(title,desc);
+ if(!seatingData||!seatingData.published||!seatingData.openSeating){guide.append(el('p','','Open seating details are loading.'));panel.append(guide);return}
+ var openAreas=seatingData.openSeating.areas||[];
+ if(openAreas.length){
+   guide.append(el('h4','open-seat-subhead','Open Floor & Rear Seating'));
+   var areaList=el('div','open-area-list');
+   openAreas.forEach(function(a){
+      var areaCard=el('div','open-area-card');areaCard.append(el('strong','',a.title),el('span','',a.description));areaList.append(areaCard);
+   });
+   guide.append(areaList);
+ }
+ guide.append(el('h4','open-seat-subhead','Open Arena Sections & Rows'));
+ var grid=el('div','open-seat-grid');
+ seatingData.openSeating.sections.forEach(function(a){
+   var all=a.rows==='A–W',card=el('div','open-seat-card'+(all?' all-open':'')),copy=el('div','open-rows',all?'Entire section':'Rows '+a.rows);
+   if(a.partialRows&&a.partialSeats)copy.append(el('small','','Plus rows '+a.partialRows+': seats '+a.partialSeats+' ONLY'));
+   else copy.append(el('small','',all?'All numbered rows':'Open rows only'));
+   card.append(el('div','open-num',a.section),copy);grid.append(card);
+ });
+ guide.append(grid,el('p','open-seat-note','Some partially open rows have specific seat numbers. Follow posted signs and verify open seats before sitting.'));
+ var mapBtn=el('button','seat-map-btn','View Arena Seating Map');mapBtn.type='button';
+ mapBtn.addEventListener('click',function(){go('venue');setMap('arena',{type:'open'})});guide.append(mapBtn);
+ panel.append(guide);
+}
+function normalizeSeatSearch(str){return String(str||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim()}
+function showSeating(){
+ var target=document.getElementById('seating-results'),input=document.getElementById('church-search');
+ if(!seatingData){
+   target.className='empty';target.textContent=seatingError?'Unable to load seating assignments. Check your connection and try again.':'Loading the reserved seating directory…';
+   if(seatingError){var retry=el('button','seat-map-btn','Try again');retry.addEventListener('click',function(){seatingError=false;showSeating()});target.append(retry)}
+   if(!seatingError&&!seatingLoading){seatingLoading=true;
+     fetch('data/seating.json?updated='+Date.now(),{cache:'no-store'})
+     .then(function(r){if(!r.ok)throw Error('Seating data unavailable');return r.json()})
+     .then(function(data){if(!data||!Array.isArray(data.churches)||typeof data.published!=='boolean')throw Error('Unexpected seating format');seatingData=data;seatingLoading=false;showSeating()})
+     .catch(function(){seatingLoading=false;seatingError=true;showSeating()});
+   }
+   return;
+ }
+ if(!seatingData.published){target.className='empty';target.textContent='Reserved seating assignments are not yet published. Please check with your church leader.';return}
+ renderOpenSeating();
+ var query=normalizeSeatSearch(input.value),matches=query?seatingData.churches.filter(function(c){return normalizeSeatSearch(c.church+' '+c.city).includes(query)||normalizeSeatSearch(c.city+' '+c.church).includes(query)}):[];
+ target.textContent='';
+ if(!query){target.className='empty';target.textContent='Start typing your church name or city to find your reserved section and rows.';return}
+ if(!matches.length){
+   target.className='empty';target.textContent='';
+   target.append(el('strong','','This church does not appear in the reserved seating list.'));
+   target.append(el('p','','Not all groups qualified for reserved seating. Your group may use the designated open seating areas instead. Please check with your church leader and review the Open Seating Areas guide below.'));
+   var viewOpen=el('button','seat-map-btn','View Open Seating Areas');viewOpen.type='button';
+   viewOpen.addEventListener('click',function(){
+      openSeatingVisible=true;renderOpenSeating();
+      document.getElementById('open-seating-panel').scrollIntoView({behavior:'smooth',block:'start'});
+   });
+   target.append(viewOpen);return
+ }
+ target.className='seating-results';
+ matches.forEach(function(c){
+   var card=el('article','seat-card');card.append(el('h3','',c.church),el('div','seat-city',c.city+', Illinois'));
+   (c.allocations||[]).forEach(function(a){
+      var location=el('div','seat-location'),section=el('div','seat-section',a.section),detail=el('div');
+      detail.append(el('div','seat-rows','Rows '+a.rows));
+      if(a.seats)detail.append(el('div','seat-seats','Reserved seats '+a.seats+' in these rows'));
+      location.append(section,detail);card.append(location);
+   });
+   var button=el('button','seat-map-btn','Highlight My Seats on Map');button.type='button';
+   button.addEventListener('click',function(){go('venue');setMap('arena',{type:'church',church:c.church,city:c.city})});
+   card.append(button);target.append(card);
+ });
+}
+function updateNow(){try{var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(new Date()),v={};p.forEach(function(x){v[x.type]=x.value});var d=v.year+'-'+v.month+'-'+v.day;if(d==='2026-11-20'||d==='2026-11-21'){var t=(+v.hour)*60+(+v.minute),ds=S[d==='2026-11-20'?'friday':'saturday'];var next=ds.find(function(x){if(x[0].indexOf('During')===0)return false;var m=x[0].match(/(\d+):(\d+)\s*(AM|PM)/);if(!m)return false;var h=(+m[1])%12+(m[3]==='PM'?12:0);return h*60+(+m[2])>=t});if(next){document.getElementById('now-label').textContent='UP NEXT AT MOMENTUM';document.getElementById('now-title').textContent=next[1];document.getElementById('now-detail').textContent=next[0]+' · '+next[2]}else if(d==='2026-11-20'){document.getElementById('now-label').textContent='MOMENTUM IS HERE';document.getElementById('now-title').textContent='Welcome to Momentum!';document.getElementById('now-detail').textContent='We are glad you are here. See you Saturday!'}else if(t<16*60+30){document.getElementById('now-label').textContent='HAPPENING AT MOMENTUM';document.getElementById('now-title').textContent='Final General Session';document.getElementById('now-detail').textContent='2:00–4:30 PM · Main Arena'}else{document.getElementById('now-label').textContent='THANK YOU FOR COMING';document.getElementById('now-title').textContent='Keep the momentum going!';document.getElementById('now-detail').textContent='Thank you for being part of Momentum ’26.'}}else if(d>'2026-11-21'){document.getElementById('now-label').textContent='THANK YOU FOR COMING';document.getElementById('now-title').textContent='Keep the momentum going!';document.getElementById('now-detail').textContent='Thank you for being part of Momentum ’26.';}}catch(e){}}
+document.addEventListener('click',function(e){var b=e.target.closest('[data-go]');if(b){go(b.dataset.go);if(b.dataset.jump){var targetId=b.dataset.jump;requestAnimationFrame(function(){var target=document.getElementById(targetId);if(target)target.scrollIntoView({behavior:'smooth',block:'start'})})}return}var t=e.target.closest('[data-day]');if(t){day=t.dataset.day;showSchedule();return}var f=e.target.closest('[data-filter]');if(f){filter=f.dataset.filter;document.querySelectorAll('[data-filter]').forEach(function(x){x.setAttribute('aria-pressed',String(x.dataset.filter===filter))});showBreakouts();return}});
+document.getElementById('breakout-search').addEventListener('input',showBreakouts);
+document.getElementById('church-search').addEventListener('input',showSeating);
+document.getElementById('close-dialog').addEventListener('click',function(){document.getElementById('event-dialog').close()});
+document.querySelectorAll('[data-map]').forEach(function(b){b.addEventListener('click',function(){setMap(b.dataset.map)})});
+document.querySelectorAll('[data-map-zoom]').forEach(function(b){b.addEventListener('click',function(){var v=b.dataset.mapZoom;if(v==='reset')mapZoom=100;else if(v==='in')mapZoom=Math.min(300,mapZoom+25);else mapZoom=Math.max(100,mapZoom-25);adjustMapZoom()})});
+document.getElementById('open-seating-toggle').addEventListener('click',function(){openSeatingVisible=!openSeatingVisible;renderOpenSeating()});
+window.addEventListener('hashchange',function(){go(location.hash.slice(1)||'home')});
+showSchedule();showBreakouts();showPartners();setMap('arena');updateNow();go(location.hash.slice(1)||'home');
+setInterval(function(){
+ updateNow();
+ updateParkingQuickAccess();
+ var expired=updateYouthReception();
+ if(expired&&document.querySelector('[data-page="reception"]').classList.contains('active'))go('more');
+ if(expired&&document.querySelector('[data-page="schedule"]').classList.contains('active'))showSchedule()
+},60000);
+})();
+</script>
+</body>
+</html>
